@@ -14,7 +14,7 @@ def get_sae_activations(model_activaitons, k_sparse_autoencoder):
     return sae_activations
 
         
-def save_highest_activating_images_high(max_activating_image_indices, max_activating_image_values, directory, dataset, image_key, sae_mean_acts, sae_sparsity, max_activating_image_label_indices):
+def save_highest_activating_images_high(max_activating_image_indices, max_activating_image_values, directory, dataset, image_key, sae_mean_acts, sae_sparsity, max_activating_image_label_indices, neurons):
     assert max_activating_image_values.size() == max_activating_image_indices.size(), "size of max activating image indices doesn't match the size of max activing values."
     number_of_neurons, number_of_max_activating_examples = max_activating_image_values.size()
 
@@ -40,7 +40,7 @@ def get_new_top_k(first_values, first_indices, second_values, second_indices, k)
     return new_values, new_indices
 
 @torch.inference_mode()
-def safe_features(
+def save_features(
     k_sparse_autoencoder: KSparseAutoencoder,
     activation_store: SDActivationsStore,
     number_of_images: int = 32_768,
@@ -108,4 +108,4 @@ def safe_features(
         with open(f'{directory}/average_stds.json', 'w') as f:
             json.dump(average_stds, f)
             
-    save_highest_activating_images_high(max_activating_image_indices[:,:10], max_activating_image_values[:,:10], directory, dataset, image_key, sae_mean_acts, sae_sparsity, max_activating_image_label_indices)
+    save_highest_activating_images_high(max_activating_image_indices[:,:10], max_activating_image_values[:,:10], directory, dataset, image_key, sae_mean_acts, sae_sparsity, max_activating_image_label_indices, neurons)
