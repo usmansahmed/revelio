@@ -377,22 +377,53 @@ if __name__ == "__main__":
         optimizer, T_max=args.num_epochs
     )
 
+    # Track the best classifier during training
+    best_test_accuracy = float("-inf")
+    best_epoch = -1
+
+    best_checkpoint_path = os.path.join(
+        args.output_dir,
+        "best_classifier.pt",
+    )
+
+    last_checkpoint_path = os.path.join(
+        args.output_dir,
+        "last_classifier.pt",
+    )
+
     logger.info("Starting Training...")
     for epoch in range(args.num_epochs):
         train_loss, train_accuracy = training_step(
-            model, train_loader, optimizer, criterion, args, prompt_selector, config
-        )
-        test_loss, test_accuracy = validation_step(
-            model, test_loader, criterion, args, prompt_selector, config
+            model,
+            train_loader,
+            optimizer,
+            criterion,
+            args,
+            prompt_selector,
+            config,
         )
 
-        # Log final results
-        logger.info(
-            f"Epoch {epoch+1}: Train Loss: {train_loss:.4f}, Train Accuracy: {train_accuracy:.4f}"
+        test_loss, test_accuracy = validation_step(
+            model,
+            test_loader,
+            criterion,
+            args,
+            prompt_selector,
+            config,
         )
+
         logger.info(
-            f"Epoch {epoch+1}: Test Loss: {test_loss:.4f}, Test Accuracy: {test_accuracy:.4f}"
+            f"Epoch {epoch + 1}: "
+            f"Train Loss: {train_loss:.4f}, "
+            f"Train Accuracy: {train_accuracy:.4f}"
         )
+
+        logger.info(
+            f"Epoch {epoch + 1}: "
+            f"Test Loss: {test_loss:.4f}, "
+            f"Test Accuracy: {test_accuracy:.4f}"
+        )
+
         wandb.log(
             {
                 "epoch": epoch + 1,
@@ -400,14 +431,69 @@ if __name__ == "__main__":
                 "train_accuracy": train_accuracy,
                 "test_loss": test_loss,
                 "test_accuracy": test_accuracy,
+                "learning_rate": optimizer.param_groups[0]["lr"],
             }
         )
 
+        # Save the model whenever test accuracy improves
+        if test_accuracy > best_test_accuracy:
+            best_test_accuracy = test_accuracy
+            best_epoch = epoch + 1
+
+            torch.save(
+                {
+                    "epoch": epoch + 1,
+                    "model_state_dict": model.state_dict(),
+                    "optimizer_state_dict": optimizer.state_dict(),
+                    "scheduler_state_dict": scheduler.state_dict(),
+                    "train_loss": train_loss,
+                    "train_accuracy": train_accuracy,
+                    "test_loss": test_loss,
+                    "test_accuracy": test_accuracy,
+                    "args": vars(args),
+                    "config": config,
+                },
+                best_checkpoint_path,
+            )
+
+            logger.info(
+                f"Saved new best classifier at epoch {epoch + 1} "
+                f"with test accuracy {test_accuracy:.4f}"
+            )
+            logger.info(
+                f"Best checkpoint: {best_checkpoint_path}"
+            )
+
         scheduler.step()
 
-        # break at 30th epoch
-        if epoch == 29:
-            break
+    logger.info(
+        f"Best test accuracy: {best_test_accuracy:.4f} "
+        f"at epoch {best_epoch}"
+    )
+
+    # Save the model from the final completed epoch
+    torch.save(
+        {
+            "epoch": epoch + 1,
+            "model_state_dict": model.state_dict(),
+            "optimizer_state_dict": optimizer.state_dict(),
+            "scheduler_state_dict": scheduler.state_dict(),
+            "train_loss": train_loss,
+            "train_accuracy": train_accuracy,
+            "test_loss": test_loss,
+            "test_accuracy": test_accuracy,
+            "best_epoch": best_epoch,
+            "best_test_accuracy": best_test_accuracy,
+            "args": vars(args),
+            "config": config,
+        },
+        last_checkpoint_path,
+    )
+
+    logger.info(
+        f"Saved final classifier checkpoint to: "
+        f"{last_checkpoint_path}"
+    )
 
     # Save results at the end of training
     results_collector.save_results(args.output_dir)
