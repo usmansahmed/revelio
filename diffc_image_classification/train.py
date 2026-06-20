@@ -269,13 +269,14 @@ if __name__ == "__main__":
     set_random_seed(args.seed)
     logger.info("")
 
-    logger.info("Setting up prompt selector...")
-    from helpers.class_labels_dict import class_labels_dict
-
-    class_labels = class_labels_dict[args.dataset_flag]
-    prompt_dict = prompt_dict[args.dataset_flag]
-    prompt_selector = CLIPPromptSelector(class_labels, prompt_dict, device=device)
+    prompt_selector = None
     if args.prompt_type == "from_CLIP":
+        logger.info("Setting up prompt selector...")
+        from helpers.class_labels_dict import class_labels_dict
+
+        class_labels = class_labels_dict[args.dataset_flag]
+        prompt_dict = prompt_dict[args.dataset_flag]
+        prompt_selector = CLIPPromptSelector(class_labels, prompt_dict, device=device)
         logger.info("")
         logger.info(f"Prompts: {prompt_selector.prompts}")
         logger.info("")
