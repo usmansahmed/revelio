@@ -10,6 +10,7 @@ model_base_dict = {
     "openai/clip-resnet-50": "clip",
     "stabilityai/stable-diffusion-2-1": "diffusion",
     "facebook/dinov2-large": "dino",
+    "runwayml/stable-diffusion-v1-5": "diffusion",
     "stable-diffusion-v1-5/stable-diffusion-v1-5": "diffusion",
     "stabilityai/stable-diffusion-2-1-base": "diffusion",
     "stabilityai/stable-diffusion-xl-base-1.0": "dit",

@@ -322,7 +322,7 @@ if __name__ == "__main__":
     config["num_classes"] = args.num_classes
     config["dropout_rate"] = args.dropout_rate
 
-    logger.info("Sample feature shape: ", sample_feature.shape)
+    logger.info(f"Sample feature shape: {sample_feature.shape}")
 
     logger.info("Setting up model...")
     model = ImageClassifer(config)

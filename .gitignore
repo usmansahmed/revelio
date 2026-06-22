@@ -3,6 +3,5 @@ SD-kSAE/caltech101/
 SD-kSAE/features
 SD-kSAE/logs
 SD-kSAE/oxfordpet
-SD-kSAE/training/__pycache__/
-sae_feature_browser/__pycache__/
+__pycache__/
 
