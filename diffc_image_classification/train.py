@@ -425,6 +425,15 @@ if __name__ == "__main__":
             f"Test Accuracy: {test_accuracy:.4f}"
         )
 
+        results_collector.update_results(
+            epoch=epoch + 1,
+            train_acc=float(train_accuracy),
+            train_loss=float(train_loss),
+            test_acc=float(test_accuracy),
+            test_loss=float(test_loss),
+            lr=float(optimizer.param_groups[0]["lr"]),
+        )
+
         wandb.log(
             {
                 "epoch": epoch + 1,
