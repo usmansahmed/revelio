@@ -3,12 +3,12 @@ from pathlib import Path
 
 
 feature_dir = Path(
-    "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/caltech101/SDv1-5/step25_mid"
+    "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1"
 )
 
-target_class = 16
-min_purity = 0.8
-min_valid = 10
+target_class = 19
+min_purity = 0.6
+min_valid = 5
 top_n = 20
 
 label_purity = torch.load(feature_dir / "label_purity_top10.pt", map_location="cpu")
