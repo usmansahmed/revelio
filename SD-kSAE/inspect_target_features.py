@@ -3,10 +3,10 @@ from pathlib import Path
 
 
 feature_dir = Path(
-    "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1"
+    "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/caltech101/SDv1-5/step25_mid"
 )
 
-target_class = 23
+target_class = 16
 min_purity = 0.8
 min_valid = 10
 top_n = 20
