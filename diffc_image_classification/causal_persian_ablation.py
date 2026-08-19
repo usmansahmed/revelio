@@ -260,15 +260,13 @@ def main():
                 config["diffusion_timestep"],
             )
 
-	    pooled = features.mean(dim=(2, 3))
-	    sparse_acts = ksae_encode(pooled, ksae)
-
-	    target_acts = sparse_acts[:, target_feature_ids]
-	    random_acts = sparse_acts[:, random_feature_ids]
-
-	    print("Target active counts per batch:", (target_acts > 0).sum(dim=0).detach().cpu().tolist())
-	    print("Target mean activations:", target_acts.mean(dim=0).detach().cpu().tolist())
-	    print("Random active counts per batch:", (random_acts > 0).sum(dim=0).detach().cpu().tolist())
+            pooled = features.mean(dim=(2, 3))
+            sparse_acts = ksae_encode(pooled, ksae)
+            target_acts = sparse_acts[:, target_feature_ids]
+            random_acts = sparse_acts[:, random_feature_ids]
+            print("Target active counts per batch:", (target_acts > 0).sum(dim=0).detach().cpu().tolist())
+            print("Target mean activations:", target_acts.mean(dim=0).detach().cpu().tolist())
+            print("Random active counts per batch:", (random_acts > 0).sum(dim=0).detach().cpu().tolist())
 
             logits_original = model.classifer(features)
 
@@ -318,17 +316,17 @@ def main():
                 TARGET_CLASS,
             )
 
-	    pooled = features.mean(dim=(2, 3))
-	    sparse_acts = ksae_encode(pooled, ksae)
+        pooled = features.mean(dim=(2, 3))
+        sparse_acts = ksae_encode(pooled, ksae)
 
-	    target_acts = sparse_acts[:, target_feature_ids]
-	    random_acts = sparse_acts[:, random_feature_ids]
+        target_acts = sparse_acts[:, target_feature_ids]
+        random_acts = sparse_acts[:, random_feature_ids]
 
-	    target_active_counts += (target_acts > 0).sum(dim=0)
-	    target_activation_sums += target_acts.sum(dim=0)
+        target_active_counts += (target_acts > 0).sum(dim=0)
+        target_activation_sums += target_acts.sum(dim=0)
 
-	    random_active_counts += (random_acts > 0).sum(dim=0)
-	    random_activation_sums += random_acts.sum(dim=0)
+        random_active_counts += (random_acts > 0).sum(dim=0)
+        random_activation_sums += random_acts.sum(dim=0)
 
     results = {
         "target_class": TARGET_CLASS,
