@@ -1,0 +1,33 @@
+{
+    "work_dir": "/home/woody/rlvl/rlvl172v",
+    "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+
+    "dataset_flag": "timm/oxford-iiit-pet",
+    "dataset_name": "oxfordpet",
+    "target_class": 19,
+    "target_class_name": "class_19",
+    "num_classes": 37,
+
+    "model_name": "runwayml/stable-diffusion-v1-5",
+    "diffusion_timestep": 25,
+    "diffusion_layer": "up_ft:1",
+    "input_channels": 1280,
+    "dropout_rate": 0.0,
+
+    "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1",
+
+    "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+
+    "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/d0p5pu4r/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1_10_up_blocks_1_81920.pt",
+
+    "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/oxford_class19_upft1_ablation.json",
+
+    "min_purity": 0.6,
+    "min_valid": 5,
+    "top_n": 20,
+    "ranking_method": "purity_mean_activation",
+
+    "max_images": 64,
+    "batch_size": 8,
+    "random_seed": 42
+}

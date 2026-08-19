@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=causal_persian
+#SBATCH --job-name=causal_ablation
 #SBATCH --partition=a100
 #SBATCH --gres=gpu:a100:1
 #SBATCH --cpus-per-task=4
 #SBATCH --time=01:00:00
-#SBATCH --output=logs/causal_persian_%j.out
-#SBATCH --error=logs/causal_persian_%j.err
+#SBATCH --output=logs/causal_ablation_%j.out
+#SBATCH --error=logs/causal_ablation_%j.err
 
 set -eo pipefail
 
@@ -30,4 +30,4 @@ export PYTHONUNBUFFERED=1
 
 cd "$PROJECT_DIR"
 
-python causal_persian_ablation.py
+python run_causal_ablation.py --config causal_ablation_config.json
