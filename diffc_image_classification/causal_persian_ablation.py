@@ -37,7 +37,7 @@ KSAE_CHECKPOINT_PATH = (
 
 OUTPUT_PATH = (
     WORK
-    + "/revelio/causal_results/persian_upft1_ablation.json"
+    + "/revelio/causal_results/upft1_ablation.json"
 )
 
 TARGET_CLASS = 19 
