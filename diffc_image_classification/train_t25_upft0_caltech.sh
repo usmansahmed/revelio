@@ -48,7 +48,7 @@ python train.py \
     --learning_rate 1e-4 \
     --num_epochs 90 \
     --batch_size 16 \
-    --num_classes 101 \
+    --num_classes 102 \
     --prompt_type "empty" \
     --pooling_strategy "GAP" \
     --dropout_rate 0.0
