@@ -10,7 +10,7 @@
 set -eo pipefail
 
 WORK=/home/woody/rlvl/rlvl172v
-PROJECT_DIR="$WORK/revelio/diffc_image_classification"
+PROJECT_DIR="$WORK/revelio/SD-kSAE"
 
 mkdir -p "$PROJECT_DIR/logs"
 mkdir -p "$WORK/revelio/causal_results"
