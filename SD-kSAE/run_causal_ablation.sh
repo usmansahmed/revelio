@@ -10,7 +10,7 @@
 set -eo pipefail
 
 WORK=/home/woody/rlvl/rlvl172v
-PROJECT_DIR="$WORK/revelio/SD-kSAE"
+PROJECT_DIR="$WORK/revelio/diffc_image_classification"
 
 mkdir -p "$PROJECT_DIR/logs"
 mkdir -p "$WORK/revelio/causal_results"
@@ -30,4 +30,4 @@ export PYTHONUNBUFFERED=1
 
 cd "$PROJECT_DIR"
 
-python run_causal_ablation.py --config causal_ablation_config.json
+python "$WORK/revelio/SD-kSAE/run_causal_ablation.py" --config "$WORK/revelio/SD-kSAE/causal_ablation_config.json"
