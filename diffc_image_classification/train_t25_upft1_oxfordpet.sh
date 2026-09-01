@@ -41,7 +41,7 @@ nvidia-smi
 
 python train.py \
     --dataset_flag "timm/oxford-iiit-pet" \
-    --output_dir "$WORK/revelio/DiffC_outputs" \
+    --output_dir "$WORK/revelio/DiffC_outputs/image512" \
     --model_name "runwayml/stable-diffusion-v1-5" \
     --diffusion_timestep 25 \
     --diffusion_layer "up_ft:1" \

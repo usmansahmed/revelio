@@ -2,7 +2,7 @@
 #SBATCH --job-name=extract_t25_upft1_oxfordpet
 #SBATCH --gres=gpu:a100:1
 #SBATCH --partition=a100
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --export=NONE
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
@@ -37,8 +37,8 @@ python extract_feature.py \
   --model_name runwayml/stable-diffusion-v1-5 \
   --timestep 25 \
   --block_name up_blocks[1] \
-  --image_size 256 \
-  --max_batch_size 32 \
-  --save_path $WORK/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1
+  --image_size 512 \
+  --max_batch_size 8 \
+  --save_path $WORK/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512
 
 echo "Feature extraction completed."

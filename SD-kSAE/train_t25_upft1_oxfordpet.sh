@@ -35,8 +35,8 @@ cd $WORK/revelio/SD-kSAE
 echo "Starting full k-SAE training..."
 
 python train_ksae.py \
-  --model_name $WORK/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1 \
-  --feature_dir $WORK/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1 \
+  --model_name $WORK/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512 \
+  --feature_dir $WORK/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512 \
   --module_name up_blocks_1 \
   --dataset_name timm/oxford-iiit-pet \
   --d_in 1280 \
