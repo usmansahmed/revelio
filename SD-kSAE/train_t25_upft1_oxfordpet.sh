@@ -27,8 +27,8 @@ export WANDB_DIR=$WORK/wandb
 
 mkdir -p logs
 mkdir -p $WANDB_DIR
-mkdir -p $WORK/revelio/SD-kSAE/Checkpoints
-mkdir -p $WORK/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1
+mkdir -p $WORK/revelio/SD-kSAE/Checkpoints/image512
+mkdir -p $WORK/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512
 
 cd $WORK/revelio/SD-kSAE
 
@@ -49,7 +49,7 @@ python train_ksae.py \
   --total_training_tokens 83886080 \
   --dead_feature_threshold 1e-6 \
   --device cuda \
-  --checkpoint_path $WORK/revelio/SD-kSAE/Checkpoints \
+  --checkpoint_path $WORK/revelio/SD-kSAE/Checkpoints/image512 \
   --dtype float32
 
 echo "Full k-SAE training completed."
