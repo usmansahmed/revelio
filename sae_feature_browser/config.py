@@ -9,58 +9,70 @@ BASE_FEATURE_DIR = Path(
 )
 
 
-DATASET_LAYER_DIRS = {
-    "Caltech101": {
-        "mid_block": (
-            BASE_FEATURE_DIR
-            / "caltech101"
-            / "SDv1-5"
-            / "step25_mid"
-        ),
-        "up_ft0": (
-            BASE_FEATURE_DIR
-            / "caltech101"
-            / "SDv1-5"
-            / "step25_upft0"
-        ),
-        "up_ft1": (
-            BASE_FEATURE_DIR
-            / "caltech101"
-            / "SDv1-5"
-            / "step25_upft1"
-        ),
-        "up_ft2": (
-            BASE_FEATURE_DIR
-            / "caltech101"
-            / "SDv1-5"
-            / "step25_upft2"
-        ),
-    },
+# DATASET_LAYER_DIRS = {
+#     "Caltech101": {
+#         "mid_block": (
+#             BASE_FEATURE_DIR
+#             / "caltech101"
+#             / "SDv1-5"
+#             / "step25_mid"
+#         ),
+#         "up_ft0": (
+#             BASE_FEATURE_DIR
+#             / "caltech101"
+#             / "SDv1-5"
+#             / "step25_upft0"
+#         ),
+#         "up_ft1": (
+#             BASE_FEATURE_DIR
+#             / "caltech101"
+#             / "SDv1-5"
+#             / "step25_upft1"
+#         ),
+#         "up_ft2": (
+#             BASE_FEATURE_DIR
+#             / "caltech101"
+#             / "SDv1-5"
+#             / "step25_upft2"
+#         ),
+#     },
 
+#     "Oxford-IIIT Pet": {
+#         "mid_block": (
+#             BASE_FEATURE_DIR
+#             / "oxfordpet"
+#             / "SDv1-5"
+#             / "step25_mid"
+#         ),
+#         "up_ft0": (
+#             BASE_FEATURE_DIR
+#             / "oxfordpet"
+#             / "SDv1-5"
+#             / "step25_upft0"
+#         ),
+#         "up_ft1": (
+#             BASE_FEATURE_DIR
+#             / "oxfordpet"
+#             / "SDv1-5"
+#             / "step25_upft1"
+#         ),
+#         "up_ft2": (
+#             BASE_FEATURE_DIR
+#             / "oxfordpet"
+#             / "SDv1-5"
+#             / "step25_upft2"
+#         ),
+#     },
+# }
+
+DATASET_LAYER_DIRS = {
     "Oxford-IIIT Pet": {
-        "mid_block": (
-            BASE_FEATURE_DIR
-            / "oxfordpet"
-            / "SDv1-5"
-            / "step25_mid"
-        ),
-        "up_ft0": (
-            BASE_FEATURE_DIR
-            / "oxfordpet"
-            / "SDv1-5"
-            / "step25_upft0"
-        ),
         "up_ft1": (
             BASE_FEATURE_DIR
             / "oxfordpet"
             / "SDv1-5"
             / "step25_upft1"
-        ),
-        "up_ft2": (
-            BASE_FEATURE_DIR
-            / "oxfordpet"
-            / "SDv1-5"
-            / "step25_upft2"
-        ),
-    },
+            / "image512"
+        )
+    }
 }
