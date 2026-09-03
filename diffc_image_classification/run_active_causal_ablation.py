@@ -56,11 +56,9 @@ def load_ksae(checkpoint_path, device, default_k=32):
 
 def ksae_encode(x, ksae):
     pre_acts = (x - ksae["b_dec"]) @ ksae["W_enc"] + ksae["b_enc"]
-    acts = torch.relu(pre_acts)
+    top_values, top_indices = torch.topk(pre_acts, k=ksae["k"], dim=-1)
 
-    top_values, top_indices = torch.topk(acts, k=ksae["k"], dim=-1)
-
-    sparse_acts = torch.zeros_like(acts)
+    sparse_acts = torch.zeros_like(pre_acts)
     sparse_acts.scatter_(dim=-1, index=top_indices, src=top_values)
 
     return sparse_acts
@@ -105,14 +103,22 @@ def select_active_class_features(
     min_valid,
     max_ablate_per_image,
     ranking_method,
+    target_feature_ids
 ):
-    active_ids = torch.nonzero(sparse_row > 0, as_tuple=False).flatten()
+    active_ids = torch.nonzero(sparse_row != 0, as_tuple=False).flatten()
 
     if active_ids.numel() == 0:
         return active_ids, active_ids, active_ids
 
+    allowed_ids = torch.tensor(
+    target_feature_ids,
+    device=active_ids.device,
+    dtype=active_ids.dtype,
+    )
+
     class_mask = (
-        (stats["majority_label"][active_ids] == target_class)
+        torch.isin(active_ids, allowed_ids)
+        & (stats["majority_label"][active_ids] == target_class)
         & (stats["label_purity"][active_ids] >= min_purity)
         & (stats["valid_count"][active_ids] >= min_valid)
     )
@@ -129,15 +135,33 @@ def select_active_class_features(
         order = torch.argsort(scores, descending=True)
         target_ids = target_ids[order[:max_ablate_per_image]]
 
-    remaining_active_ids = active_ids[~torch.isin(active_ids, target_ids)]
+    # A fair control must not contain another feature associated with the target
+    # class. Match without replacement on absolute activation magnitude so a
+    # weak random feature is not compared with a strongly active target feature.
+    control_pool = active_ids[
+        stats["majority_label"][active_ids] != target_class
+    ]
+    matched_random_ids = []
+    available = control_pool
+    for target_id in target_ids:
+        if available.numel() == 0:
+            break
+        distances = (
+            sparse_row[available].abs() - sparse_row[target_id].abs()
+        ).abs()
+        # Random jitter makes exact ties reproducible under torch.manual_seed
+        # without systematically preferring low feature IDs.
+        distances = distances + torch.rand_like(distances) * 1e-12
+        match_position = torch.argmin(distances)
+        matched_random_ids.append(available[match_position])
+        available = torch.cat(
+            (available[:match_position], available[match_position + 1:])
+        )
 
-    random_count = min(target_ids.numel(), remaining_active_ids.numel())
-
-    if random_count > 0:
-        perm = torch.randperm(remaining_active_ids.numel(), device=sparse_row.device)
-        random_ids = remaining_active_ids[perm[:random_count]]
+    if matched_random_ids:
+        random_ids = torch.stack(matched_random_ids)
     else:
-        random_ids = remaining_active_ids[:0]
+        random_ids = control_pool[:0]
 
     return active_ids, target_ids, random_ids
 
@@ -168,6 +192,7 @@ def build_feature_variants(
             min_valid=cfg["min_valid"],
             max_ablate_per_image=cfg["max_ablate_per_image"],
             ranking_method=cfg["active_feature_ranking"],
+            target_feature_ids = cfg["target_feature_ids"]
         )
 
         if target_ids.numel() > 0:
@@ -207,8 +232,10 @@ def build_feature_variants(
     random_pooled = ksae_decode(sparse_random, ksae)
 
     recon_features = features + (recon_pooled - pooled)[:, :, None, None]
-    target_features = features + (target_pooled - pooled)[:, :, None, None]
-    random_features = features + (random_pooled - pooled)[:, :, None, None]
+    # Preserve everything the SAE fails to reconstruct. The causal variants add
+    # only the decoder-direction change caused by zeroing the selected neurons.
+    target_features = features + (target_pooled - recon_pooled)[:, :, None, None]
+    random_features = features + (random_pooled - recon_pooled)[:, :, None, None]
 
     return recon_features, target_features, random_features, batch_target_counts, batch_random_counts
 
@@ -323,8 +350,6 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     print("Device:", device)
-    print("Target class:", cfg["target_class"], cfg.get("target_class_name", ""))
-
     print()
     print("Loading feature statistics...")
     stats = load_feature_stats(cfg["feature_dir"], device=device)
@@ -345,6 +370,16 @@ def main():
         cfg["dataset_flag"],
         split=cfg.get("split", "test"),
     )
+
+    class_names = hf_test_dataset.features["label"].names
+    target_class = cfg["target_class"]
+    if not 0 <= target_class < len(class_names):
+        raise ValueError(
+            f"target_class {target_class} is outside the dataset label range "
+            f"0..{len(class_names) - 1}."
+        )
+    target_class_name = class_names[target_class]
+    print("Target class:", target_class, target_class_name)
 
     labels_all = hf_test_dataset["label"]
 
@@ -499,16 +534,12 @@ def main():
     total_images = finalized_metrics["original"]["total"]
 
     results = {
-        "config": cfg,
+        "config": {**cfg, "target_class_name": target_class_name},
         "metrics": finalized_metrics,
         "confidence_drop_from_original": {
             "sae_reconstruction": original_conf - recon_conf,
             "active_targeted_ablation": original_conf - target_conf,
             "active_random_ablation": original_conf - random_conf,
-        },
-        "extra_drop_after_reconstruction": {
-            "active_targeted_minus_reconstruction": recon_conf - target_conf,
-            "active_random_minus_reconstruction": recon_conf - random_conf,
         },
         "activation_summary": {
             "total_images": total_images,
@@ -525,6 +556,10 @@ def main():
             ),
             "avg_random_ablated_per_image": (
                 feature_counter["total_random_ablated"] / total_images
+            ),
+            "random_control": (
+                "active non-target-class features matched without replacement "
+                "on absolute activation magnitude"
             ),
         },
         "top_target_ablated_features": sorted_activation_dict(
