@@ -3,11 +3,28 @@ import json
 import random
 import sys
 from pathlib import Path
+import pandas as pd
 
 import torch
 import torch.nn.functional as F
 from torch.utils.data import DataLoader, Subset
 
+
+def load_target_feature_ids(summary_path, target_class, min_purity, min_valid):
+    df = pd.read_csv(summary_path)
+
+    selected = df[
+        (df["majority_label"] == target_class)
+        & (df["label_purity"] >= min_purity)
+        & (df["valid_top_count"] >= min_valid)
+    ]
+
+    feature_ids = selected["feature_id"].astype(int).tolist()
+
+    print(f"Automatically selected {len(feature_ids)} target features")
+    print("Feature IDs:", feature_ids)
+
+    return feature_ids
 
 def load_json(path):
     with open(path, "r") as f:
@@ -348,6 +365,13 @@ def main():
     torch.manual_seed(random_seed)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+    cfg["target_feature_ids"] = load_target_feature_ids(
+    cfg["feature_summary_path"],
+    cfg["target_class"],
+    cfg["min_purity"],
+    cfg["min_valid"],
+)
 
     print("Device:", device)
     print()
