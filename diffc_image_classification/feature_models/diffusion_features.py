@@ -312,7 +312,16 @@ class DiffusionVisionTower(BaseVisionTower):
                 latents = scale_factor * self.vae.encode(images).latent_dist.mode()
 
                 t = torch.tensor(time_step, dtype=torch.long, device=self.device)
-                noise = torch.randn_like(latents)
+                generator = torch.Generator(device=self.device)
+                generator.manual_seed(42)
+
+                noise = torch.randn(
+                    latents.shape,
+                    generator=generator,
+                    device=latents.device,
+                    dtype=latents.dtype,
+                )
+                # noise = torch.randn_like(latents)
                 latents_noisy = self.scheduler.add_noise(latents, noise, t).to(
                     dtype=self.dtype, device=self.device
                 )

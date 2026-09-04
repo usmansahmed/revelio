@@ -363,6 +363,7 @@ def main():
     random_seed = cfg.get("random_seed", 42)
     random.seed(random_seed)
     torch.manual_seed(random_seed)
+    torch.cuda.manual_seed_all(random_seed)
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
