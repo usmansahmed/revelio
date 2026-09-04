@@ -4,6 +4,7 @@ import random
 import sys
 from pathlib import Path
 import pandas as pd
+from datetime import datetime
 
 import torch
 import torch.nn.functional as F
@@ -599,8 +600,14 @@ def main():
         ),
     }
 
-    output_path = Path(cfg["output_path"])
-    output_path.parent.mkdir(parents=True, exist_ok=True)
+    base_output_path = Path(cfg["output_path"])
+    base_output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+    output_path = base_output_path.with_name(
+        f"{base_output_path.stem}_{timestamp}{base_output_path.suffix}"
+    )
 
     with output_path.open("w") as f:
         json.dump(results, f, indent=4)

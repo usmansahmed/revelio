@@ -23,7 +23,7 @@
 
     "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
 
-    "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_class19_upft1_ablation.json",
+    "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_upft1_ablation.json",
 
     "min_purity": 0.8,
     "min_valid": 10,
