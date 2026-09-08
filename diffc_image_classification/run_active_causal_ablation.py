@@ -1085,14 +1085,8 @@ def main():
                 batch_size_actual
             )
 
-            print(
-                f"Batch {batch_idx}: "
-                f"target_counts="
-                f"{[
-                    x['number_target_neurons_ablated']
-                    for x in batch_interventions
-                ]}"
-            )
+            target_counts = [x["number_target_neurons_ablated"] for x in batch_interventions]
+            print(f"Batch {batch_idx}: " f"target_counts={target_counts}")
 
     finalized_metrics = {
         name: finalize_metrics(
