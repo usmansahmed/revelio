@@ -1040,6 +1040,33 @@ def main():
                 targeted_logit = float(logits_target[i, label].item())
                 random_logit = float(logits_random[i, label].item())
 
+                # Find the strongest competing class separately for each condition.
+                competitor_mask = torch.ones(
+                    logits_original.size(1),
+                    dtype=torch.bool,
+                    device=logits_original.device,
+                )
+                competitor_mask[label] = False
+
+                original_competing_logit = float(
+                    logits_original[i, competitor_mask].max().item()
+                )
+
+                targeted_competing_logit = float(
+                    logits_target[i, competitor_mask].max().item()
+                )
+
+                random_competing_logit = float(
+                    logits_random[i, competitor_mask].max().item()
+                )
+
+                original_margin = original_logit - original_competing_logit
+                targeted_margin = targeted_logit - targeted_competing_logit
+                random_margin = random_logit - random_competing_logit
+
+                targeted_margin_drop = original_margin - targeted_margin
+                random_margin_drop = original_margin - random_margin
+
                 targeted_logit_drop = original_logit - targeted_logit
                 random_logit_drop = original_logit - random_logit
 
@@ -1093,6 +1120,12 @@ def main():
                     "targeted_logit_drop": targeted_logit_drop,
                     "random_logit_drop": random_logit_drop,
                     "logit_drop_difference": targeted_logit_drop - random_logit_drop,
+                    "original_margin": original_margin,
+                    "targeted_margin": targeted_margin,
+                    "random_margin": random_margin,
+                    "targeted_margin_drop": targeted_margin_drop,
+                    "random_margin_drop": random_margin_drop,
+                    "margin_drop_difference": targeted_margin_drop - random_margin_drop,
                 })
 
             sample_offset += (
@@ -1156,6 +1189,27 @@ def main():
             "number_target_neurons_ablated"
         ] > 0
     ]
+
+    if treated_images:
+        margin_differences = [
+            row["targeted_margin_drop"] - row["random_margin_drop"]
+            for row in treated_images
+        ]
+
+        mean_margin_difference = sum(margin_differences) / len(margin_differences)
+        median_margin_difference = median(margin_differences)
+
+        fraction_targeted_margin_greater = (
+            sum(
+                row["targeted_margin_drop"] > row["random_margin_drop"]
+                for row in treated_images
+            )
+            / len(treated_images)
+        )
+    else:
+        mean_margin_difference = 0.0
+        median_margin_difference = 0.0
+        fraction_targeted_margin_greater = 0.0
 
     if treated_images:
         logit_differences = [
@@ -1288,6 +1342,9 @@ def main():
             "mean_targeted_minus_random_logit_drop": mean_logit_difference,
             "median_targeted_minus_random_logit_drop": median_logit_difference,
             "fraction_targeted_drop_greater_than_random": fraction_targeted_greater,
+            "mean_targeted_minus_random_margin_drop": mean_margin_difference,
+            "median_targeted_minus_random_margin_drop": median_margin_difference,
+            "fraction_targeted_margin_drop_greater_than_random": fraction_targeted_margin_greater,
         },
 
         "top_target_ablated_features":
