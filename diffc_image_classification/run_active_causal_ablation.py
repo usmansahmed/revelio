@@ -4,6 +4,7 @@ import random
 import sys
 from datetime import datetime
 from pathlib import Path
+from statistics import median
 
 import pandas as pd
 import torch
@@ -1035,6 +1036,13 @@ def main():
                     ].item()
                 )
 
+                original_logit = float(logits_original[i, label].item())
+                targeted_logit = float(logits_target[i, label].item())
+                random_logit = float(logits_random[i, label].item())
+
+                targeted_logit_drop = original_logit - targeted_logit
+                random_logit_drop = original_logit - random_logit
+
                 intervention = (
                     batch_interventions[i]
                 )
@@ -1079,6 +1087,12 @@ def main():
                         intervention[
                             "sum_target_activation"
                         ],
+                    "original_true_logit": original_logit,
+                    "targeted_true_logit": targeted_logit,
+                    "random_true_logit": random_logit,
+                    "targeted_logit_drop": targeted_logit_drop,
+                    "random_logit_drop": random_logit_drop,
+                    "logit_drop_difference": targeted_logit_drop - random_logit_drop,
                 })
 
             sample_offset += (
@@ -1142,6 +1156,27 @@ def main():
             "number_target_neurons_ablated"
         ] > 0
     ]
+
+    if treated_images:
+        logit_differences = [
+            row["targeted_logit_drop"] - row["random_logit_drop"]
+            for row in treated_images
+        ]
+
+        mean_logit_difference = sum(logit_differences) / len(logit_differences)
+        median_logit_difference = median(logit_differences)
+
+        fraction_targeted_greater = (
+            sum(
+                row["targeted_logit_drop"] > row["random_logit_drop"]
+                for row in treated_images
+            )
+            / len(treated_images)
+        )
+    else:
+        mean_logit_difference = 0.0
+        median_logit_difference = 0.0
+        fraction_targeted_greater = 0.0
 
     if treated_images:
         treated_target_drop = (
@@ -1250,6 +1285,9 @@ def main():
             "targeted_minus_random_drop":
                 treated_target_drop
                 - treated_random_drop,
+            "mean_targeted_minus_random_logit_drop": mean_logit_difference,
+            "median_targeted_minus_random_logit_drop": median_logit_difference,
+            "fraction_targeted_drop_greater_than_random": fraction_targeted_greater,
         },
 
         "top_target_ablated_features":
