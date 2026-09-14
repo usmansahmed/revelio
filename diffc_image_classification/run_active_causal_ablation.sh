@@ -3,7 +3,7 @@
 #SBATCH --partition=a100
 #SBATCH --gres=gpu:a100:1
 #SBATCH --cpus-per-task=4
-#SBATCH --time=01:00:00
+#SBATCH --time=00:05:00
 #SBATCH --output=logs/active_causal_%j.out
 #SBATCH --error=logs/active_causal_%j.err
 

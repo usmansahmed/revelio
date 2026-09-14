@@ -30,5 +30,5 @@ export PYTHONUNBUFFERED=1
 
 cd "$PROJECT_DIR"
 
-python run_combined_active_causal_ablation.py \
+python run_combined_causal_ablation.py \
     --config active_causal_ablation_config.json
