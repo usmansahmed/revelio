@@ -33,7 +33,7 @@
     "random_seed": 42,
     "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
     "bootstrap_samples": 10000,
-    "target_classes": [15, 18, 33, 35, 36],
+    "target_classes": "all",
     "amplification_factor": 1.5,
     "max_amplify_per_image": 5
 }
