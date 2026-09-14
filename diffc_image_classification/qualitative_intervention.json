@@ -1,0 +1,39 @@
+{
+    "work_dir": "/home/woody/rlvl/rlvl172v",
+    "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+    "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+
+    "dataset_flag": "timm/oxford-iiit-pet",
+    "num_classes": 37,
+    "split": "test",
+
+    "model_name": "runwayml/stable-diffusion-v1-5",
+    "diffusion_timestep": 25,
+    "diffusion_layer": "up_ft:1",
+    "input_channels": 1280,
+    "dropout_rate": 0.0,
+    "prompt_type": "empty",
+    "pooling_strategy": "GAP",
+    "diffusion_step_type": "onestep",
+
+    "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+    "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
+    "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+
+    "save_dir": "/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug",
+
+    "target_class": 18,
+    "source_class": 25,
+    "source_indices": [],
+    "max_source_images": 8,
+
+    "min_purity": 0.8,
+    "min_valid": 10,
+    "active_feature_ranking": "purity_actual_activation",
+
+    "max_modify_per_image": 5,
+    "amplification_factor": 2.0,
+    "insertion_value_scale": 1.0,
+
+    "random_seed": 42
+}
