@@ -619,6 +619,7 @@ def main():
         }
 
         grid_images = [source_vis]
+        condition_images = {}
 
         for condition in conditions:
             if condition == "baseline":
@@ -645,14 +646,64 @@ def main():
                 hook_info = hook.info
 
             recon = decode_latent(pipe, x0)[0].float().cpu()
+            condition_images[condition] = recon
             save_tensor_image(recon, item_dir / f"{condition}.png")
             grid_images.append(recon)
             image_summary["conditions"][condition] = hook_info
 
-        baseline = grid_images[1]
+        baseline = condition_images["baseline"]
+
         image_summary["baseline_pixel_mse_vs_source"] = float(
             torch.mean((baseline - source_vis) ** 2).item()
         )
+
+        target_insertion = condition_images["target_insertion"]
+        control_insertion = condition_images["control_insertion"]
+
+        target_diff = torch.abs(target_insertion - baseline)
+        control_diff = torch.abs(control_insertion - baseline)
+
+        save_tensor_image(
+            target_diff,
+            item_dir / "target_insertion_diff.png"
+        )
+
+        save_tensor_image(
+            control_diff,
+            item_dir / "control_insertion_diff.png"
+        )
+
+        # Magnified versions for easier visual inspection
+        save_tensor_image(
+            torch.clamp(target_diff * 10.0, 0, 1),
+            item_dir / "target_insertion_diff_x10.png"
+        )
+
+        save_tensor_image(
+            torch.clamp(control_diff * 10.0, 0, 1),
+            item_dir / "control_insertion_diff_x10.png"
+        )
+
+        target_mae = torch.mean(target_diff).item()
+        target_mse = torch.mean((target_insertion - baseline) ** 2).item()
+
+        control_mae = torch.mean(control_diff).item()
+        control_mse = torch.mean((control_insertion - baseline) ** 2).item()
+
+        print(
+            f"Target insertion vs baseline: "
+            f"MAE={target_mae:.8f}, MSE={target_mse:.8f}"
+        )
+
+        print(
+            f"Control insertion vs baseline: "
+            f"MAE={control_mae:.8f}, MSE={control_mse:.8f}"
+        )
+
+        image_summary["target_insertion_pixel_mae"] = target_mae
+        image_summary["target_insertion_pixel_mse"] = target_mse
+        image_summary["control_insertion_pixel_mae"] = control_mae
+        image_summary["control_insertion_pixel_mse"] = control_mse
 
         grid = make_grid(grid_images, nrow=len(grid_images), padding=2)
         save_tensor_image(grid, item_dir / "grid.png")
