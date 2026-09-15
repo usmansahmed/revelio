@@ -24,8 +24,8 @@
 
     "target_class": 18,
     "source_class": 25,
-    "source_indices": [],
-    "max_source_images": 8,
+    "source_indices": [1],
+    "max_source_images": 1,
 
     "min_purity": 0.8,
     "min_valid": 10,
