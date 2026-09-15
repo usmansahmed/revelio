@@ -276,27 +276,32 @@ def make_noisy_latents(sd_model, images, timestep, seed):
     return latents, noise, latents_noisy
 
 
-def predict_x0(sd_model, latents_noisy, prompt_embeds, timestep, hook_handle=None):
+def predict_x0(sd_model, latents_noisy, prompt_embeds, timestep):
     t = torch.tensor([timestep], dtype=torch.long, device=latents_noisy.device)
 
     with torch.no_grad():
         unet_out = sd_model.unet(
             latents_noisy,
             t,
+            up_ft_indices=[len(sd_model.unet.up_blocks) - 1],
             encoder_hidden_states=prompt_embeds,
         )
 
-    noise_pred = unet_out.sample if hasattr(unet_out, "sample") else unet_out[0]
+    noise_pred = unet_out["sample"]
 
     alphas_cumprod = sd_model.scheduler.alphas_cumprod.to(
         device=latents_noisy.device,
         dtype=latents_noisy.dtype,
     )
+
     alpha_t = alphas_cumprod[timestep]
     sqrt_alpha_t = alpha_t.sqrt().view(1, 1, 1, 1)
     sqrt_one_minus_alpha_t = (1.0 - alpha_t).sqrt().view(1, 1, 1, 1)
 
-    x0 = (latents_noisy - sqrt_one_minus_alpha_t * noise_pred) / sqrt_alpha_t
+    x0 = (
+        latents_noisy - sqrt_one_minus_alpha_t * noise_pred
+    ) / sqrt_alpha_t
+
     return x0
 
 
@@ -397,7 +402,15 @@ def main():
     model = ImageClassifer(diffc_config).to(device)
     model.eval()
 
-    sd_model = model.feature_extractor.feature_model
+    sd_model = model.feature_model
+    from diffusers import AutoencoderKL
+    vae_decoder = AutoencoderKL.from_pretrained(
+        cfg["model_name"],
+        subfolder="vae",
+        torch_dtype=sd_model.dtype
+    ).to(device)
+
+    vae_decoder.eval()
     hook_module = resolve_hook_module(sd_model.unet, cfg["diffusion_layer"])
 
     out_dir = Path(cfg["save_dir"])
@@ -478,7 +491,7 @@ def main():
                 selected_ids = intervention.selected_ids
                 sum_selected_activation = intervention.sum_selected_activation
 
-            recon_img = decode_latents(sd_model.vae, x0)[0].detach().cpu()
+            recon_img = decode_latents(vae_decoder, x0)[0].detach().cpu()
             tensor_to_png(recon_img, item_dir / f"{mode}.png")
             saved_tensors.append(recon_img)
 
