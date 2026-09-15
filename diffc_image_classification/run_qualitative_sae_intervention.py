@@ -520,6 +520,7 @@ def main():
     # We only use Revelio's dataset helper here. The diffusion model itself is a normal
     # Stable Diffusion pipeline, not Revelio's feature-extraction UNet wrapper.
     sys.path.insert(0, cfg["diffc_dir"])
+    sys.path.insert(1, cfg["sd_ksae_dir"])
     from constants import clip_transforms, diffusion_transformers_val
     from helpers.dataset import HuggingFaceImageDataset, load_huggingface_dataset
 
