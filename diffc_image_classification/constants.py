@@ -16,6 +16,7 @@ model_base_dict = {
     "stabilityai/stable-diffusion-xl-base-1.0": "dit",
     "facebook/DiT-XL-2-256": "dit",
     "facebook/DiT-XL-2-512": "dit",
+    "sd2-community/stable-diffusion-2-1": "diffusion",
 }  # to instantiate the FeatureExtractor class in the main
 
 
