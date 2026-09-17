@@ -39,6 +39,18 @@ echo "Starting up_ft:1 training"
 
 nvidia-smi
 
-python smoke_test_dit.py
+python train.py \
+  --dataset_flag "timm/oxford-iiit-pet" \
+  --output_dir "$WORK/revelio/DiffC_outputs/" \
+  --model_name "facebook/DiT-XL-2-512" \
+  --diffusion_timestep 25 \
+  --diffusion_layer "14" \
+  --learning_rate 1e-4 \
+  --num_epochs 90 \
+  --batch_size 16 \
+  --num_classes 37 \
+  --prompt_type "empty" \
+  --pooling_strategy "GAP" \
+  --dropout_rate 0.0
 
 echo "up_ft:1 training finished"
