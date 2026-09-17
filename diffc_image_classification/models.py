@@ -159,8 +159,10 @@ class DiTClassifier_V4(nn.Module):
     def forward(self, x):
         # Input: [batch_size, H*W, 1152]
 
-        # reshape to [batch_size, 1152, H, W]
-        x = x.view(x.size(0), 1152, 32, 32)
+        # Tokens are row-major spatial positions; transpose channels before reshape.
+        if x.ndim != 3 or x.shape[1:] != (1024, 1152):
+            raise ValueError(f"Expected DiT tokens [B, 1024, 1152], got {tuple(x.shape)}")
+        x = x.transpose(1, 2).reshape(x.shape[0], 1152, 32, 32)
 
         x = self.input_bn(x)  # Normalize input features from another network
 
@@ -219,7 +221,7 @@ class ImageClassifier_DiT(nn.Module):
 
         # Initialize classifier
         self.classifier = DiTClassifier_V4(
-            input_features=1152,
+            input_features=self.config["input_channels"],
             num_classes=self.config["num_classes"],
             dropout_rate=self.config["dropout_rate"],
         )
@@ -237,14 +239,12 @@ class ImageClassifier_DiT(nn.Module):
             batch_images, prompt_embs, time_step
         )
 
-        # If no specific index is given, return the full feature map for the selected layer
-        if self.idx is None:
-            return image_features[:, int(self.layer), :]
-
-        # Return the feature at the specific index within the selected layer
-        return image_features[:, int(self.layer), :, self.idx]
+        # DiT tower returns only the selected block, avoiding an all-layer stack.
+        if image_features.ndim != 3:
+            raise ValueError(f"Expected selected DiT block [B, N, C], got {tuple(image_features.shape)}")
+        return image_features
 
     def forward(self, batch_images, prompt_embs, time_step):
-        # Extract features from the specific layer
+        self.feature_model.eval()  # Keep the frozen DiT in evaluation mode.
         features = self.get_features(batch_images, prompt_embs, time_step)
         return self.classifier(features)

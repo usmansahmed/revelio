@@ -19,7 +19,7 @@ from constants import (
     diffusion_transformers_train,
     clip_transforms,
 )
-from models import ImageClassifer
+from models import ImageClassifer, ImageClassifier_DiT
 from feature_models.clip_infer import CLIPPromptSelector
 from helpers.prompt_dict import prompt_dict
 
@@ -196,7 +196,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--diffusion_layer",
         type=str,
-        choices=["bottleneck:0", "up_ft:0", "up_ft:1", "up_ft:2"],
+        choices=["bottleneck:0", "up_ft:0", "up_ft:1", "up_ft:2", "14"],
         required=True,
     )
     parser.add_argument(
@@ -316,16 +316,23 @@ if __name__ == "__main__":
     config["diffusion_step_type"] = "onestep"
     config["device"] = device
 
-    sample_feature = get_sample_feature(train_dataset[0][0], config)
-    input_channels = sample_feature.shape[1]
+    is_dit = config["feature_model"] == "dit"
+    if is_dit:
+        # DiT-XL/2-512 block features: [batch, 1024 tokens, 1152 channels].
+        # Avoid loading a second DiT checkpoint just to infer this dimension.
+        input_channels = 1152
+        logger.info("DiT feature shape expected: [batch, 1024, 1152]")
+    else:
+        sample_feature = get_sample_feature(train_dataset[0][0], config)
+        input_channels = sample_feature.shape[1]
+        logger.info(f"Sample feature shape: {sample_feature.shape}")
+
     config["input_channels"] = input_channels
     config["num_classes"] = args.num_classes
     config["dropout_rate"] = args.dropout_rate
 
-    logger.info(f"Sample feature shape: {sample_feature.shape}")
-
     logger.info("Setting up model...")
-    model = ImageClassifer(config)
+    model = ImageClassifier_DiT(config) if is_dit else ImageClassifer(config)
     model.to(device)
     logger.info("")
 

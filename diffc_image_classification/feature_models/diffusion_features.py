@@ -180,8 +180,9 @@ class MyDiTTransformer2DModel(DiTTransformer2DModel):
 
         # hidden_states_list.append(hidden_states)
 
-        # 2. Blocks
-        for block in self.transformer_blocks:
+        # 2. Blocks. When a block is requested, stop there to save GPU memory.
+        selected_block = getattr(self, "feature_block_index", None)
+        for block_idx, block in enumerate(self.transformer_blocks):
             if self.training and self.gradient_checkpointing:
 
                 def create_custom_forward(module, return_dict=None):
@@ -218,7 +219,11 @@ class MyDiTTransformer2DModel(DiTTransformer2DModel):
                     class_labels=class_labels,
                 )
 
-            hidden_states_list.append(hidden_states)
+            if selected_block is not None:
+                if block_idx == selected_block:
+                    return hidden_states  # [batch, tokens, channels]
+            else:
+                hidden_states_list.append(hidden_states)
 
         hidden_states_cat = torch.stack(hidden_states_list, dim=0)
         hidden_states_cat = hidden_states_cat.permute(
@@ -448,8 +453,10 @@ class OneStepDiTPipeline(DiTPipeline):
         scale_factor = self.vae.config.scaling_factor
         latents = scale_factor * self.vae.encode(img_tensor).latent_dist.mode()
 
-        t = torch.tensor(t, dtype=torch.long, device=device)
+        t = torch.as_tensor(t, dtype=torch.long, device=device)
 
+        # Preserve the released Revelio DiT protocol: timestep conditioning
+        # without adding noise to the VAE latents.
         dit_output = self.transformer(latents, t, class_labels=class_labels)
         return dit_output
 
@@ -492,8 +499,8 @@ class DiTTower(BaseVisionTower):
 
         # images = images.to(device="cuda")
 
-        time_step = torch.tensor([time_step], dtype=torch.long, device=images.device)
-        class_labels = torch.tensor([1000], device=images.device).repeat(batch_size)
+        time_step = torch.full((batch_size,), int(time_step), dtype=torch.long, device=images.device)
+        class_labels = torch.full((batch_size,), 1000, dtype=torch.long, device=images.device)
 
         # print(images.shape, class_labels.shape)
         # exit()
@@ -518,6 +525,10 @@ class DiTTower(BaseVisionTower):
             sd_id, subfolder="transformer"
         )
         self.transformer = self.dit_pipe.transformer
+        block_idx = int(self._config["diffusion_layer"])
+        if not 0 <= block_idx < len(self.transformer.transformer_blocks):
+            raise ValueError(f"Invalid DiT block index: {block_idx}")
+        self.transformer.feature_block_index = block_idx
         self.vae = self.dit_pipe.vae
         self.scheduler = self.dit_pipe.scheduler
         self.model = self.dit_pipe
