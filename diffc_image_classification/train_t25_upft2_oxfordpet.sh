@@ -13,7 +13,7 @@ WORK=/home/woody/rlvl/rlvl172v
 PROJECT_DIR="$WORK/revelio/diffc_image_classification"
 
 mkdir -p "$PROJECT_DIR/logs"
-mkdir -p "$WORK/revelio/DiffC_outputs"
+mkdir -p "$WORK/revelio/DiffC_outputs/epoch30"
 
 module load python
 conda activate "$WORK/conda_envs/revelio"
@@ -41,12 +41,12 @@ nvidia-smi
 
 python train.py \
     --dataset_flag "timm/oxford-iiit-pet" \
-    --output_dir "$WORK/revelio/DiffC_outputs" \
+    --output_dir "$WORK/revelio/DiffC_outputs/epoch30" \
     --model_name "runwayml/stable-diffusion-v1-5" \
     --diffusion_timestep 25 \
     --diffusion_layer "up_ft:2" \
     --learning_rate 1e-4 \
-    --num_epochs 90 \
+    --num_epochs 30 \
     --batch_size 16 \
     --num_classes 37 \
     --prompt_type "empty" \
