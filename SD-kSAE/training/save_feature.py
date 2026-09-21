@@ -86,8 +86,9 @@ def save_features(
         
         if not os.path.exists(directory):
             os.makedirs(directory)
-            
-        max_activating_image_label_indices = torch.tensor([dataset[int(index)]['label'] for index in tqdm(max_activating_image_indices.flatten(), desc = "getting image labels")])
+
+        label_key = "variant" if k_sparse_autoencoder.cfg.dataset_name == "dpdl-benchmark/fgvc_aircraft" else "label"
+        max_activating_image_label_indices = torch.tensor([dataset[int(index)][label_key] for index in tqdm(max_activating_image_indices.flatten(), desc = "getting image labels")])
         max_activating_image_label_indices = max_activating_image_label_indices.view(max_activating_image_indices.shape)
         torch.save(max_activating_image_indices, f'{directory}/max_activating_image_indices.pt')
         torch.save(max_activating_image_values, f'{directory}/max_activating_image_values.pt')
