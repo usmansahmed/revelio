@@ -2,7 +2,7 @@
 #SBATCH --job-name=train_t25_upft0_aircraft
 #SBATCH --gres=gpu:a100:1
 #SBATCH --partition=a100
-#SBATCH --time=08:00:00
+#SBATCH --time=16:00:00
 #SBATCH --export=NONE
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
