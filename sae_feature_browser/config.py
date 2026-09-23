@@ -65,14 +65,43 @@ BASE_FEATURE_DIR = Path(
 #     },
 # }
 
+# DATASET_LAYER_DIRS = {
+#     "Oxford-IIIT Pet": {
+#         "up_ft1": (
+#             BASE_FEATURE_DIR
+#             / "oxfordpet"
+#             / "SDv1-5"
+#             / "step25_upft1"
+#             / "image512"
+#         )
+#     }
+# }
+
 DATASET_LAYER_DIRS = {
-    "Oxford-IIIT Pet": {
+    "FGVC-Aircraft": {
+        "mid_block": (
+            BASE_FEATURE_DIR
+            / "aircraft"
+            / "SDv1-5"
+            / "step25_mid"
+        ),
+        "up_ft0": (
+            BASE_FEATURE_DIR
+            / "aircraft"
+            / "SDv1-5"
+            / "step25_upft0"
+        ),
         "up_ft1": (
             BASE_FEATURE_DIR
-            / "oxfordpet"
+            / "aircraft"
             / "SDv1-5"
             / "step25_upft1"
-            / "image512"
-        )
-    }
+        ),
+        "up_ft2": (
+            BASE_FEATURE_DIR
+            / "aircraft"
+            / "SDv1-5"
+            / "step25_upft2"
+        ),
+    },
 }
