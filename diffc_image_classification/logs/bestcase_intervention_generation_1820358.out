@@ -1,0 +1,158 @@
+### Starting TaskPrologue of job 1820358 on tg090 at Wed Sep 23 03:49:10 PM CEST 2026
+Running on cores 96-127 with governor ondemand
+Wed Sep 23 15:49:10 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   42C    P0             65W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+Loading dataset...
+Loading k-SAE...
+k-SAE: 81920 features | d_in= 1280 | k= 32
+Reference cache loaded | finite medians: 190 | count>0: 190
+Loading Diff-C + diffusion feature extractor...
+Loaded Diff-C checkpoint epoch: 88
+
+Computing top-10 class statistics from the training set...
+  stats batch 0/460 | images=8
+  stats batch 25/460 | images=208
+  stats batch 50/460 | images=408
+  stats batch 75/460 | images=608
+  stats batch 100/460 | images=808
+  stats batch 125/460 | images=1008
+  stats batch 150/460 | images=1208
+  stats batch 175/460 | images=1408
+  stats batch 200/460 | images=1608
+  stats batch 225/460 | images=1808
+  stats batch 250/460 | images=2008
+  stats batch 275/460 | images=2208
+  stats batch 300/460 | images=2408
+  stats batch 325/460 | images=2608
+  stats batch 350/460 | images=2808
+  stats batch 375/460 | images=3008
+  stats batch 400/460 | images=3208
+  stats batch 425/460 | images=3408
+  stats batch 450/460 | images=3608
+Feature stats complete | features with >=1 valid top activation: 18165 | features with 10: 2561
+
+Eligible class-specific features:
+  00 abyssinian: 0
+  01 american_bulldog: 6
+  02 american_pit_bull_terrier: 0
+  03 basset_hound: 0
+  04 beagle: 0
+  05 bengal: 0
+  06 birman: 0
+  07 bombay: 1
+  08 boxer: 2
+  09 british_shorthair: 6
+  10 chihuahua: 0
+  11 egyptian_mau: 1
+  12 english_cocker_spaniel: 0
+  13 english_setter: 0
+  14 german_shorthaired: 2
+  15 great_pyrenees: 15
+  16 havanese: 1
+  17 japanese_chin: 1
+  18 keeshond: 32
+  19 leonberger: 12
+  20 maine_coon: 1
+  21 miniature_pinscher: 0
+  22 newfoundland: 12
+  23 persian: 11
+  24 pomeranian: 3
+  25 pug: 2
+  26 ragdoll: 1
+  27 russian_blue: 1
+  28 saint_bernard: 0
+  29 samoyed: 7
+  30 scottish_terrier: 0
+  31 shiba_inu: 3
+  32 siamese: 0
+  33 sphynx: 15
+  34 staffordshire_bull_terrier: 1
+  35 wheaten_terrier: 20
+  36 yorkshire_terrier: 19
+Control pool: 175
+
+Searching for strong classifier-level intervention cases...
+  scanned=1/3669 | rows=92 | per-target valid images=0..1
+  scanned=11/3669 | rows=932 | per-target valid images=0..10
+  scanned=21/3669 | rows=1480 | per-target valid images=0..16
+  scanned=41/3669 | rows=3020 | per-target valid images=0..33
+  scanned=51/3669 | rows=3812 | per-target valid images=0..42
+  scanned=61/3669 | rows=4620 | per-target valid images=0..51
+  scanned=71/3669 | rows=5356 | per-target valid images=0..58
+  scanned=81/3669 | rows=6028 | per-target valid images=0..64
+  scanned=91/3669 | rows=6132 | per-target valid images=0..64
+
+Best cases:
+          true_label_name  target_class_name  image_index  insertion_scale  target_flip  control_flip  original_target_margin  targeted_target_margin  control_target_margin  target_margin_increase_difference
+         scottish_terrier  yorkshire_terrier         2614              2.0         True         False               -7.944920                2.574335              -9.452497                          12.026831
+                   bombay       newfoundland          165              2.0         True         False               -9.233243                1.388171              -8.829247                          10.217419
+             russian_blue  yorkshire_terrier         2518              2.0         True         False               -8.868816                1.011343              -8.734290                           9.745633
+            saint_bernard           keeshond         1411              2.0         True         False               -5.376259                0.699139              -6.955343                           7.654481
+             basset_hound  british_shorthair          659              2.0         True         False               -5.575682                0.376471              -5.735681                           6.112152
+             basset_hound   american_bulldog          659              2.0         True         False               -4.587412                0.217577              -3.975067                           4.192643
+            saint_bernard     great_pyrenees         1411              2.0         True         False               -3.303595                1.109378              -2.451011                           3.560389
+            saint_bernard         leonberger         1411              2.0         True         False               -3.327914                0.472706              -2.848290                           3.320996
+american_pit_bull_terrier german_shorthaired         2278              2.0         True         False               -3.328198                0.077207              -3.054859                           3.132066
+             basset_hound    wheaten_terrier          659              2.0         True         False               -4.303300                1.551700              -0.776462                           2.328161
+
+Saved classifier search results:
+  /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/best_case_generation/all_candidate_interventions.json
+  /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/best_case_generation/best_cases.csv
+  /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/best_case_generation/best_cases.json
+
+Loading Stable Diffusion pipeline for qualitative generation...
+Generated 1/10 | idx=2614 scottish_terrier -> yorkshire_terrier | target_flip=True | control_flip=False
+Generated 2/10 | idx=165 bombay -> newfoundland | target_flip=True | control_flip=False
+Generated 3/10 | idx=2518 russian_blue -> yorkshire_terrier | target_flip=True | control_flip=False
+Generated 4/10 | idx=1411 saint_bernard -> keeshond | target_flip=True | control_flip=False
+Generated 5/10 | idx=659 basset_hound -> british_shorthair | target_flip=True | control_flip=False
+Generated 6/10 | idx=659 basset_hound -> american_bulldog | target_flip=True | control_flip=False
+Generated 7/10 | idx=1411 saint_bernard -> great_pyrenees | target_flip=True | control_flip=False
+Generated 8/10 | idx=1411 saint_bernard -> leonberger | target_flip=True | control_flip=False
+Generated 9/10 | idx=2278 american_pit_bull_terrier -> german_shorthaired | target_flip=True | control_flip=False
+Generated 10/10 | idx=659 basset_hound -> wheaten_terrier | target_flip=True | control_flip=False
+
+Done. Outputs saved under: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/best_case_generation
+=== JOB_STATISTICS ===
+=== current date     : Wed Sep 23 04:00:05 PM CEST 2026
+= Job-ID             : 1820358 on tinygpu
+= Job-Name           : bestcase_intervention_generation
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/bestcase_intervention_generation.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 00:30:00
+= Elapsed runtime    : 00:10:56
+= Total RAM usage    : 13.2 GiB of requested  GiB (%)   
+= Node list          : tg090
+= Subm/Elig/Start/End: 2026-09-23T15:39:28 / 2026-09-23T15:39:28 / 2026-09-23T15:49:09 / 2026-09-23T16:00:05
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           691.5G  1000.0G  1500.0G        N/A   1,570K   5,000K   7,500K        N/A    
+    /home/hpc              37.5G   104.9G   209.7G        N/A   3,235      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:C1:00.0, 2107577, 76 %, 25 %, 16060 MiB, 642056 ms

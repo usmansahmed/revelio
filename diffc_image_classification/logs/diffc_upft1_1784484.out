@@ -1,0 +1,71 @@
+### Starting TaskPrologue of job 1784484 on tg097 at Fri Aug 21 01:09:16 AM CEST 2026
+Running on cores 64-95 with governor ondemand
+Fri Aug 21 01:09:16 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.43.02              KMD Version: 610.43.02     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   41C    P0             55W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Job ID: 1784484
+Node: tg097
+Python: /home/woody/rlvl/rlvl172v/conda_envs/revelio/bin/python
+Starting up_ft:1 training
+Fri Aug 21 01:09:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.43.02              KMD Version: 610.43.02     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   41C    P0             69W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+up_ft:1 training finished
+=== JOB_STATISTICS ===
+=== current date     : Fri Aug 21 02:49:22 PM CEST 2026
+= Job-ID             : 1784484 on tinygpu
+= Job-Name           : diffc_caltech_upft1
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/train_t25_upft1_caltech.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 16:00:00
+= Elapsed runtime    : 13:40:09
+= Total RAM usage    : 10.6 GiB of requested  GiB (%)   
+= Node list          : tg097
+= Subm/Elig/Start/End: 2026-08-20T11:32:42 / 2026-08-20T11:32:42 / 2026-08-21T01:09:13 / 2026-08-21T14:49:22
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           299.1G  1000.0G  1500.0G        N/A   1,145K   5,000K   7,500K        N/A    
+    /home/hpc              25.2G   104.9G   209.7G        N/A   3,221      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 3570333, 84 %, 34 %, 37034 MiB, 49189411 ms

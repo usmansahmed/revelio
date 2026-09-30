@@ -1,0 +1,50 @@
+### Starting TaskPrologue of job 1812557 on tg090 at Mon Sep 14 02:32:09 PM CEST 2026
+Running on cores 0-31 with governor ondemand
+Mon Sep 14 14:32:09 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+| N/A   40C    P0             55W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+k-SAE k: 32 | n_features: 81920
+Loaded DiffC checkpoint epoch: 88
+Loading train/test datasets...
+=== JOB_STATISTICS ===
+=== current date     : Mon Sep 14 02:32:58 PM CEST 2026
+= Job-ID             : 1812557 on tinygpu
+= Job-Name           : active_causal_sufficiency
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_causal_sufficiency_insertion.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:53
+= Total RAM usage    : 9.5 GiB of requested  GiB (%)   
+= Node list          : tg090
+= Subm/Elig/Start/End: 2026-09-14T14:31:47 / 2026-09-14T14:31:47 / 2026-09-14T14:32:05 / 2026-09-14T14:32:58
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:01:00.0, 2692743, 1 %, 0 %, 8860 MiB, 35418 ms

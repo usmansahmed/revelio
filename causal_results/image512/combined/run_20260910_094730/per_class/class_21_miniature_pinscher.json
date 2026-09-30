@@ -1,0 +1,35 @@
+{
+  "class_id": 21,
+  "class_name": "miniature_pinscher",
+  "selected_feature_count": 0,
+  "selected_feature_ids": [],
+  "metrics": {
+    "original": {
+      "accuracy": null,
+      "total": 64
+    },
+    "active_targeted_ablation": {
+      "accuracy": null
+    },
+    "active_random_ablation": {
+      "accuracy": null
+    }
+  },
+  "treated_images_summary": {
+    "total_treated_images": 0,
+    "fraction_treated": 0.0,
+    "targeted_minus_random_drop": null,
+    "mean_targeted_minus_random_logit_drop": null,
+    "median_targeted_minus_random_logit_drop": null,
+    "mean_targeted_minus_random_margin_drop": null,
+    "median_targeted_minus_random_margin_drop": null,
+    "ci_95_low": null,
+    "ci_95_high": null,
+    "positive_images": 0,
+    "negative_images": 0,
+    "fraction_targeted_margin_drop_greater_than_random": null,
+    "wilcoxon_p": null,
+    "sign_test_p": null
+  },
+  "per_image_results": []
+}

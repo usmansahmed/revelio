@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 2614,
+    "image_seed": 2656,
+    "true_label": 30,
+    "true_label_name": "scottish_terrier",
+    "target_class": 36,
+    "target_class_name": "yorkshire_terrier",
+    "insertion_scale": 2.0,
+    "original_pred": 30,
+    "original_pred_name": "scottish_terrier",
+    "target_neuron_ids": [
+      46602,
+      25022,
+      45935
+    ],
+    "control_neuron_ids": [
+      43575,
+      75509,
+      81345
+    ],
+    "removed_source_neuron_ids": [
+      46525,
+      59904,
+      80875
+    ],
+    "target_inserted_values": [
+      19.276351928710938,
+      17.780864715576172,
+      17.564239501953125
+    ],
+    "control_inserted_values": [
+      20.57680892944336,
+      17.986858367919922,
+      17.464811325073242
+    ],
+    "removed_source_values": [
+      1.1737624406814575,
+      1.2072367668151855,
+      1.2178782224655151
+    ],
+    "targeted_pred": 36,
+    "targeted_pred_name": "yorkshire_terrier",
+    "control_pred": 30,
+    "control_pred_name": "scottish_terrier",
+    "original_target_margin": -7.944919586181641,
+    "targeted_target_margin": 2.5743346214294434,
+    "control_target_margin": -9.452496528625488,
+    "targeted_target_margin_increase": 10.519254207611084,
+    "control_target_margin_increase": -1.5075769424438477,
+    "target_margin_increase_difference": 12.026831150054932,
+    "original_target_logit": 1.9924973249435425,
+    "targeted_target_logit": 9.151531219482422,
+    "control_target_logit": 0.4813624918460846,
+    "target_logit_increase_difference": 8.670168727636337,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 30,
+  "source_label_name": "scottish_terrier",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      46602,
+      25022,
+      45935
+    ],
+    "removed_source_neuron_ids": [
+      46525,
+      59904,
+      80875
+    ],
+    "inserted_values": [
+      19.276351928710938,
+      17.780864715576172,
+      17.564239501953125
+    ],
+    "delta_l2": 34.09663009643555
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      43575,
+      75509,
+      81345
+    ],
+    "removed_source_neuron_ids": [
+      46525,
+      59904,
+      80875
+    ],
+    "inserted_values": [
+      20.57680892944336,
+      17.986858367919922,
+      17.464811325073242
+    ],
+    "delta_l2": 32.6750602722168
+  },
+  "target_pixel_mae_vs_baseline": 5.848861110280268e-05,
+  "target_pixel_mse_vs_baseline": 1.8919536159955896e-08,
+  "control_pixel_mae_vs_baseline": 5.7763420045375824e-05,
+  "control_pixel_mse_vs_baseline": 1.8505867060980563e-08
+}

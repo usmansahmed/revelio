@@ -1,0 +1,452 @@
+### Starting TaskPrologue of job 1812439 on tg091 at Mon Sep 14 11:46:37 AM CEST 2026
+Running on cores 96-127 with governor ondemand
+Mon Sep 14 11:46:37 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   33C    P0             51W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+Amplification factor: 1.5
+Loading feature statistics...
+Loading k-SAE...
+k-SAE k: 32
+k-SAE n_features: 81920
+Loading dataset...
+Loading DiffC model...
+Loaded DiffC checkpoint epoch: 88
+
+======================================================================
+Class 0: abyssinian
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 1: american_bulldog
+Selected features: 7 | Test images: 64
+  Batch 0: target_counts=[0, 0, 2, 0, 1, 0, 0, 0]
+  Batch 1: target_counts=[1, 5, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 5, 0, 0, 1, 0, 0, 1]
+  Batch 3: target_counts=[0, 0, 0, 1, 2, 4, 1, 5]
+  Batch 4: target_counts=[0, 0, 0, 5, 0, 0, 0, 1]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 5, 5, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 5, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 5, 0, 0, 1, 0]
+
+======================================================================
+Class 2: american_pit_bull_terrier
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 3: basset_hound
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 4: beagle
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 5: bengal
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 6: birman
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 7: bombay
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[1, 0, 1, 0, 1, 1, 0, 0]
+  Batch 5: target_counts=[0, 0, 1, 1, 1, 0, 0, 1]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+
+======================================================================
+Class 8: boxer
+Selected features: 2 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 1, 0, 0, 0, 0, 0, 1]
+  Batch 4: target_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 0, 1, 0, 0, 0]
+
+======================================================================
+Class 9: british_shorthair
+Selected features: 6 | Test images: 64
+  Batch 0: target_counts=[0, 4, 2, 3, 1, 1, 0, 0]
+  Batch 1: target_counts=[3, 0, 3, 2, 0, 0, 0, 1]
+  Batch 2: target_counts=[2, 1, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 1, 0, 1, 0, 1, 0]
+  Batch 4: target_counts=[0, 0, 1, 1, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 2, 2, 0, 1, 1, 0, 0]
+  Batch 6: target_counts=[1, 0, 0, 2, 1, 2, 0, 0]
+  Batch 7: target_counts=[1, 0, 2, 0, 1, 0, 0, 4]
+
+======================================================================
+Class 10: chihuahua
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 11: egyptian_mau
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 1, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 1, 0, 0, 0, 1]
+  Batch 2: target_counts=[0, 0, 1, 1, 0, 0, 0, 1]
+  Batch 3: target_counts=[0, 1, 0, 1, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 1, 0, 1, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 12: english_cocker_spaniel
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 13: english_setter
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 14: german_shorthaired
+Selected features: 2 | Test images: 64
+  Batch 0: target_counts=[0, 0, 1, 0, 0, 0, 1, 0]
+  Batch 1: target_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[1, 0, 0, 0, 0, 0, 0, 1]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 6: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 0, 0, 2, 0, 0]
+
+======================================================================
+Class 15: great_pyrenees
+Selected features: 16 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 1, 1, 3, 0]
+  Batch 2: target_counts=[0, 1, 1, 0, 0, 2, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 4: target_counts=[1, 0, 1, 1, 0, 0, 1, 0]
+  Batch 5: target_counts=[3, 0, 0, 0, 0, 0, 3, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 1, 0]
+  Batch 7: target_counts=[0, 0, 1, 1, 2, 1, 0, 1]
+
+======================================================================
+Class 16: havanese
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 1, 0, 1, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+  Batch 7: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 17: japanese_chin
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 18: keeshond
+Selected features: 34 | Test images: 64
+  Batch 0: target_counts=[4, 0, 2, 0, 2, 5, 4, 0]
+  Batch 1: target_counts=[4, 2, 5, 0, 5, 0, 0, 0]
+  Batch 2: target_counts=[1, 1, 1, 0, 1, 4, 0, 5]
+  Batch 3: target_counts=[0, 2, 0, 1, 0, 0, 0, 1]
+  Batch 4: target_counts=[0, 1, 0, 3, 1, 2, 2, 5]
+  Batch 5: target_counts=[5, 0, 0, 5, 0, 4, 0, 1]
+  Batch 6: target_counts=[0, 0, 4, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 2, 4, 0, 2, 1, 0]
+
+======================================================================
+Class 19: leonberger
+Selected features: 13 | Test images: 64
+  Batch 0: target_counts=[0, 2, 0, 5, 0, 0, 0, 5]
+  Batch 1: target_counts=[2, 5, 1, 1, 1, 4, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+  Batch 3: target_counts=[0, 1, 0, 1, 0, 0, 4, 5]
+  Batch 4: target_counts=[0, 0, 1, 0, 0, 0, 1, 0]
+  Batch 5: target_counts=[0, 2, 0, 4, 0, 0, 2, 0]
+  Batch 6: target_counts=[2, 1, 5, 0, 4, 0, 5, 0]
+  Batch 7: target_counts=[0, 3, 0, 0, 1, 0, 0, 0]
+
+======================================================================
+Class 20: maine_coon
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 1, 1, 1, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 1, 0, 0, 1]
+
+======================================================================
+Class 21: miniature_pinscher
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 22: newfoundland
+Selected features: 13 | Test images: 64
+  Batch 0: target_counts=[1, 1, 0, 1, 0, 0, 1, 0]
+  Batch 1: target_counts=[0, 0, 1, 0, 1, 0, 1, 0]
+  Batch 2: target_counts=[1, 1, 2, 1, 0, 0, 0, 1]
+  Batch 3: target_counts=[0, 0, 2, 0, 1, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 1, 0, 0, 0, 1, 0]
+  Batch 5: target_counts=[0, 0, 0, 1, 2, 0, 0, 0]
+  Batch 6: target_counts=[2, 0, 1, 1, 1, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 0, 1, 0, 0, 1]
+
+======================================================================
+Class 23: persian
+Selected features: 11 | Test images: 64
+  Batch 0: target_counts=[4, 1, 1, 3, 4, 1, 2, 0]
+  Batch 1: target_counts=[1, 2, 3, 0, 1, 1, 1, 3]
+  Batch 2: target_counts=[5, 3, 3, 4, 3, 2, 2, 2]
+  Batch 3: target_counts=[1, 4, 4, 0, 0, 3, 1, 3]
+  Batch 4: target_counts=[0, 1, 2, 0, 1, 0, 4, 0]
+  Batch 5: target_counts=[4, 2, 0, 0, 0, 4, 3, 2]
+  Batch 6: target_counts=[3, 5, 0, 5, 3, 0, 1, 5]
+  Batch 7: target_counts=[1, 0, 2, 2, 0, 4, 0, 0]
+
+======================================================================
+Class 24: pomeranian
+Selected features: 3 | Test images: 64
+  Batch 0: target_counts=[0, 1, 0, 2, 1, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 2, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 3]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 25: pug
+Selected features: 2 | Test images: 64
+  Batch 0: target_counts=[0, 2, 1, 0, 1, 0, 0, 1]
+  Batch 1: target_counts=[0, 0, 0, 0, 1, 1, 0, 0]
+  Batch 2: target_counts=[1, 1, 0, 0, 1, 0, 1, 1]
+  Batch 3: target_counts=[0, 1, 1, 0, 1, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 1, 1, 2, 0, 1]
+  Batch 5: target_counts=[0, 1, 0, 1, 0, 0, 1, 1]
+  Batch 6: target_counts=[1, 1, 1, 0, 0, 1, 1, 0]
+  Batch 7: target_counts=[0, 1, 1, 0, 1, 1, 0, 0]
+
+======================================================================
+Class 26: ragdoll
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 27: russian_blue
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 1, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 1, 0, 0, 0, 1, 0]
+  Batch 3: target_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 1]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 28: saint_bernard
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 29: samoyed
+Selected features: 8 | Test images: 64
+  Batch 0: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 2, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[2, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 30: scottish_terrier
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 31: shiba_inu
+Selected features: 4 | Test images: 64
+  Batch 0: target_counts=[2, 0, 0, 0, 0, 0, 1, 0]
+  Batch 1: target_counts=[0, 0, 0, 1, 0, 0, 0, 0]
+  Batch 2: target_counts=[1, 1, 1, 0, 0, 2, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 3]
+  Batch 4: target_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 3, 1, 0, 0, 0, 0]
+
+======================================================================
+Class 32: siamese
+Selected features: 0 | Test images: 64
+Skipping class: no selected features or no test images.
+
+======================================================================
+Class 33: sphynx
+Selected features: 20 | Test images: 64
+  Batch 0: target_counts=[0, 2, 0, 0, 0, 4, 3, 0]
+  Batch 1: target_counts=[1, 0, 0, 3, 1, 0, 3, 1]
+  Batch 2: target_counts=[2, 1, 2, 0, 0, 5, 0, 0]
+  Batch 3: target_counts=[5, 3, 0, 3, 4, 1, 0, 0]
+  Batch 4: target_counts=[0, 5, 1, 0, 0, 0, 2, 0]
+  Batch 5: target_counts=[5, 0, 0, 4, 0, 0, 0, 0]
+  Batch 6: target_counts=[2, 5, 1, 3, 0, 3, 1, 1]
+  Batch 7: target_counts=[3, 5, 0, 2, 5, 5, 5, 4]
+
+======================================================================
+Class 34: staffordshire_bull_terrier
+Selected features: 1 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 4: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 5: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+
+======================================================================
+Class 35: wheaten_terrier
+Selected features: 21 | Test images: 64
+  Batch 0: target_counts=[0, 0, 5, 0, 4, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 3, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 2, 0, 0, 0, 2, 5, 1]
+  Batch 4: target_counts=[0, 1, 0, 0, 0, 1, 2, 1]
+  Batch 5: target_counts=[1, 0, 0, 1, 0, 0, 4, 1]
+  Batch 6: target_counts=[0, 5, 0, 0, 0, 2, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 1, 1, 0, 2, 0]
+
+======================================================================
+Class 36: yorkshire_terrier
+Selected features: 20 | Test images: 64
+  Batch 0: target_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 1, 1, 0, 1, 0, 0, 0]
+  Batch 2: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 1, 0, 0, 0, 0, 1, 1]
+  Batch 4: target_counts=[0, 2, 0, 1, 1, 1, 1, 1]
+  Batch 5: target_counts=[2, 0, 1, 1, 0, 0, 0, 3]
+  Batch 6: target_counts=[0, 0, 1, 1, 1, 0, 0, 1]
+  Batch 7: target_counts=[0, 0, 2, 1, 0, 0, 0, 0]
+
+======================================================================
+ class_id                 class_name  amplification_factor  n_selected_features  n_amplified  mean_margin_difference  median_margin_difference  ci_95_low  ci_95_high  fraction_positive   wilcoxon_p  sign_test_p
+        0                 abyssinian                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        1           american_bulldog                   1.5                    7           20                0.522488                  0.296293   0.309254    0.789339           1.000000 9.536743e-07 9.536743e-07
+        2  american_pit_bull_terrier                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        3               basset_hound                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        4                     beagle                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        5                     bengal                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        6                     birman                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+        7                     bombay                   1.5                    1           10                0.156785                  0.098029   0.091603    0.228286           1.000000 9.765625e-04 9.765625e-04
+        8                      boxer                   1.5                    2            7                0.177913                  0.197657   0.119613    0.227428           1.000000 7.812500e-03 7.812500e-03
+        9          british_shorthair                   1.5                    6           28                0.284173                  0.245189   0.211837    0.366373           0.964286 7.450581e-09 1.080334e-07
+       10                  chihuahua                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       11               egyptian_mau                   1.5                    1           11                0.880643                  0.723192   0.583974    1.223563           1.000000 4.882812e-04 4.882812e-04
+       12     english_cocker_spaniel                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       13             english_setter                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       14         german_shorthaired                   1.5                    2            9                0.443786                  0.311907   0.303589    0.605648           1.000000 1.953125e-03 1.953125e-03
+       15             great_pyrenees                   1.5                   16           20                0.088641                  0.067555   0.047777    0.134505           0.900000 2.927780e-04 2.012253e-04
+       16                   havanese                   1.5                    1            5                0.150624                  0.159264   0.110606    0.177936           1.000000 3.125000e-02 3.125000e-02
+       17              japanese_chin                   1.5                    1            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       18                   keeshond                   1.5                   34           33                0.443255                  0.238014   0.289430    0.609487           0.909091 5.203765e-08 7.005874e-07
+       19                 leonberger                   1.5                   13           26                0.277456                  0.120102   0.162199    0.406449           0.923077 6.407499e-07 5.245209e-06
+       20                 maine_coon                   1.5                    1            5                0.242557                  0.236059   0.103587    0.381527           1.000000 3.125000e-02 3.125000e-02
+       21         miniature_pinscher                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       22               newfoundland                   1.5                   13           25                0.160626                  0.073309   0.100847    0.228780           0.920000 9.834766e-07 9.715557e-06
+       23                    persian                   1.5                   11           47                0.608778                  0.413243   0.461302    0.777347           0.978723 3.552714e-14 3.410605e-13
+       24                 pomeranian                   1.5                    3            6                0.267036                  0.137077   0.022802    0.599386           0.833333 4.687500e-02 1.093750e-01
+       25                        pug                   1.5                    2           31                0.287204                  0.226237   0.214944    0.361714           1.000000 4.656613e-10 4.656613e-10
+       26                    ragdoll                   1.5                    1            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       27               russian_blue                   1.5                    1            6                0.062911                  0.075587  -0.011223    0.139603           0.666667 1.093750e-01 3.437500e-01
+       28              saint_bernard                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       29                    samoyed                   1.5                    8            3                0.216339                  0.178931   0.077750    0.392338           1.000000 1.250000e-01 1.250000e-01
+       30           scottish_terrier                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       31                  shiba_inu                   1.5                    4           12                0.161863                  0.157351   0.113700    0.212871           1.000000 2.441406e-04 2.441406e-04
+       32                    siamese                   1.5                    0            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       33                     sphynx                   1.5                   20           36                0.420149                  0.362302   0.312175    0.546884           0.972222 4.365575e-11 5.384209e-10
+       34 staffordshire_bull_terrier                   1.5                    1            0                     NaN                       NaN        NaN         NaN                NaN          NaN          NaN
+       35            wheaten_terrier                   1.5                   21           21                0.200875                  0.154207   0.102203    0.311419           0.857143 2.551079e-04 7.448196e-04
+       36          yorkshire_terrier                   1.5                   20           24                0.300310                  0.220129   0.202198    0.397720           0.958333 1.192093e-07 1.490116e-06
+
+Saved run to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/amplification/run_20260914_114836_x1.5
+Summary CSV: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/amplification/run_20260914_114836_x1.5/amplification_statistical_summary.csv
+Combined JSON: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/amplification/run_20260914_114836_x1.5/combined_summary.json
+=== JOB_STATISTICS ===
+=== current date     : Mon Sep 14 11:50:30 AM CEST 2026
+= Job-ID             : 1812439 on tinygpu
+= Job-Name           : active_causal_amplification
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_combined_causal_amplification.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:03:54
+= Total RAM usage    : 10.4 GiB of requested  GiB (%)   
+= Node list          : tg091
+= Subm/Elig/Start/End: 2026-09-14T11:46:29 / 2026-09-14T11:46:29 / 2026-09-14T11:46:36 / 2026-09-14T11:50:30
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:C1:00.0, 1601983, 55 %, 21 %, 17118 MiB, 150359 ms

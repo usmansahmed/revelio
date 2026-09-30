@@ -1,0 +1,223 @@
+{
+  "run_timestamp": "20260914_144407",
+  "config": {
+    "work_dir": "/home/woody/rlvl/rlvl172v",
+    "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+    "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+    "dataset_flag": "timm/oxford-iiit-pet",
+    "num_classes": 37,
+    "split": "test",
+    "model_name": "runwayml/stable-diffusion-v1-5",
+    "diffusion_timestep": 25,
+    "diffusion_layer": "up_ft:1",
+    "input_channels": 1280,
+    "dropout_rate": 0.0,
+    "prompt_type": "empty",
+    "pooling_strategy": "GAP",
+    "diffusion_step_type": "onestep",
+    "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+    "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/image512/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+    "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+    "output_dir": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency",
+    "reference_activation_cache": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/reference_activation_medians.pt",
+    "recompute_reference_activations": false,
+    "min_purity": 0.8,
+    "min_valid": 10,
+    "active_feature_ranking": "purity_actual_activation",
+    "max_source_images_per_target": 64,
+    "batch_size": 8,
+    "random_seed": 42,
+    "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
+    "bootstrap_samples": 10000,
+    "target_classes": "all",
+    "insertion_scale": 1.0,
+    "max_insert_per_image": 3
+  },
+  "targets": [
+    {
+      "target_class": 0,
+      "target_class_name": "abyssinian",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_00_abyssinian.json"
+    },
+    {
+      "target_class": 1,
+      "target_class_name": "american_bulldog",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_01_american_bulldog.json"
+    },
+    {
+      "target_class": 2,
+      "target_class_name": "american_pit_bull_terrier",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_02_american_pit_bull_terrier.json"
+    },
+    {
+      "target_class": 3,
+      "target_class_name": "basset_hound",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_03_basset_hound.json"
+    },
+    {
+      "target_class": 4,
+      "target_class_name": "beagle",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_04_beagle.json"
+    },
+    {
+      "target_class": 5,
+      "target_class_name": "bengal",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_05_bengal.json"
+    },
+    {
+      "target_class": 6,
+      "target_class_name": "birman",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_06_birman.json"
+    },
+    {
+      "target_class": 7,
+      "target_class_name": "bombay",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_07_bombay.json"
+    },
+    {
+      "target_class": 8,
+      "target_class_name": "boxer",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_08_boxer.json"
+    },
+    {
+      "target_class": 9,
+      "target_class_name": "british_shorthair",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_09_british_shorthair.json"
+    },
+    {
+      "target_class": 10,
+      "target_class_name": "chihuahua",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_10_chihuahua.json"
+    },
+    {
+      "target_class": 11,
+      "target_class_name": "egyptian_mau",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_11_egyptian_mau.json"
+    },
+    {
+      "target_class": 12,
+      "target_class_name": "english_cocker_spaniel",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_12_english_cocker_spaniel.json"
+    },
+    {
+      "target_class": 13,
+      "target_class_name": "english_setter",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_13_english_setter.json"
+    },
+    {
+      "target_class": 14,
+      "target_class_name": "german_shorthaired",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_14_german_shorthaired.json"
+    },
+    {
+      "target_class": 15,
+      "target_class_name": "great_pyrenees",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_15_great_pyrenees.json"
+    },
+    {
+      "target_class": 16,
+      "target_class_name": "havanese",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_16_havanese.json"
+    },
+    {
+      "target_class": 17,
+      "target_class_name": "japanese_chin",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_17_japanese_chin.json"
+    },
+    {
+      "target_class": 18,
+      "target_class_name": "keeshond",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_18_keeshond.json"
+    },
+    {
+      "target_class": 19,
+      "target_class_name": "leonberger",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_19_leonberger.json"
+    },
+    {
+      "target_class": 20,
+      "target_class_name": "maine_coon",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_20_maine_coon.json"
+    },
+    {
+      "target_class": 21,
+      "target_class_name": "miniature_pinscher",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_21_miniature_pinscher.json"
+    },
+    {
+      "target_class": 22,
+      "target_class_name": "newfoundland",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_22_newfoundland.json"
+    },
+    {
+      "target_class": 23,
+      "target_class_name": "persian",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_23_persian.json"
+    },
+    {
+      "target_class": 24,
+      "target_class_name": "pomeranian",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_24_pomeranian.json"
+    },
+    {
+      "target_class": 25,
+      "target_class_name": "pug",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_25_pug.json"
+    },
+    {
+      "target_class": 26,
+      "target_class_name": "ragdoll",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_26_ragdoll.json"
+    },
+    {
+      "target_class": 27,
+      "target_class_name": "russian_blue",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_27_russian_blue.json"
+    },
+    {
+      "target_class": 28,
+      "target_class_name": "saint_bernard",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_28_saint_bernard.json"
+    },
+    {
+      "target_class": 29,
+      "target_class_name": "samoyed",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_29_samoyed.json"
+    },
+    {
+      "target_class": 30,
+      "target_class_name": "scottish_terrier",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_30_scottish_terrier.json"
+    },
+    {
+      "target_class": 31,
+      "target_class_name": "shiba_inu",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_31_shiba_inu.json"
+    },
+    {
+      "target_class": 32,
+      "target_class_name": "siamese",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_32_siamese.json"
+    },
+    {
+      "target_class": 33,
+      "target_class_name": "sphynx",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_33_sphynx.json"
+    },
+    {
+      "target_class": 34,
+      "target_class_name": "staffordshire_bull_terrier",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_34_staffordshire_bull_terrier.json"
+    },
+    {
+      "target_class": 35,
+      "target_class_name": "wheaten_terrier",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_35_wheaten_terrier.json"
+    },
+    {
+      "target_class": 36,
+      "target_class_name": "yorkshire_terrier",
+      "detail_file": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/per_target_class/target_36_yorkshire_terrier.json"
+    }
+  ]
+}

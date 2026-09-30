@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 659,
+    "image_seed": 701,
+    "true_label": 3,
+    "true_label_name": "basset_hound",
+    "target_class": 1,
+    "target_class_name": "american_bulldog",
+    "insertion_scale": 2.0,
+    "original_pred": 3,
+    "original_pred_name": "basset_hound",
+    "target_neuron_ids": [
+      8541,
+      33547,
+      57659
+    ],
+    "control_neuron_ids": [
+      28415,
+      67517,
+      16916
+    ],
+    "removed_source_neuron_ids": [
+      29066,
+      39650,
+      56390
+    ],
+    "target_inserted_values": [
+      15.04793643951416,
+      13.482999801635742,
+      13.955741882324219
+    ],
+    "control_inserted_values": [
+      14.96200180053711,
+      13.5840482711792,
+      13.827690124511719
+    ],
+    "removed_source_values": [
+      0.964378297328949,
+      0.9983294606208801,
+      1.0475653409957886
+    ],
+    "targeted_pred": 1,
+    "targeted_pred_name": "american_bulldog",
+    "control_pred": 35,
+    "control_pred_name": "wheaten_terrier",
+    "original_target_margin": -4.587412357330322,
+    "targeted_target_margin": 0.21757662296295166,
+    "control_target_margin": -3.975066661834717,
+    "targeted_target_margin_increase": 4.804988980293274,
+    "control_target_margin_increase": 0.6123456954956055,
+    "target_margin_increase_difference": 4.1926432847976685,
+    "original_target_logit": -1.7514342069625854,
+    "targeted_target_logit": 1.7422878742218018,
+    "control_target_logit": -1.989026427268982,
+    "target_logit_increase_difference": 3.7313143014907837,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 3,
+  "source_label_name": "basset_hound",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      8541,
+      33547,
+      57659
+    ],
+    "removed_source_neuron_ids": [
+      29066,
+      39650,
+      56390
+    ],
+    "inserted_values": [
+      15.04793643951416,
+      13.482999801635742,
+      13.955741882324219
+    ],
+    "delta_l2": 26.67979621887207
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      28415,
+      67517,
+      16916
+    ],
+    "removed_source_neuron_ids": [
+      29066,
+      39650,
+      56390
+    ],
+    "inserted_values": [
+      14.96200180053711,
+      13.5840482711792,
+      13.827690124511719
+    ],
+    "delta_l2": 25.69481086730957
+  },
+  "target_pixel_mae_vs_baseline": 5.1585957407951355e-05,
+  "target_pixel_mse_vs_baseline": 1.4437167017433694e-08,
+  "control_pixel_mae_vs_baseline": 5.0936203479068354e-05,
+  "control_pixel_mse_vs_baseline": 1.4277929949457757e-08
+}

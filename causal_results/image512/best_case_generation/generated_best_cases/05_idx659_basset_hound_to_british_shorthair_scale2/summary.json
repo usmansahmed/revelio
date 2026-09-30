@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 659,
+    "image_seed": 701,
+    "true_label": 3,
+    "true_label_name": "basset_hound",
+    "target_class": 9,
+    "target_class_name": "british_shorthair",
+    "insertion_scale": 2.0,
+    "original_pred": 3,
+    "original_pred_name": "basset_hound",
+    "target_neuron_ids": [
+      26264,
+      67996,
+      48574
+    ],
+    "control_neuron_ids": [
+      64835,
+      66801,
+      60460
+    ],
+    "removed_source_neuron_ids": [
+      39715,
+      29066,
+      39650
+    ],
+    "target_inserted_values": [
+      11.604715347290039,
+      10.01668930053711,
+      9.883930206298828
+    ],
+    "control_inserted_values": [
+      11.569255828857422,
+      9.968666076660156,
+      9.812935829162598
+    ],
+    "removed_source_values": [
+      0.9450451135635376,
+      0.964378297328949,
+      0.9983294606208801
+    ],
+    "targeted_pred": 9,
+    "targeted_pred_name": "british_shorthair",
+    "control_pred": 3,
+    "control_pred_name": "basset_hound",
+    "original_target_margin": -5.575682163238525,
+    "targeted_target_margin": 0.37647107243537903,
+    "control_target_margin": -5.73568058013916,
+    "targeted_target_margin_increase": 5.952153235673904,
+    "control_target_margin_increase": -0.15999841690063477,
+    "target_margin_increase_difference": 6.112151652574539,
+    "original_target_logit": -2.739703893661499,
+    "targeted_target_logit": 0.8244213461875916,
+    "control_target_logit": -2.8748514652252197,
+    "target_logit_increase_difference": 3.6992728114128113,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 3,
+  "source_label_name": "basset_hound",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      26264,
+      67996,
+      48574
+    ],
+    "removed_source_neuron_ids": [
+      39715,
+      29066,
+      39650
+    ],
+    "inserted_values": [
+      11.604715347290039,
+      10.01668930053711,
+      9.883930206298828
+    ],
+    "delta_l2": 21.094730377197266
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      64835,
+      66801,
+      60460
+    ],
+    "removed_source_neuron_ids": [
+      39715,
+      29066,
+      39650
+    ],
+    "inserted_values": [
+      11.569255828857422,
+      9.968666076660156,
+      9.812935829162598
+    ],
+    "delta_l2": 18.706256866455078
+  },
+  "target_pixel_mae_vs_baseline": 5.0423044740455225e-05,
+  "target_pixel_mse_vs_baseline": 1.4126726455288008e-08,
+  "control_pixel_mae_vs_baseline": 4.9263548135058954e-05,
+  "control_pixel_mse_vs_baseline": 1.3752696759183891e-08
+}

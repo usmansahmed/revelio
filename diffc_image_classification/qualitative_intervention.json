@@ -13,10 +13,8 @@
     "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
     "target_class": 18,
     "source_class": 25,
-    "source_indices": [
-        1
-    ],
-    "max_source_images": 1,
+    "source_indices": [],
+    "max_source_images": 5,
     "min_purity": 0.8,
     "min_valid": 10,
     "control_min_purity": 0.8,
@@ -27,7 +25,7 @@
     "amplification_factor": 2.0,
     "insertion_feature_ranking": "purity_reference_activation",
     "max_insert_per_image": 5,
-    "insertion_scale": 1.0,
+    "insertion_scale": 2.0,
     "random_seed": 42,
-    "save_dir": "/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug_corrected"
+    "save_dir": "/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug3"
 }

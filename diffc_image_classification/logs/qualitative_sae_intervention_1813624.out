@@ -1,0 +1,56 @@
+### Starting TaskPrologue of job 1813624 on tg091 at Tue Sep 15 11:41:49 AM CEST 2026
+Running on cores 64-95 with governor ondemand
+Tue Sep 15 11:41:49 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   39C    P0             53W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda | dtype: torch.float16
+Loading normal Stable Diffusion pipeline...
+Hook module: up_ft:1 | CrossAttnUpBlock2D
+Loading k-SAE and feature statistics...
+Target class 18: 34 qualifying features
+Eligible insertion-control pool: 190 features
+Loading dataset...
+Target: keeshond | Source: pug | images: [1]
+Finished index=1 label=pug baseline_mse=0.001386
+Saved: /home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug_corrected/summary.json
+=== JOB_STATISTICS ===
+=== current date     : Tue Sep 15 11:42:33 AM CEST 2026
+= Job-ID             : 1813624 on tinygpu
+= Job-Name           : qualitative_sae_intervention
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_qualitative_sae_intervention.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:47
+= Total RAM usage    : 7.8 GiB of requested  GiB (%)   
+= Node list          : tg091
+= Subm/Elig/Start/End: 2026-09-15T11:01:18 / 2026-09-15T11:01:18 / 2026-09-15T11:41:46 / 2026-09-15T11:42:33
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 1692771, 2 %, 0 %, 4356 MiB, 27514 ms

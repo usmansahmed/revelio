@@ -1,0 +1,2922 @@
+{
+  "target_class": 34,
+  "target_class_name": "staffordshire_bull_terrier",
+  "selected_feature_count": 1,
+  "selected_feature_ids": [
+    81345
+  ],
+  "insertion_scale": 1.0,
+  "max_insert_per_image": 3,
+  "metadata": {
+    "eligible_target_features": [
+      81345
+    ],
+    "reference_counts": {
+      "81345": 8
+    },
+    "reference_medians": {
+      "81345": 8.732405662536621
+    }
+  },
+  "summary": {
+    "n_inserted": 64,
+    "mean_target_confidence_difference": -0.00022739941113666777,
+    "mean_target_logit_difference": 0.6147163021378219,
+    "median_target_logit_difference": 0.6202795505523682,
+    "mean_target_margin_difference": 0.5863500684499741,
+    "median_target_margin_difference": 0.6249475479125977,
+    "ci_95_low": 0.39021835960447787,
+    "ci_95_high": 0.7713143033906814,
+    "positive_images": 51,
+    "negative_images": 13,
+    "fraction_positive": 0.796875,
+    "wilcoxon_p": 3.9997740277883257e-07,
+    "sign_test_p": 9.404810782147007e-07,
+    "targeted_flip_count": 0,
+    "control_flip_count": 0,
+    "targeted_flip_fraction": 0.0,
+    "control_flip_fraction": 0.0
+  },
+  "per_image_results": [
+    {
+      "image_index": 3372,
+      "true_label": 3,
+      "target_class": 34,
+      "original_pred": 3,
+      "targeted_pred": 3,
+      "control_pred": 3,
+      "original_target_confidence": 2.880913951841535e-09,
+      "targeted_target_confidence": 4.776978368425944e-09,
+      "control_target_confidence": 3.0156617203402902e-09,
+      "targeted_target_confidence_increase": 1.8960644165844087e-09,
+      "control_target_confidence_increase": 1.3474776849875525e-10,
+      "target_confidence_increase_difference": 1.7613166480856535e-09,
+      "original_target_logit": -6.159904479980469,
+      "targeted_target_logit": -5.8679304122924805,
+      "control_target_logit": -6.101798057556152,
+      "targeted_target_logit_increase": 0.2919740676879883,
+      "control_target_logit_increase": 0.058106422424316406,
+      "target_logit_increase_difference": 0.23386764526367188,
+      "original_target_margin": -19.665157318115234,
+      "targeted_target_margin": -19.159456253051758,
+      "control_target_margin": -19.61944580078125,
+      "targeted_target_margin_increase": 0.5057010650634766,
+      "control_target_margin_increase": 0.045711517333984375,
+      "target_margin_increase_difference": 0.4599895477294922,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        19376
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.664743185043335
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2786,
+      "true_label": 0,
+      "target_class": 34,
+      "original_pred": 0,
+      "targeted_pred": 0,
+      "control_pred": 0,
+      "original_target_confidence": 1.4154901464280556e-06,
+      "targeted_target_confidence": 1.7406600818503648e-06,
+      "control_target_confidence": 1.2369641808618326e-06,
+      "targeted_target_confidence_increase": 3.251699354223092e-07,
+      "control_target_confidence_increase": -1.7852596556622302e-07,
+      "target_confidence_increase_difference": 5.036959009885322e-07,
+      "original_target_logit": -4.902497291564941,
+      "targeted_target_logit": -4.531304359436035,
+      "control_target_logit": -5.068636417388916,
+      "targeted_target_logit_increase": 0.37119293212890625,
+      "control_target_logit_increase": -0.1661391258239746,
+      "target_logit_increase_difference": 0.5373320579528809,
+      "original_target_margin": -13.466270446777344,
+      "targeted_target_margin": -13.260186195373535,
+      "control_target_margin": -13.601400375366211,
+      "targeted_target_margin_increase": 0.2060842514038086,
+      "control_target_margin_increase": -0.1351299285888672,
+      "target_margin_increase_difference": 0.3412141799926758,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        74614
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.611750602722168
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 318,
+      "true_label": 4,
+      "target_class": 34,
+      "original_pred": 4,
+      "targeted_pred": 4,
+      "control_pred": 4,
+      "original_target_confidence": 0.00022572404122911394,
+      "targeted_target_confidence": 0.00029059345251880586,
+      "control_target_confidence": 0.00023393031733576208,
+      "targeted_target_confidence_increase": 6.486941128969193e-05,
+      "control_target_confidence_increase": 8.206276106648147e-06,
+      "target_confidence_increase_difference": 5.666313518304378e-05,
+      "original_target_logit": -2.546875238418579,
+      "targeted_target_logit": -2.0566961765289307,
+      "control_target_logit": -2.5470688343048096,
+      "targeted_target_logit_increase": 0.49017906188964844,
+      "control_target_logit_increase": -0.00019359588623046875,
+      "target_logit_increase_difference": 0.4903726577758789,
+      "original_target_margin": -8.304012298583984,
+      "targeted_target_margin": -8.105546951293945,
+      "control_target_margin": -8.254154205322266,
+      "targeted_target_margin_increase": 0.19846534729003906,
+      "control_target_margin_increase": 0.04985809326171875,
+      "target_margin_increase_difference": 0.1486072540283203,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        63416
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.0210208892822266
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2513,
+      "true_label": 1,
+      "target_class": 34,
+      "original_pred": 1,
+      "targeted_pred": 1,
+      "control_pred": 1,
+      "original_target_confidence": 2.6723915524939912e-08,
+      "targeted_target_confidence": 9.181337645713938e-08,
+      "control_target_confidence": 3.22306448197196e-08,
+      "targeted_target_confidence_increase": 6.508946093219947e-08,
+      "control_target_confidence_increase": 5.506729294779689e-09,
+      "target_confidence_increase_difference": 5.9582731637419784e-08,
+      "original_target_logit": -4.935661315917969,
+      "targeted_target_logit": -4.1260600090026855,
+      "control_target_logit": -4.895966053009033,
+      "targeted_target_logit_increase": 0.8096013069152832,
+      "control_target_logit_increase": 0.03969526290893555,
+      "target_logit_increase_difference": 0.7699060440063477,
+      "original_target_margin": -17.437705993652344,
+      "targeted_target_margin": -16.203506469726562,
+      "control_target_margin": -17.250347137451172,
+      "targeted_target_margin_increase": 1.2341995239257812,
+      "control_target_margin_increase": 0.18735885620117188,
+      "target_margin_increase_difference": 1.0468406677246094,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        34399
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.854127049446106
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2524,
+      "true_label": 14,
+      "target_class": 34,
+      "original_pred": 14,
+      "targeted_pred": 14,
+      "control_pred": 14,
+      "original_target_confidence": 0.008055664598941803,
+      "targeted_target_confidence": 0.00874033197760582,
+      "control_target_confidence": 0.01467575691640377,
+      "targeted_target_confidence_increase": 0.0006846673786640167,
+      "control_target_confidence_increase": 0.0066200923174619675,
+      "target_confidence_increase_difference": -0.005935424938797951,
+      "original_target_logit": -2.4754581451416016,
+      "targeted_target_logit": -2.048632860183716,
+      "control_target_logit": -2.7181246280670166,
+      "targeted_target_logit_increase": 0.42682528495788574,
+      "control_target_logit_increase": -0.24266648292541504,
+      "target_logit_increase_difference": 0.6694917678833008,
+      "original_target_margin": -4.675091743469238,
+      "targeted_target_margin": -4.644011497497559,
+      "control_target_margin": -3.7790040969848633,
+      "targeted_target_margin_increase": 0.031080245971679688,
+      "control_target_margin_increase": 0.896087646484375,
+      "target_margin_increase_difference": -0.8650074005126953,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        6305
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.223341941833496
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1463,
+      "true_label": 18,
+      "target_class": 34,
+      "original_pred": 18,
+      "targeted_pred": 18,
+      "control_pred": 18,
+      "original_target_confidence": 4.641823281303914e-08,
+      "targeted_target_confidence": 2.892903516737988e-08,
+      "control_target_confidence": 3.1498558428211254e-08,
+      "targeted_target_confidence_increase": -1.748919764565926e-08,
+      "control_target_confidence_increase": -1.4919674384827886e-08,
+      "target_confidence_increase_difference": -2.5695232608313745e-09,
+      "original_target_logit": -5.632107257843018,
+      "targeted_target_logit": -5.37567138671875,
+      "control_target_logit": -5.906004905700684,
+      "targeted_target_logit_increase": 0.2564358711242676,
+      "control_target_logit_increase": -0.273897647857666,
+      "target_logit_increase_difference": 0.5303335189819336,
+      "original_target_margin": -16.885557174682617,
+      "targeted_target_margin": -17.358413696289062,
+      "control_target_margin": -17.27330780029297,
+      "targeted_target_margin_increase": -0.4728565216064453,
+      "control_target_margin_increase": -0.38775062561035156,
+      "target_margin_increase_difference": -0.08510589599609375,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        20867
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.5001300573348999
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2444,
+      "true_label": 17,
+      "target_class": 34,
+      "original_pred": 17,
+      "targeted_pred": 17,
+      "control_pred": 17,
+      "original_target_confidence": 5.896843049413292e-06,
+      "targeted_target_confidence": 7.934869245218579e-06,
+      "control_target_confidence": 3.834229573840275e-06,
+      "targeted_target_confidence_increase": 2.038026195805287e-06,
+      "control_target_confidence_increase": -2.0626134755730163e-06,
+      "target_confidence_increase_difference": 4.100639671378303e-06,
+      "original_target_logit": -3.7796878814697266,
+      "targeted_target_logit": -3.3734371662139893,
+      "control_target_logit": -4.042018413543701,
+      "targeted_target_logit_increase": 0.4062507152557373,
+      "control_target_logit_increase": -0.2623305320739746,
+      "target_logit_increase_difference": 0.6685812473297119,
+      "original_target_margin": -12.040579795837402,
+      "targeted_target_margin": -11.743780136108398,
+      "control_target_margin": -12.47113037109375,
+      "targeted_target_margin_increase": 0.2967996597290039,
+      "control_target_margin_increase": -0.43055057525634766,
+      "target_margin_increase_difference": 0.7273502349853516,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        16485
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.8112460374832153
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1485,
+      "true_label": 19,
+      "target_class": 34,
+      "original_pred": 19,
+      "targeted_pred": 19,
+      "control_pred": 19,
+      "original_target_confidence": 2.043789208983071e-06,
+      "targeted_target_confidence": 1.2067415582350804e-06,
+      "control_target_confidence": 9.78545131147257e-07,
+      "targeted_target_confidence_increase": -8.370476507479907e-07,
+      "control_target_confidence_increase": -1.065244077835814e-06,
+      "target_confidence_increase_difference": 2.281964270878234e-07,
+      "original_target_logit": -5.886355876922607,
+      "targeted_target_logit": -5.586141586303711,
+      "control_target_logit": -6.103085041046143,
+      "targeted_target_logit_increase": 0.3002142906188965,
+      "control_target_logit_increase": -0.21672916412353516,
+      "target_logit_increase_difference": 0.5169434547424316,
+      "original_target_margin": -13.099363327026367,
+      "targeted_target_margin": -13.627150535583496,
+      "control_target_margin": -13.836650848388672,
+      "targeted_target_margin_increase": -0.5277872085571289,
+      "control_target_margin_increase": -0.7372875213623047,
+      "target_margin_increase_difference": 0.20950031280517578,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        60838
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.555006980895996
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3507,
+      "true_label": 14,
+      "target_class": 34,
+      "original_pred": 14,
+      "targeted_pred": 14,
+      "control_pred": 14,
+      "original_target_confidence": 5.8997156884288415e-06,
+      "targeted_target_confidence": 8.057143531914335e-06,
+      "control_target_confidence": 1.8082162569044158e-05,
+      "targeted_target_confidence_increase": 2.1574278434854932e-06,
+      "control_target_confidence_increase": 1.2182446880615316e-05,
+      "target_confidence_increase_difference": -1.0025019037129823e-05,
+      "original_target_logit": -6.543118953704834,
+      "targeted_target_logit": -5.947595119476318,
+      "control_target_logit": -6.337552070617676,
+      "targeted_target_logit_increase": 0.5955238342285156,
+      "control_target_logit_increase": 0.2055668830871582,
+      "target_logit_increase_difference": 0.3899569511413574,
+      "original_target_margin": -11.99184799194336,
+      "targeted_target_margin": -11.6787109375,
+      "control_target_margin": -10.818168640136719,
+      "targeted_target_margin_increase": 0.3131370544433594,
+      "control_target_margin_increase": 1.1736793518066406,
+      "target_margin_increase_difference": -0.8605422973632812,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        5281
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1614195108413696
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 329,
+      "true_label": 22,
+      "target_class": 34,
+      "original_pred": 22,
+      "targeted_pred": 22,
+      "control_pred": 22,
+      "original_target_confidence": 2.9065290618746076e-07,
+      "targeted_target_confidence": 6.562792691511277e-07,
+      "control_target_confidence": 2.90913760636613e-07,
+      "targeted_target_confidence_increase": 3.656263629636669e-07,
+      "control_target_confidence_increase": 2.60854449152248e-10,
+      "target_confidence_increase_difference": 3.6536550851451466e-07,
+      "original_target_logit": -3.7516560554504395,
+      "targeted_target_logit": -3.2814650535583496,
+      "control_target_logit": -3.948427677154541,
+      "targeted_target_logit_increase": 0.47019100189208984,
+      "control_target_logit_increase": -0.19677162170410156,
+      "target_logit_increase_difference": 0.6669626235961914,
+      "original_target_margin": -15.051128387451172,
+      "targeted_target_margin": -14.23666763305664,
+      "control_target_margin": -15.050228118896484,
+      "targeted_target_margin_increase": 0.8144607543945312,
+      "control_target_margin_increase": 0.0009002685546875,
+      "target_margin_increase_difference": 0.8135604858398438,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        39289
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1899007558822632
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3655,
+      "true_label": 16,
+      "target_class": 34,
+      "original_pred": 16,
+      "targeted_pred": 16,
+      "control_pred": 16,
+      "original_target_confidence": 9.101152500079479e-06,
+      "targeted_target_confidence": 2.3660524675506167e-05,
+      "control_target_confidence": 7.477081908291439e-06,
+      "targeted_target_confidence_increase": 1.4559372175426688e-05,
+      "control_target_confidence_increase": -1.6240705917880405e-06,
+      "target_confidence_increase_difference": 1.618344276721473e-05,
+      "original_target_logit": -3.2845449447631836,
+      "targeted_target_logit": -2.5243980884552,
+      "control_target_logit": -3.338820457458496,
+      "targeted_target_logit_increase": 0.7601468563079834,
+      "control_target_logit_increase": -0.0542755126953125,
+      "target_logit_increase_difference": 0.8144223690032959,
+      "original_target_margin": -11.606901168823242,
+      "targeted_target_margin": -10.651453018188477,
+      "control_target_margin": -11.803479194641113,
+      "targeted_target_margin_increase": 0.9554481506347656,
+      "control_target_margin_increase": -0.1965780258178711,
+      "target_margin_increase_difference": 1.1520261764526367,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        17004
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.9608008861541748
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2076,
+      "true_label": 19,
+      "target_class": 34,
+      "original_pred": 19,
+      "targeted_pred": 19,
+      "control_pred": 19,
+      "original_target_confidence": 5.077176865597721e-07,
+      "targeted_target_confidence": 2.9937254453216156e-07,
+      "control_target_confidence": 6.135661578809959e-07,
+      "targeted_target_confidence_increase": -2.0834514202761056e-07,
+      "control_target_confidence_increase": 1.0584847132122377e-07,
+      "target_confidence_increase_difference": -3.1419361334883433e-07,
+      "original_target_logit": -7.984300136566162,
+      "targeted_target_logit": -7.842756271362305,
+      "control_target_logit": -8.025595664978027,
+      "targeted_target_logit_increase": 0.14154386520385742,
+      "control_target_logit_increase": -0.041295528411865234,
+      "target_logit_increase_difference": 0.18283939361572266,
+      "original_target_margin": -14.48444938659668,
+      "targeted_target_margin": -15.017121315002441,
+      "control_target_margin": -14.288312911987305,
+      "targeted_target_margin_increase": -0.5326719284057617,
+      "control_target_margin_increase": 0.196136474609375,
+      "target_margin_increase_difference": -0.7288084030151367,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        12402
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.6208381652832031
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3409,
+      "true_label": 20,
+      "target_class": 34,
+      "original_pred": 20,
+      "targeted_pred": 20,
+      "control_pred": 20,
+      "original_target_confidence": 7.790755063297183e-08,
+      "targeted_target_confidence": 2.155200462539142e-07,
+      "control_target_confidence": 4.6976520451380566e-08,
+      "targeted_target_confidence_increase": 1.3761249562094235e-07,
+      "control_target_confidence_increase": -3.093103018159127e-08,
+      "target_confidence_increase_difference": 1.6854352580253362e-07,
+      "original_target_logit": -7.53601598739624,
+      "targeted_target_logit": -6.946848392486572,
+      "control_target_logit": -7.764275550842285,
+      "targeted_target_logit_increase": 0.589167594909668,
+      "control_target_logit_increase": -0.22825956344604492,
+      "target_logit_increase_difference": 0.8174271583557129,
+      "original_target_margin": -16.367483139038086,
+      "targeted_target_margin": -15.349748611450195,
+      "control_target_margin": -16.8734130859375,
+      "targeted_target_margin_increase": 1.0177345275878906,
+      "control_target_margin_increase": -0.5059299468994141,
+      "target_margin_increase_difference": 1.5236644744873047,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        35718
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        3.8346869945526123
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 40,
+      "true_label": 19,
+      "target_class": 34,
+      "original_pred": 19,
+      "targeted_pred": 19,
+      "control_pred": 19,
+      "original_target_confidence": 1.3528224096504005e-09,
+      "targeted_target_confidence": 1.5093029048784956e-09,
+      "control_target_confidence": 1.0199281419431827e-09,
+      "targeted_target_confidence_increase": 1.5648049522809515e-10,
+      "control_target_confidence_increase": -3.3289426770721775e-10,
+      "target_confidence_increase_difference": 4.893747629353129e-10,
+      "original_target_logit": -8.429136276245117,
+      "targeted_target_logit": -7.896244049072266,
+      "control_target_logit": -8.59678840637207,
+      "targeted_target_logit_increase": 0.5328922271728516,
+      "control_target_logit_increase": -0.16765213012695312,
+      "target_logit_increase_difference": 0.7005443572998047,
+      "original_target_margin": -20.421062469482422,
+      "targeted_target_margin": -20.311613082885742,
+      "control_target_margin": -20.703523635864258,
+      "targeted_target_margin_increase": 0.10944938659667969,
+      "control_target_margin_increase": -0.28246116638183594,
+      "target_margin_increase_difference": 0.3919105529785156,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        11554
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1297438144683838
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3587,
+      "true_label": 20,
+      "target_class": 34,
+      "original_pred": 20,
+      "targeted_pred": 20,
+      "control_pred": 20,
+      "original_target_confidence": 7.330360404012026e-06,
+      "targeted_target_confidence": 2.5120933059952222e-05,
+      "control_target_confidence": 5.013179361412767e-06,
+      "targeted_target_confidence_increase": 1.7790572655940196e-05,
+      "control_target_confidence_increase": -2.317181042599259e-06,
+      "target_confidence_increase_difference": 2.0107753698539454e-05,
+      "original_target_logit": -4.866601467132568,
+      "targeted_target_logit": -4.19301700592041,
+      "control_target_logit": -5.1644978523254395,
+      "targeted_target_logit_increase": 0.6735844612121582,
+      "control_target_logit_increase": -0.2978963851928711,
+      "target_logit_increase_difference": 0.9714808464050293,
+      "original_target_margin": -11.821866035461426,
+      "targeted_target_margin": -10.589910507202148,
+      "control_target_margin": -12.201656341552734,
+      "targeted_target_margin_increase": 1.2319555282592773,
+      "control_target_margin_increase": -0.3797903060913086,
+      "target_margin_increase_difference": 1.611745834350586,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        77613
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5815956592559814
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 451,
+      "true_label": 21,
+      "target_class": 34,
+      "original_pred": 21,
+      "targeted_pred": 21,
+      "control_pred": 21,
+      "original_target_confidence": 0.012076464481651783,
+      "targeted_target_confidence": 0.010453995317220688,
+      "control_target_confidence": 0.022364765405654907,
+      "targeted_target_confidence_increase": -0.0016224691644310951,
+      "control_target_confidence_increase": 0.010288300924003124,
+      "target_confidence_increase_difference": -0.01191077008843422,
+      "original_target_logit": 0.7157973051071167,
+      "targeted_target_logit": 1.4111751317977905,
+      "control_target_logit": 0.768670916557312,
+      "targeted_target_logit_increase": 0.6953778266906738,
+      "control_target_logit_increase": 0.05287361145019531,
+      "target_logit_increase_difference": 0.6425042152404785,
+      "original_target_margin": -4.376845836639404,
+      "targeted_target_margin": -4.5393171310424805,
+      "control_target_margin": -3.7320332527160645,
+      "targeted_target_margin_increase": -0.16247129440307617,
+      "control_target_margin_increase": 0.6448125839233398,
+      "target_margin_increase_difference": -0.807283878326416,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        38210
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.9687522649765015
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1233,
+      "true_label": 16,
+      "target_class": 34,
+      "original_pred": 16,
+      "targeted_pred": 16,
+      "control_pred": 16,
+      "original_target_confidence": 0.0030737186316400766,
+      "targeted_target_confidence": 0.004266850184649229,
+      "control_target_confidence": 0.0018845547456294298,
+      "targeted_target_confidence_increase": 0.0011931315530091524,
+      "control_target_confidence_increase": -0.0011891638860106468,
+      "target_confidence_increase_difference": 0.0023822954390197992,
+      "original_target_logit": -3.0233147144317627,
+      "targeted_target_logit": -2.694260597229004,
+      "control_target_logit": -3.368242025375366,
+      "targeted_target_logit_increase": 0.3290541172027588,
+      "control_target_logit_increase": -0.3449273109436035,
+      "target_logit_increase_difference": 0.6739814281463623,
+      "original_target_margin": -5.521862983703613,
+      "targeted_target_margin": -5.07661247253418,
+      "control_target_margin": -6.010924339294434,
+      "targeted_target_margin_increase": 0.4452505111694336,
+      "control_target_margin_increase": -0.4890613555908203,
+      "target_margin_increase_difference": 0.9343118667602539,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        50553
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.5590837001800537
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3325,
+      "true_label": 7,
+      "target_class": 34,
+      "original_pred": 7,
+      "targeted_pred": 7,
+      "control_pred": 7,
+      "original_target_confidence": 3.6992602314711576e-09,
+      "targeted_target_confidence": 7.149125735850248e-09,
+      "control_target_confidence": 5.152641424643889e-09,
+      "targeted_target_confidence_increase": 3.4498655043790905e-09,
+      "control_target_confidence_increase": 1.4533811931727314e-09,
+      "target_confidence_increase_difference": 1.996484311206359e-09,
+      "original_target_logit": -6.0545830726623535,
+      "targeted_target_logit": -5.434808731079102,
+      "control_target_logit": -6.157939910888672,
+      "targeted_target_logit_increase": 0.619774341583252,
+      "control_target_logit_increase": -0.10335683822631836,
+      "target_logit_increase_difference": 0.7231311798095703,
+      "original_target_margin": -19.415132522583008,
+      "targeted_target_margin": -18.756275177001953,
+      "control_target_margin": -19.083755493164062,
+      "targeted_target_margin_increase": 0.6588573455810547,
+      "control_target_margin_increase": 0.3313770294189453,
+      "target_margin_increase_difference": 0.3274803161621094,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        55010
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.8064243793487549
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2581,
+      "true_label": 20,
+      "target_class": 34,
+      "original_pred": 20,
+      "targeted_pred": 20,
+      "control_pred": 20,
+      "original_target_confidence": 2.0047307771164924e-05,
+      "targeted_target_confidence": 4.2293766455259174e-05,
+      "control_target_confidence": 1.9154602341586724e-05,
+      "targeted_target_confidence_increase": 2.224645868409425e-05,
+      "control_target_confidence_increase": -8.927054295782e-07,
+      "target_confidence_increase_difference": 2.313916411367245e-05,
+      "original_target_logit": -6.489930629730225,
+      "targeted_target_logit": -6.169273853302002,
+      "control_target_logit": -6.6041259765625,
+      "targeted_target_logit_increase": 0.32065677642822266,
+      "control_target_logit_increase": -0.11419534683227539,
+      "target_logit_increase_difference": 0.43485212326049805,
+      "original_target_margin": -10.689892768859863,
+      "targeted_target_margin": -9.925336837768555,
+      "control_target_margin": -10.683111190795898,
+      "targeted_target_margin_increase": 0.7645559310913086,
+      "control_target_margin_increase": 0.006781578063964844,
+      "target_margin_increase_difference": 0.7577743530273438,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        75138
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        3.324277877807617
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1994,
+      "true_label": 8,
+      "target_class": 34,
+      "original_pred": 8,
+      "targeted_pred": 8,
+      "control_pred": 8,
+      "original_target_confidence": 1.641375092731323e-05,
+      "targeted_target_confidence": 2.476896952430252e-05,
+      "control_target_confidence": 3.071450919378549e-05,
+      "targeted_target_confidence_increase": 8.355218596989289e-06,
+      "control_target_confidence_increase": 1.4300758266472258e-05,
+      "target_confidence_increase_difference": -5.945539669482969e-06,
+      "original_target_logit": -0.983755886554718,
+      "targeted_target_logit": -0.25888052582740784,
+      "control_target_logit": -0.9960681200027466,
+      "targeted_target_logit_increase": 0.7248753607273102,
+      "control_target_logit_increase": -0.012312233448028564,
+      "target_logit_increase_difference": 0.7371875941753387,
+      "original_target_margin": -11.017361640930176,
+      "targeted_target_margin": -10.605886459350586,
+      "control_target_margin": -10.390713691711426,
+      "targeted_target_margin_increase": 0.41147518157958984,
+      "control_target_margin_increase": 0.62664794921875,
+      "target_margin_increase_difference": -0.21517276763916016,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        6740
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.4751142263412476
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3142,
+      "true_label": 32,
+      "target_class": 34,
+      "original_pred": 32,
+      "targeted_pred": 32,
+      "control_pred": 32,
+      "original_target_confidence": 0.0005454215570352972,
+      "targeted_target_confidence": 0.0006307882140390575,
+      "control_target_confidence": 0.0006535355350933969,
+      "targeted_target_confidence_increase": 8.536665700376034e-05,
+      "control_target_confidence_increase": 0.00010811397805809975,
+      "target_confidence_increase_difference": -2.274732105433941e-05,
+      "original_target_logit": -5.3440752029418945,
+      "targeted_target_logit": -5.207250595092773,
+      "control_target_logit": -5.504678726196289,
+      "targeted_target_logit_increase": 0.1368246078491211,
+      "control_target_logit_increase": -0.16060352325439453,
+      "target_logit_increase_difference": 0.2974281311035156,
+      "original_target_margin": -6.931324481964111,
+      "targeted_target_margin": -6.890990257263184,
+      "control_target_margin": -6.59882116317749,
+      "targeted_target_margin_increase": 0.040334224700927734,
+      "control_target_margin_increase": 0.3325033187866211,
+      "target_margin_increase_difference": -0.29216909408569336,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        62095
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        4.239665508270264
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2843,
+      "true_label": 9,
+      "target_class": 34,
+      "original_pred": 9,
+      "targeted_pred": 9,
+      "control_pred": 9,
+      "original_target_confidence": 8.860008051669865e-07,
+      "targeted_target_confidence": 1.9868230083375238e-06,
+      "control_target_confidence": 1.1156801065226318e-06,
+      "targeted_target_confidence_increase": 1.1008222031705373e-06,
+      "control_target_confidence_increase": 2.296793013556453e-07,
+      "target_confidence_increase_difference": 8.71142901814892e-07,
+      "original_target_logit": -4.717982769012451,
+      "targeted_target_logit": -4.135887622833252,
+      "control_target_logit": -4.88247537612915,
+      "targeted_target_logit_increase": 0.5820951461791992,
+      "control_target_logit_increase": -0.16449260711669922,
+      "target_logit_increase_difference": 0.7465877532958984,
+      "original_target_margin": -13.93644905090332,
+      "targeted_target_margin": -13.128854751586914,
+      "control_target_margin": -13.705877304077148,
+      "targeted_target_margin_increase": 0.8075942993164062,
+      "control_target_margin_increase": 0.23057174682617188,
+      "target_margin_increase_difference": 0.5770225524902344,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        44120
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.8532799482345581
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3373,
+      "true_label": 36,
+      "target_class": 34,
+      "original_pred": 36,
+      "targeted_pred": 36,
+      "control_pred": 36,
+      "original_target_confidence": 2.0388692956174737e-09,
+      "targeted_target_confidence": 1.959046924682184e-09,
+      "control_target_confidence": 7.20371373663653e-10,
+      "targeted_target_confidence_increase": -7.982237093528965e-11,
+      "control_target_confidence_increase": -1.3184979219538207e-09,
+      "target_confidence_increase_difference": 1.238675551018531e-09,
+      "original_target_logit": -9.803604125976562,
+      "targeted_target_logit": -9.635838508605957,
+      "control_target_logit": -10.144392013549805,
+      "targeted_target_logit_increase": 0.16776561737060547,
+      "control_target_logit_increase": -0.3407878875732422,
+      "target_logit_increase_difference": 0.5085535049438477,
+      "original_target_margin": -20.01085662841797,
+      "targeted_target_margin": -20.050796508789062,
+      "control_target_margin": -21.051246643066406,
+      "targeted_target_margin_increase": -0.03993988037109375,
+      "control_target_margin_increase": -1.0403900146484375,
+      "target_margin_increase_difference": 1.0004501342773438,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        49292
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.6814067363739014
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1122,
+      "true_label": 8,
+      "target_class": 34,
+      "original_pred": 8,
+      "targeted_pred": 8,
+      "control_pred": 8,
+      "original_target_confidence": 4.097260898561217e-06,
+      "targeted_target_confidence": 5.901520125917159e-06,
+      "control_target_confidence": 4.231049842928769e-06,
+      "targeted_target_confidence_increase": 1.8042592273559421e-06,
+      "control_target_confidence_increase": 1.3378894436755218e-07,
+      "target_confidence_increase_difference": 1.67047028298839e-06,
+      "original_target_logit": -4.445248603820801,
+      "targeted_target_logit": -3.4274685382843018,
+      "control_target_logit": -4.846170902252197,
+      "targeted_target_logit_increase": 1.017780065536499,
+      "control_target_logit_increase": -0.4009222984313965,
+      "target_logit_increase_difference": 1.4187023639678955,
+      "original_target_margin": -12.405003547668457,
+      "targeted_target_margin": -12.040239334106445,
+      "control_target_margin": -12.37266731262207,
+      "targeted_target_margin_increase": 0.3647642135620117,
+      "control_target_margin_increase": 0.03233623504638672,
+      "target_margin_increase_difference": 0.332427978515625,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        75275
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.417934775352478
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1040,
+      "true_label": 28,
+      "target_class": 34,
+      "original_pred": 28,
+      "targeted_pred": 28,
+      "control_pred": 28,
+      "original_target_confidence": 1.5456053104045964e-09,
+      "targeted_target_confidence": 2.1572148511950218e-09,
+      "control_target_confidence": 1.503024260607333e-09,
+      "targeted_target_confidence_increase": 6.116095407904254e-10,
+      "control_target_confidence_increase": -4.2581049797263404e-11,
+      "target_confidence_increase_difference": 6.541905905876888e-10,
+      "original_target_logit": -9.775978088378906,
+      "targeted_target_logit": -9.464149475097656,
+      "control_target_logit": -9.816754341125488,
+      "targeted_target_logit_increase": 0.31182861328125,
+      "control_target_logit_increase": -0.04077625274658203,
+      "target_logit_increase_difference": 0.35260486602783203,
+      "original_target_margin": -20.287830352783203,
+      "targeted_target_margin": -19.954425811767578,
+      "control_target_margin": -20.315765380859375,
+      "targeted_target_margin_increase": 0.333404541015625,
+      "control_target_margin_increase": -0.027935028076171875,
+      "target_margin_increase_difference": 0.3613395690917969,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        11015
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.705959677696228
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1612,
+      "true_label": 15,
+      "target_class": 34,
+      "original_pred": 15,
+      "targeted_pred": 15,
+      "control_pred": 15,
+      "original_target_confidence": 1.0991612953148433e-07,
+      "targeted_target_confidence": 9.214622309627885e-08,
+      "control_target_confidence": 1.1105238684194774e-07,
+      "targeted_target_confidence_increase": -1.7769906435205485e-08,
+      "control_target_confidence_increase": 1.1362573104634066e-09,
+      "target_confidence_increase_difference": -1.890616374566889e-08,
+      "original_target_logit": -7.5230793952941895,
+      "targeted_target_logit": -7.298135757446289,
+      "control_target_logit": -7.678369998931885,
+      "targeted_target_logit_increase": 0.2249436378479004,
+      "control_target_logit_increase": -0.1552906036376953,
+      "target_logit_increase_difference": 0.3802342414855957,
+      "original_target_margin": -16.019079208374023,
+      "targeted_target_margin": -16.19689178466797,
+      "control_target_margin": -16.005285263061523,
+      "targeted_target_margin_increase": -0.1778125762939453,
+      "control_target_margin_increase": 0.0137939453125,
+      "target_margin_increase_difference": -0.1916065216064453,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        39334
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.4647204875946045
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3248,
+      "true_label": 3,
+      "target_class": 34,
+      "original_pred": 3,
+      "targeted_pred": 3,
+      "control_pred": 3,
+      "original_target_confidence": 4.9016184675565455e-06,
+      "targeted_target_confidence": 1.118289765145164e-05,
+      "control_target_confidence": 3.979168468504213e-06,
+      "targeted_target_confidence_increase": 6.281279183895094e-06,
+      "control_target_confidence_increase": -9.224499990523327e-07,
+      "target_confidence_increase_difference": 7.203729182947427e-06,
+      "original_target_logit": -7.756893157958984,
+      "targeted_target_logit": -7.342926502227783,
+      "control_target_logit": -7.8987226486206055,
+      "targeted_target_logit_increase": 0.41396665573120117,
+      "control_target_logit_increase": -0.1418294906616211,
+      "target_logit_increase_difference": 0.5557961463928223,
+      "original_target_margin": -11.90785026550293,
+      "targeted_target_margin": -11.066132545471191,
+      "control_target_margin": -11.904011726379395,
+      "targeted_target_margin_increase": 0.8417177200317383,
+      "control_target_margin_increase": 0.0038385391235351562,
+      "target_margin_increase_difference": 0.8378791809082031,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        73162
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.8555140495300293
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 951,
+      "true_label": 23,
+      "target_class": 34,
+      "original_pred": 23,
+      "targeted_pred": 23,
+      "control_pred": 23,
+      "original_target_confidence": 2.1501023184100632e-07,
+      "targeted_target_confidence": 6.629928748225211e-07,
+      "control_target_confidence": 8.183165789432678e-08,
+      "targeted_target_confidence_increase": 4.479826429815148e-07,
+      "control_target_confidence_increase": -1.3317857394667953e-07,
+      "target_confidence_increase_difference": 5.811612169281943e-07,
+      "original_target_logit": -8.709527969360352,
+      "targeted_target_logit": -8.200153350830078,
+      "control_target_logit": -9.118416786193848,
+      "targeted_target_logit_increase": 0.5093746185302734,
+      "control_target_logit_increase": -0.4088888168334961,
+      "target_logit_increase_difference": 0.9182634353637695,
+      "original_target_margin": -15.351958274841309,
+      "targeted_target_margin": -14.224964141845703,
+      "control_target_margin": -16.318233489990234,
+      "targeted_target_margin_increase": 1.1269941329956055,
+      "control_target_margin_increase": -0.9662752151489258,
+      "target_margin_increase_difference": 2.0932693481445312,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        76420
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.889025330543518
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 921,
+      "true_label": 16,
+      "target_class": 34,
+      "original_pred": 16,
+      "targeted_pred": 16,
+      "control_pred": 16,
+      "original_target_confidence": 4.6614857751592353e-08,
+      "targeted_target_confidence": 7.726465867108345e-08,
+      "control_target_confidence": 4.5860684139142904e-08,
+      "targeted_target_confidence_increase": 3.06498009194911e-08,
+      "control_target_confidence_increase": -7.541736124494491e-10,
+      "target_confidence_increase_difference": 3.140397453194055e-08,
+      "original_target_logit": -7.154047012329102,
+      "targeted_target_logit": -6.7295002937316895,
+      "control_target_logit": -7.0675153732299805,
+      "targeted_target_logit_increase": 0.4245467185974121,
+      "control_target_logit_increase": 0.0865316390991211,
+      "target_logit_increase_difference": 0.338015079498291,
+      "original_target_margin": -16.881290435791016,
+      "targeted_target_margin": -16.3759708404541,
+      "control_target_margin": -16.89760971069336,
+      "targeted_target_margin_increase": 0.5053195953369141,
+      "control_target_margin_increase": -0.01631927490234375,
+      "target_margin_increase_difference": 0.5216388702392578,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        70880
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.97983980178833
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3523,
+      "true_label": 35,
+      "target_class": 34,
+      "original_pred": 35,
+      "targeted_pred": 35,
+      "control_pred": 35,
+      "original_target_confidence": 2.2021390577720013e-07,
+      "targeted_target_confidence": 2.641392882196669e-07,
+      "control_target_confidence": 1.4051956043203973e-07,
+      "targeted_target_confidence_increase": 4.39253824424668e-08,
+      "control_target_confidence_increase": -7.96943453451604e-08,
+      "target_confidence_increase_difference": 1.236197277876272e-07,
+      "original_target_logit": -7.655495643615723,
+      "targeted_target_logit": -6.909397125244141,
+      "control_target_logit": -7.965346813201904,
+      "targeted_target_logit_increase": 0.746098518371582,
+      "control_target_logit_increase": -0.30985116958618164,
+      "target_logit_increase_difference": 1.0559496879577637,
+      "original_target_margin": -15.327378273010254,
+      "targeted_target_margin": -15.146197319030762,
+      "control_target_margin": -15.776815414428711,
+      "targeted_target_margin_increase": 0.1811809539794922,
+      "control_target_margin_increase": -0.44943714141845703,
+      "target_margin_increase_difference": 0.6306180953979492,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        46424
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5560497045516968
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1615,
+      "true_label": 35,
+      "target_class": 34,
+      "original_pred": 35,
+      "targeted_pred": 35,
+      "control_pred": 35,
+      "original_target_confidence": 0.00017930203466676176,
+      "targeted_target_confidence": 0.0002248420350952074,
+      "control_target_confidence": 0.00012977758888155222,
+      "targeted_target_confidence_increase": 4.554000042844564e-05,
+      "control_target_confidence_increase": -4.9524445785209537e-05,
+      "target_confidence_increase_difference": 9.506444621365517e-05,
+      "original_target_logit": -5.055545330047607,
+      "targeted_target_logit": -4.6224470138549805,
+      "control_target_logit": -5.167803764343262,
+      "targeted_target_logit_increase": 0.43309831619262695,
+      "control_target_logit_increase": -0.1122584342956543,
+      "target_logit_increase_difference": 0.5453567504882812,
+      "original_target_margin": -8.588366508483887,
+      "targeted_target_margin": -8.370086669921875,
+      "control_target_margin": -8.911298751831055,
+      "targeted_target_margin_increase": 0.21827983856201172,
+      "control_target_margin_increase": -0.32293224334716797,
+      "target_margin_increase_difference": 0.5412120819091797,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        43355
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.5094066858291626
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2322,
+      "true_label": 7,
+      "target_class": 34,
+      "original_pred": 7,
+      "targeted_pred": 7,
+      "control_pred": 7,
+      "original_target_confidence": 4.559813415738745e-09,
+      "targeted_target_confidence": 7.493991205365091e-09,
+      "control_target_confidence": 7.3205965733791345e-09,
+      "targeted_target_confidence_increase": 2.9341777896263466e-09,
+      "control_target_confidence_increase": 2.7607831576403896e-09,
+      "target_confidence_increase_difference": 1.7339463198595695e-10,
+      "original_target_logit": -6.4705939292907715,
+      "targeted_target_logit": -6.144245624542236,
+      "control_target_logit": -6.466883659362793,
+      "targeted_target_logit_increase": 0.32634830474853516,
+      "control_target_logit_increase": 0.0037102699279785156,
+      "target_logit_increase_difference": 0.32263803482055664,
+      "original_target_margin": -19.205982208251953,
+      "targeted_target_margin": -18.70916175842285,
+      "control_target_margin": -18.73257064819336,
+      "targeted_target_margin_increase": 0.49682044982910156,
+      "control_target_margin_increase": 0.47341156005859375,
+      "target_margin_increase_difference": 0.023408889770507812,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        11766
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.7696868181228638
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3107,
+      "true_label": 3,
+      "target_class": 34,
+      "original_pred": 3,
+      "targeted_pred": 3,
+      "control_pred": 3,
+      "original_target_confidence": 2.6613770387484692e-05,
+      "targeted_target_confidence": 8.537281973985955e-05,
+      "control_target_confidence": 2.670632238732651e-05,
+      "targeted_target_confidence_increase": 5.875904935237486e-05,
+      "control_target_confidence_increase": 9.255199984181672e-08,
+      "target_confidence_increase_difference": 5.866649735253304e-05,
+      "original_target_logit": -3.8681185245513916,
+      "targeted_target_logit": -3.1711366176605225,
+      "control_target_logit": -3.789649248123169,
+      "targeted_target_logit_increase": 0.6969819068908691,
+      "control_target_logit_increase": 0.07846927642822266,
+      "target_logit_increase_difference": 0.6185126304626465,
+      "original_target_margin": -10.498490333557129,
+      "targeted_target_margin": -9.283737182617188,
+      "control_target_margin": -10.508641242980957,
+      "targeted_target_margin_increase": 1.2147531509399414,
+      "control_target_margin_increase": -0.010150909423828125,
+      "target_margin_increase_difference": 1.2249040603637695,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        1807
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.9127267599105835
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3194,
+      "true_label": 36,
+      "target_class": 34,
+      "original_pred": 36,
+      "targeted_pred": 36,
+      "control_pred": 36,
+      "original_target_confidence": 2.7464545837574406e-07,
+      "targeted_target_confidence": 2.694358443022793e-07,
+      "control_target_confidence": 1.557369699867195e-07,
+      "targeted_target_confidence_increase": -5.209614073464763e-09,
+      "control_target_confidence_increase": -1.1890848838902457e-07,
+      "target_confidence_increase_difference": 1.136988743155598e-07,
+      "original_target_logit": -8.5867919921875,
+      "targeted_target_logit": -8.394280433654785,
+      "control_target_logit": -8.846808433532715,
+      "targeted_target_logit_increase": 0.19251155853271484,
+      "control_target_logit_increase": -0.26001644134521484,
+      "target_logit_increase_difference": 0.4525279998779297,
+      "original_target_margin": -15.049198150634766,
+      "targeted_target_margin": -15.086019515991211,
+      "control_target_margin": -15.592412948608398,
+      "targeted_target_margin_increase": -0.03682136535644531,
+      "control_target_margin_increase": -0.5432147979736328,
+      "target_margin_increase_difference": 0.5063934326171875,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        57321
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5633678436279297
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1819,
+      "true_label": 26,
+      "target_class": 34,
+      "original_pred": 26,
+      "targeted_pred": 26,
+      "control_pred": 26,
+      "original_target_confidence": 2.4058474082266912e-05,
+      "targeted_target_confidence": 0.00011000691301887855,
+      "control_target_confidence": 2.043548010988161e-05,
+      "targeted_target_confidence_increase": 8.594843893661164e-05,
+      "control_target_confidence_increase": -3.622993972385302e-06,
+      "target_confidence_increase_difference": 8.957143290899694e-05,
+      "original_target_logit": -6.238640308380127,
+      "targeted_target_logit": -5.76493501663208,
+      "control_target_logit": -6.39712381362915,
+      "targeted_target_logit_increase": 0.4737052917480469,
+      "control_target_logit_increase": -0.15848350524902344,
+      "target_logit_increase_difference": 0.6321887969970703,
+      "original_target_margin": -10.627500534057617,
+      "targeted_target_margin": -9.095293998718262,
+      "control_target_margin": -10.788566589355469,
+      "targeted_target_margin_increase": 1.5322065353393555,
+      "control_target_margin_increase": -0.16106605529785156,
+      "target_margin_increase_difference": 1.693272590637207,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        41368
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.9039007425308228
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 459,
+      "true_label": 36,
+      "target_class": 34,
+      "original_pred": 36,
+      "targeted_pred": 36,
+      "control_pred": 36,
+      "original_target_confidence": 3.4178299301856896e-06,
+      "targeted_target_confidence": 8.085203262453433e-06,
+      "control_target_confidence": 1.664171804804937e-06,
+      "targeted_target_confidence_increase": 4.6673733322677435e-06,
+      "control_target_confidence_increase": -1.7536581253807526e-06,
+      "target_confidence_increase_difference": 6.421031457648496e-06,
+      "original_target_logit": -6.974000453948975,
+      "targeted_target_logit": -6.201552391052246,
+      "control_target_logit": -7.262974262237549,
+      "targeted_target_logit_increase": 0.7724480628967285,
+      "control_target_logit_increase": -0.2889738082885742,
+      "target_logit_increase_difference": 1.0614218711853027,
+      "original_target_margin": -12.584586143493652,
+      "targeted_target_margin": -11.723197937011719,
+      "control_target_margin": -13.30461597442627,
+      "targeted_target_margin_increase": 0.8613882064819336,
+      "control_target_margin_increase": -0.7200298309326172,
+      "target_margin_increase_difference": 1.5814180374145508,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        40132
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1471259593963623
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1942,
+      "true_label": 27,
+      "target_class": 34,
+      "original_pred": 27,
+      "targeted_pred": 27,
+      "control_pred": 27,
+      "original_target_confidence": 9.166701056528836e-05,
+      "targeted_target_confidence": 0.00014597926929127425,
+      "control_target_confidence": 8.643598994240165e-05,
+      "targeted_target_confidence_increase": 5.4312258725985885e-05,
+      "control_target_confidence_increase": -5.231020622886717e-06,
+      "target_confidence_increase_difference": 5.95432793488726e-05,
+      "original_target_logit": -6.09666633605957,
+      "targeted_target_logit": -5.656379222869873,
+      "control_target_logit": -6.433404445648193,
+      "targeted_target_logit_increase": 0.44028711318969727,
+      "control_target_logit_increase": -0.33673810958862305,
+      "target_logit_increase_difference": 0.7770252227783203,
+      "original_target_margin": -9.20074462890625,
+      "targeted_target_margin": -8.741865158081055,
+      "control_target_margin": -9.231746673583984,
+      "targeted_target_margin_increase": 0.4588794708251953,
+      "control_target_margin_increase": -0.031002044677734375,
+      "target_margin_increase_difference": 0.4898815155029297,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        64015
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.7115447521209717
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2529,
+      "true_label": 30,
+      "target_class": 34,
+      "original_pred": 30,
+      "targeted_pred": 30,
+      "control_pred": 30,
+      "original_target_confidence": 2.8471708901633974e-07,
+      "targeted_target_confidence": 9.406852541360422e-07,
+      "control_target_confidence": 2.9387879862952104e-07,
+      "targeted_target_confidence_increase": 6.559681651197025e-07,
+      "control_target_confidence_increase": 9.161709613181301e-09,
+      "target_confidence_increase_difference": 6.468064555065212e-07,
+      "original_target_logit": -5.2539801597595215,
+      "targeted_target_logit": -4.318901538848877,
+      "control_target_logit": -5.497822284698486,
+      "targeted_target_logit_increase": 0.9350786209106445,
+      "control_target_logit_increase": -0.24384212493896484,
+      "target_logit_increase_difference": 1.1789207458496094,
+      "original_target_margin": -15.071733474731445,
+      "targeted_target_margin": -13.87661361694336,
+      "control_target_margin": -15.040033340454102,
+      "targeted_target_margin_increase": 1.195119857788086,
+      "control_target_margin_increase": 0.03170013427734375,
+      "target_margin_increase_difference": 1.1634197235107422,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        4253
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1066665649414062
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2107,
+      "true_label": 26,
+      "target_class": 34,
+      "original_pred": 26,
+      "targeted_pred": 26,
+      "control_pred": 26,
+      "original_target_confidence": 3.196546231265529e-06,
+      "targeted_target_confidence": 5.744189820688916e-06,
+      "control_target_confidence": 2.8449567253119312e-06,
+      "targeted_target_confidence_increase": 2.5476435894233873e-06,
+      "control_target_confidence_increase": -3.5158950595359784e-07,
+      "target_confidence_increase_difference": 2.899233095376985e-06,
+      "original_target_logit": -6.311630725860596,
+      "targeted_target_logit": -6.028162956237793,
+      "control_target_logit": -6.262579917907715,
+      "targeted_target_logit_increase": 0.28346776962280273,
+      "control_target_logit_increase": 0.04905080795288086,
+      "target_logit_increase_difference": 0.23441696166992188,
+      "original_target_margin": -12.650351524353027,
+      "targeted_target_margin": -12.062925338745117,
+      "control_target_margin": -12.766855239868164,
+      "targeted_target_margin_increase": 0.5874261856079102,
+      "control_target_margin_increase": -0.11650371551513672,
+      "target_margin_increase_difference": 0.7039299011230469,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        22083
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        3.1924734115600586
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1698,
+      "true_label": 28,
+      "target_class": 34,
+      "original_pred": 28,
+      "targeted_pred": 28,
+      "control_pred": 28,
+      "original_target_confidence": 2.1646492314175703e-05,
+      "targeted_target_confidence": 5.4706841183360666e-05,
+      "control_target_confidence": 1.5766714568599127e-05,
+      "targeted_target_confidence_increase": 3.3060348869184963e-05,
+      "control_target_confidence_increase": -5.879777745576575e-06,
+      "target_confidence_increase_difference": 3.894012661476154e-05,
+      "original_target_logit": -5.360039710998535,
+      "targeted_target_logit": -4.826683044433594,
+      "control_target_logit": -5.705986499786377,
+      "targeted_target_logit_increase": 0.5333566665649414,
+      "control_target_logit_increase": -0.3459467887878418,
+      "target_logit_increase_difference": 0.8793034553527832,
+      "original_target_margin": -10.725813865661621,
+      "targeted_target_margin": -9.782137870788574,
+      "control_target_margin": -11.038262367248535,
+      "targeted_target_margin_increase": 0.9436759948730469,
+      "control_target_margin_increase": -0.31244850158691406,
+      "target_margin_increase_difference": 1.256124496459961,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        54904
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5561285018920898
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2773,
+      "true_label": 20,
+      "target_class": 34,
+      "original_pred": 20,
+      "targeted_pred": 20,
+      "control_pred": 20,
+      "original_target_confidence": 9.59790213528322e-07,
+      "targeted_target_confidence": 3.8706093619111925e-06,
+      "control_target_confidence": 4.5023725192550046e-07,
+      "targeted_target_confidence_increase": 2.9108191483828705e-06,
+      "control_target_confidence_increase": -5.095529616028216e-07,
+      "target_confidence_increase_difference": 3.420372109985692e-06,
+      "original_target_logit": -5.696993350982666,
+      "targeted_target_logit": -4.985159873962402,
+      "control_target_logit": -5.952083587646484,
+      "targeted_target_logit_increase": 0.7118334770202637,
+      "control_target_logit_increase": -0.25509023666381836,
+      "target_logit_increase_difference": 0.966923713684082,
+      "original_target_margin": -13.85458755493164,
+      "targeted_target_margin": -12.457966804504395,
+      "control_target_margin": -14.612728118896484,
+      "targeted_target_margin_increase": 1.396620750427246,
+      "control_target_margin_increase": -0.7581405639648438,
+      "target_margin_increase_difference": 2.15476131439209,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        8300
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.584221601486206
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 137,
+      "true_label": 21,
+      "target_class": 34,
+      "original_pred": 21,
+      "targeted_pred": 21,
+      "control_pred": 21,
+      "original_target_confidence": 2.3754189442115603e-06,
+      "targeted_target_confidence": 1.0095303650814458e-06,
+      "control_target_confidence": 6.0281545302132145e-06,
+      "targeted_target_confidence_increase": -1.3658885791301145e-06,
+      "control_target_confidence_increase": 3.652735586001654e-06,
+      "target_confidence_increase_difference": -5.018624165131769e-06,
+      "original_target_logit": -3.082630157470703,
+      "targeted_target_logit": -2.6222751140594482,
+      "control_target_logit": -2.8834803104400635,
+      "targeted_target_logit_increase": 0.4603550434112549,
+      "control_target_logit_increase": 0.19914984703063965,
+      "target_logit_increase_difference": 0.26120519638061523,
+      "original_target_margin": -12.950279235839844,
+      "targeted_target_margin": -13.806010246276855,
+      "control_target_margin": -12.018972396850586,
+      "targeted_target_margin_increase": -0.8557310104370117,
+      "control_target_margin_increase": 0.9313068389892578,
+      "target_margin_increase_difference": -1.7870378494262695,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        51087
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.41078630089759827
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 815,
+      "true_label": 3,
+      "target_class": 34,
+      "original_pred": 3,
+      "targeted_pred": 3,
+      "control_pred": 3,
+      "original_target_confidence": 4.287766586230646e-08,
+      "targeted_target_confidence": 8.956087071965158e-08,
+      "control_target_confidence": 3.222865530005947e-08,
+      "targeted_target_confidence_increase": 4.668320485734512e-08,
+      "control_target_confidence_increase": -1.0649010562246986e-08,
+      "target_confidence_increase_difference": 5.73322154195921e-08,
+      "original_target_logit": -7.792040824890137,
+      "targeted_target_logit": -7.486526966094971,
+      "control_target_logit": -7.841099739074707,
+      "targeted_target_logit_increase": 0.305513858795166,
+      "control_target_logit_increase": -0.04905891418457031,
+      "target_logit_increase_difference": 0.35457277297973633,
+      "original_target_margin": -16.964725494384766,
+      "targeted_target_margin": -16.22795295715332,
+      "control_target_margin": -17.250301361083984,
+      "targeted_target_margin_increase": 0.7367725372314453,
+      "control_target_margin_increase": -0.28557586669921875,
+      "target_margin_increase_difference": 1.022348403930664,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        40179
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.974946141242981
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2810,
+      "true_label": 30,
+      "target_class": 34,
+      "original_pred": 30,
+      "targeted_pred": 30,
+      "control_pred": 30,
+      "original_target_confidence": 3.036643647646997e-06,
+      "targeted_target_confidence": 1.0127176210517064e-05,
+      "control_target_confidence": 6.071220013836864e-06,
+      "targeted_target_confidence_increase": 7.090532562870067e-06,
+      "control_target_confidence_increase": 3.0345763661898673e-06,
+      "target_confidence_increase_difference": 4.055956196680199e-06,
+      "original_target_logit": -6.1748127937316895,
+      "targeted_target_logit": -5.263448715209961,
+      "control_target_logit": -6.2711567878723145,
+      "targeted_target_logit_increase": 0.9113640785217285,
+      "control_target_logit_increase": -0.096343994140625,
+      "target_logit_increase_difference": 1.0077080726623535,
+      "original_target_margin": -12.703544616699219,
+      "targeted_target_margin": -11.49833869934082,
+      "control_target_margin": -12.009054183959961,
+      "targeted_target_margin_increase": 1.2052059173583984,
+      "control_target_margin_increase": 0.6944904327392578,
+      "target_margin_increase_difference": 0.5107154846191406,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        75027
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5206464529037476
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 528,
+      "true_label": 14,
+      "target_class": 34,
+      "original_pred": 14,
+      "targeted_pred": 14,
+      "control_pred": 3,
+      "original_target_confidence": 0.0025314372032880783,
+      "targeted_target_confidence": 0.0028504589572548866,
+      "control_target_confidence": 0.0027538740541785955,
+      "targeted_target_confidence_increase": 0.0003190217539668083,
+      "control_target_confidence_increase": 0.00022243685089051723,
+      "target_confidence_increase_difference": 9.658490307629108e-05,
+      "original_target_logit": -2.8416953086853027,
+      "targeted_target_logit": -2.456156015396118,
+      "control_target_logit": -2.98437762260437,
+      "targeted_target_logit_increase": 0.38553929328918457,
+      "control_target_logit_increase": -0.14268231391906738,
+      "target_logit_increase_difference": 0.528221607208252,
+      "original_target_margin": -5.526528358459473,
+      "targeted_target_margin": -5.650433540344238,
+      "control_target_margin": -5.285056114196777,
+      "targeted_target_margin_increase": -0.12390518188476562,
+      "control_target_margin_increase": 0.2414722442626953,
+      "target_margin_increase_difference": -0.36537742614746094,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        55326
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.2708427906036377
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2211,
+      "true_label": 22,
+      "target_class": 34,
+      "original_pred": 22,
+      "targeted_pred": 22,
+      "control_pred": 22,
+      "original_target_confidence": 1.6297941328957677e-05,
+      "targeted_target_confidence": 3.87571744795423e-05,
+      "control_target_confidence": 9.881222467811313e-06,
+      "targeted_target_confidence_increase": 2.2459233150584623e-05,
+      "control_target_confidence_increase": -6.416718861146364e-06,
+      "target_confidence_increase_difference": 2.8875952011730988e-05,
+      "original_target_logit": -6.134687423706055,
+      "targeted_target_logit": -5.4295268058776855,
+      "control_target_logit": -6.407569885253906,
+      "targeted_target_logit_increase": 0.7051606178283691,
+      "control_target_logit_increase": -0.27288246154785156,
+      "target_logit_increase_difference": 0.9780430793762207,
+      "original_target_margin": -10.992851257324219,
+      "targeted_target_margin": -10.128350257873535,
+      "control_target_margin": -11.499717712402344,
+      "targeted_target_margin_increase": 0.8645009994506836,
+      "control_target_margin_increase": -0.506866455078125,
+      "target_margin_increase_difference": 1.3713674545288086,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        52239
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.0125930309295654
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 3457,
+      "true_label": 6,
+      "target_class": 34,
+      "original_pred": 6,
+      "targeted_pred": 6,
+      "control_pred": 6,
+      "original_target_confidence": 4.392972741129597e-08,
+      "targeted_target_confidence": 5.490120358331296e-08,
+      "control_target_confidence": 2.428431677969911e-08,
+      "targeted_target_confidence_increase": 1.0971476172016992e-08,
+      "control_target_confidence_increase": -1.964541063159686e-08,
+      "target_confidence_increase_difference": 3.061688680361385e-08,
+      "original_target_logit": -7.790761947631836,
+      "targeted_target_logit": -7.520881175994873,
+      "control_target_logit": -7.949522495269775,
+      "targeted_target_logit_increase": 0.2698807716369629,
+      "control_target_logit_increase": -0.15876054763793945,
+      "target_logit_increase_difference": 0.42864131927490234,
+      "original_target_margin": -16.93769073486328,
+      "targeted_target_margin": -16.71673583984375,
+      "control_target_margin": -17.531400680541992,
+      "targeted_target_margin_increase": 0.22095489501953125,
+      "control_target_margin_increase": -0.5937099456787109,
+      "target_margin_increase_difference": 0.8146648406982422,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        37474
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.5926936864852905
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 129,
+      "true_label": 23,
+      "target_class": 34,
+      "original_pred": 23,
+      "targeted_pred": 23,
+      "control_pred": 23,
+      "original_target_confidence": 2.616535493871197e-05,
+      "targeted_target_confidence": 5.610244261333719e-05,
+      "control_target_confidence": 1.79594771907432e-05,
+      "targeted_target_confidence_increase": 2.9937087674625218e-05,
+      "control_target_confidence_increase": -8.20587774796877e-06,
+      "target_confidence_increase_difference": 3.814296542259399e-05,
+      "original_target_logit": -5.508533000946045,
+      "targeted_target_logit": -5.254745960235596,
+      "control_target_logit": -5.589457035064697,
+      "targeted_target_logit_increase": 0.2537870407104492,
+      "control_target_logit_increase": -0.08092403411865234,
+      "target_logit_increase_difference": 0.33471107482910156,
+      "original_target_margin": -10.514656066894531,
+      "targeted_target_margin": -9.682390213012695,
+      "control_target_margin": -10.901336669921875,
+      "targeted_target_margin_increase": 0.8322658538818359,
+      "control_target_margin_increase": -0.38668060302734375,
+      "target_margin_increase_difference": 1.2189464569091797,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        27091
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.3415707349777222
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 406,
+      "true_label": 24,
+      "target_class": 34,
+      "original_pred": 24,
+      "targeted_pred": 24,
+      "control_pred": 24,
+      "original_target_confidence": 0.00016404810594394803,
+      "targeted_target_confidence": 0.0003842236183118075,
+      "control_target_confidence": 0.00010838539310498163,
+      "targeted_target_confidence_increase": 0.00022017551236785948,
+      "control_target_confidence_increase": -5.56627128389664e-05,
+      "target_confidence_increase_difference": 0.0002758382252068259,
+      "original_target_logit": -4.425436973571777,
+      "targeted_target_logit": -3.844038248062134,
+      "control_target_logit": -4.576248645782471,
+      "targeted_target_logit_increase": 0.5813987255096436,
+      "control_target_logit_increase": -0.15081167221069336,
+      "target_logit_increase_difference": 0.7322103977203369,
+      "original_target_margin": -8.622600555419922,
+      "targeted_target_margin": -7.757689476013184,
+      "control_target_margin": -9.012459754943848,
+      "targeted_target_margin_increase": 0.8649110794067383,
+      "control_target_margin_increase": -0.3898591995239258,
+      "target_margin_increase_difference": 1.254770278930664,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        45841
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.9650722742080688
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 773,
+      "true_label": 15,
+      "target_class": 34,
+      "original_pred": 15,
+      "targeted_pred": 15,
+      "control_pred": 15,
+      "original_target_confidence": 1.6379693761336966e-06,
+      "targeted_target_confidence": 2.2524081941810437e-06,
+      "control_target_confidence": 1.0110782113770256e-06,
+      "targeted_target_confidence_increase": 6.14438818047347e-07,
+      "control_target_confidence_increase": -6.268911647566711e-07,
+      "target_confidence_increase_difference": 1.241329982804018e-06,
+      "original_target_logit": -5.628371715545654,
+      "targeted_target_logit": -5.039366722106934,
+      "control_target_logit": -5.834331512451172,
+      "targeted_target_logit_increase": 0.5890049934387207,
+      "control_target_logit_increase": -0.20595979690551758,
+      "target_logit_increase_difference": 0.7949647903442383,
+      "original_target_margin": -13.321033477783203,
+      "targeted_target_margin": -13.002872467041016,
+      "control_target_margin": -13.803468704223633,
+      "targeted_target_margin_increase": 0.3181610107421875,
+      "control_target_margin_increase": -0.4824352264404297,
+      "target_margin_increase_difference": 0.8005962371826172,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        37325
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1296164989471436
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2358,
+      "true_label": 3,
+      "target_class": 34,
+      "original_pred": 3,
+      "targeted_pred": 3,
+      "control_pred": 3,
+      "original_target_confidence": 3.525843339957646e-06,
+      "targeted_target_confidence": 1.1500747859827243e-05,
+      "control_target_confidence": 2.889021970986505e-06,
+      "targeted_target_confidence_increase": 7.974904519869597e-06,
+      "control_target_confidence_increase": -6.368213689711411e-07,
+      "target_confidence_increase_difference": 8.611725888840738e-06,
+      "original_target_logit": -3.024836778640747,
+      "targeted_target_logit": -2.432471513748169,
+      "control_target_logit": -3.1983861923217773,
+      "targeted_target_logit_increase": 0.5923652648925781,
+      "control_target_logit_increase": -0.17354941368103027,
+      "target_logit_increase_difference": 0.7659146785736084,
+      "original_target_margin": -12.555294036865234,
+      "targeted_target_margin": -11.372852325439453,
+      "control_target_margin": -12.75450611114502,
+      "targeted_target_margin_increase": 1.1824417114257812,
+      "control_target_margin_increase": -0.19921207427978516,
+      "target_margin_increase_difference": 1.3816537857055664,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        10544
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.6437846422195435
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 321,
+      "true_label": 35,
+      "target_class": 34,
+      "original_pred": 35,
+      "targeted_pred": 35,
+      "control_pred": 35,
+      "original_target_confidence": 2.5956096578738652e-05,
+      "targeted_target_confidence": 2.490883707650937e-05,
+      "control_target_confidence": 1.431318378308788e-05,
+      "targeted_target_confidence_increase": -1.0472595022292808e-06,
+      "control_target_confidence_increase": -1.1642912795650773e-05,
+      "target_confidence_increase_difference": 1.0595653293421492e-05,
+      "original_target_logit": -5.157193183898926,
+      "targeted_target_logit": -4.896670341491699,
+      "control_target_logit": -5.365281581878662,
+      "targeted_target_logit_increase": 0.26052284240722656,
+      "control_target_logit_increase": -0.20808839797973633,
+      "target_logit_increase_difference": 0.4686112403869629,
+      "original_target_margin": -10.554679870605469,
+      "targeted_target_margin": -10.597505569458008,
+      "control_target_margin": -11.151678085327148,
+      "targeted_target_margin_increase": -0.04282569885253906,
+      "control_target_margin_increase": -0.5969982147216797,
+      "target_margin_increase_difference": 0.5541725158691406,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        30176
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.1803457736968994
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2502,
+      "true_label": 9,
+      "target_class": 34,
+      "original_pred": 9,
+      "targeted_pred": 9,
+      "control_pred": 9,
+      "original_target_confidence": 4.482769355718119e-08,
+      "targeted_target_confidence": 1.451707447586159e-07,
+      "control_target_confidence": 5.1667111478082006e-08,
+      "targeted_target_confidence_increase": 1.0034305120143472e-07,
+      "control_target_confidence_increase": 6.839417920900814e-09,
+      "target_confidence_increase_difference": 9.35036332805339e-08,
+      "original_target_logit": -5.848095893859863,
+      "targeted_target_logit": -5.128005027770996,
+      "control_target_logit": -5.937756538391113,
+      "targeted_target_logit_increase": 0.7200908660888672,
+      "control_target_logit_increase": -0.08966064453125,
+      "target_logit_increase_difference": 0.8097515106201172,
+      "original_target_margin": -16.920413970947266,
+      "targeted_target_margin": -15.745309829711914,
+      "control_target_margin": -16.77842140197754,
+      "targeted_target_margin_increase": 1.1751041412353516,
+      "control_target_margin_increase": 0.14199256896972656,
+      "target_margin_increase_difference": 1.033111572265625,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        258
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.33602774143219
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 417,
+      "true_label": 23,
+      "target_class": 34,
+      "original_pred": 23,
+      "targeted_pred": 23,
+      "control_pred": 23,
+      "original_target_confidence": 6.080524972418289e-09,
+      "targeted_target_confidence": 1.8745499374972496e-08,
+      "control_target_confidence": 2.199316506690252e-09,
+      "targeted_target_confidence_increase": 1.2664974402554208e-08,
+      "control_target_confidence_increase": -3.8812084657280366e-09,
+      "target_confidence_increase_difference": 1.6546182868282244e-08,
+      "original_target_logit": -8.897387504577637,
+      "targeted_target_logit": -8.5892333984375,
+      "control_target_logit": -9.083826065063477,
+      "targeted_target_logit_increase": 0.3081541061401367,
+      "control_target_logit_increase": -0.18643856048583984,
+      "target_logit_increase_difference": 0.49459266662597656,
+      "original_target_margin": -18.91808319091797,
+      "targeted_target_margin": -17.792192459106445,
+      "control_target_margin": -19.935089111328125,
+      "targeted_target_margin_increase": 1.1258907318115234,
+      "control_target_margin_increase": -1.0170059204101562,
+      "target_margin_increase_difference": 2.1428966522216797,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        34420
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.0765931606292725
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2991,
+      "true_label": 12,
+      "target_class": 34,
+      "original_pred": 12,
+      "targeted_pred": 12,
+      "control_pred": 12,
+      "original_target_confidence": 1.1187710757809555e-09,
+      "targeted_target_confidence": 1.4664491843063843e-09,
+      "control_target_confidence": 2.985825142687304e-09,
+      "targeted_target_confidence_increase": 3.476781085254288e-10,
+      "control_target_confidence_increase": 1.8670540669063485e-09,
+      "target_confidence_increase_difference": -1.5193759583809197e-09,
+      "original_target_logit": -10.988519668579102,
+      "targeted_target_logit": -10.763260841369629,
+      "control_target_logit": -10.86158275604248,
+      "targeted_target_logit_increase": 0.22525882720947266,
+      "control_target_logit_increase": 0.1269369125366211,
+      "target_logit_increase_difference": 0.09832191467285156,
+      "original_target_margin": -20.609962463378906,
+      "targeted_target_margin": -20.33877944946289,
+      "control_target_margin": -19.626625061035156,
+      "targeted_target_margin_increase": 0.2711830139160156,
+      "control_target_margin_increase": 0.98333740234375,
+      "target_margin_increase_difference": -0.7121543884277344,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        40225
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.3721239566802979
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2578,
+      "true_label": 17,
+      "target_class": 34,
+      "original_pred": 17,
+      "targeted_pred": 17,
+      "control_pred": 17,
+      "original_target_confidence": 1.8274091928560665e-07,
+      "targeted_target_confidence": 1.9251021399213641e-07,
+      "control_target_confidence": 1.4707880779951665e-07,
+      "targeted_target_confidence_increase": 9.769294706529763e-09,
+      "control_target_confidence_increase": -3.566211148609e-08,
+      "target_confidence_increase_difference": 4.543140619261976e-08,
+      "original_target_logit": -5.608460903167725,
+      "targeted_target_logit": -5.321743011474609,
+      "control_target_logit": -5.64824104309082,
+      "targeted_target_logit_increase": 0.28671789169311523,
+      "control_target_logit_increase": -0.0397801399230957,
+      "target_logit_increase_difference": 0.32649803161621094,
+      "original_target_margin": -15.515167236328125,
+      "targeted_target_margin": -15.463096618652344,
+      "control_target_margin": -15.732272148132324,
+      "targeted_target_margin_increase": 0.05207061767578125,
+      "control_target_margin_increase": -0.21710491180419922,
+      "target_margin_increase_difference": 0.26917552947998047,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        3470
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        0.8807982206344604
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2179,
+      "true_label": 31,
+      "target_class": 34,
+      "original_pred": 31,
+      "targeted_pred": 31,
+      "control_pred": 31,
+      "original_target_confidence": 2.7154885628988268e-06,
+      "targeted_target_confidence": 4.16869124819641e-06,
+      "control_target_confidence": 2.2442891349783167e-06,
+      "targeted_target_confidence_increase": 1.4532026852975832e-06,
+      "control_target_confidence_increase": -4.7119942792051006e-07,
+      "target_confidence_increase_difference": 1.9244021132180933e-06,
+      "original_target_logit": -3.3317720890045166,
+      "targeted_target_logit": -2.809840440750122,
+      "control_target_logit": -3.431886911392212,
+      "targeted_target_logit_increase": 0.5219316482543945,
+      "control_target_logit_increase": -0.10011482238769531,
+      "target_logit_increase_difference": 0.6220464706420898,
+      "original_target_margin": -12.816412925720215,
+      "targeted_target_margin": -12.387774467468262,
+      "control_target_margin": -13.007051467895508,
+      "targeted_target_margin_increase": 0.4286384582519531,
+      "control_target_margin_increase": -0.19063854217529297,
+      "target_margin_increase_difference": 0.6192770004272461,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        37089
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.0162172317504883
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2285,
+      "true_label": 35,
+      "target_class": 34,
+      "original_pred": 35,
+      "targeted_pred": 35,
+      "control_pred": 35,
+      "original_target_confidence": 2.595575097075198e-06,
+      "targeted_target_confidence": 1.9518554381647846e-06,
+      "control_target_confidence": 2.0105717339902185e-06,
+      "targeted_target_confidence_increase": -6.437196589104133e-07,
+      "control_target_confidence_increase": -5.850033630849794e-07,
+      "target_confidence_increase_difference": -5.871629582543392e-08,
+      "original_target_logit": -7.381199359893799,
+      "targeted_target_logit": -7.08426570892334,
+      "control_target_logit": -7.4245924949646,
+      "targeted_target_logit_increase": 0.296933650970459,
+      "control_target_logit_increase": -0.04339313507080078,
+      "target_logit_increase_difference": 0.34032678604125977,
+      "original_target_margin": -12.837318420410156,
+      "targeted_target_margin": -13.132562637329102,
+      "control_target_margin": -13.101423263549805,
+      "targeted_target_margin_increase": -0.2952442169189453,
+      "control_target_margin_increase": -0.26410484313964844,
+      "target_margin_increase_difference": -0.031139373779296875,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        3328
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.578246831893921
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 783,
+      "true_label": 35,
+      "target_class": 34,
+      "original_pred": 35,
+      "targeted_pred": 35,
+      "control_pred": 35,
+      "original_target_confidence": 6.254869049371337e-07,
+      "targeted_target_confidence": 6.975063797654002e-07,
+      "control_target_confidence": 2.3224276901601115e-07,
+      "targeted_target_confidence_increase": 7.201947482826654e-08,
+      "control_target_confidence_increase": -3.932441359211225e-07,
+      "target_confidence_increase_difference": 4.6526361074938904e-07,
+      "original_target_logit": -9.969441413879395,
+      "targeted_target_logit": -9.407079696655273,
+      "control_target_logit": -10.18316650390625,
+      "targeted_target_logit_increase": 0.5623617172241211,
+      "control_target_logit_increase": -0.21372509002685547,
+      "target_logit_increase_difference": 0.7760868072509766,
+      "original_target_margin": -14.237069129943848,
+      "targeted_target_margin": -14.144207000732422,
+      "control_target_margin": -15.257296562194824,
+      "targeted_target_margin_increase": 0.09286212921142578,
+      "control_target_margin_increase": -1.0202274322509766,
+      "target_margin_increase_difference": 1.1130895614624023,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        62062
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.7015388011932373
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2893,
+      "true_label": 6,
+      "target_class": 34,
+      "original_pred": 6,
+      "targeted_pred": 6,
+      "control_pred": 6,
+      "original_target_confidence": 1.531589521874821e-09,
+      "targeted_target_confidence": 1.529772419850417e-09,
+      "control_target_confidence": 6.98359203799015e-10,
+      "targeted_target_confidence_increase": -1.8171020244039937e-12,
+      "control_target_confidence_increase": -8.332303180758061e-10,
+      "target_confidence_increase_difference": 8.314132160514021e-10,
+      "original_target_logit": -9.302064895629883,
+      "targeted_target_logit": -9.193674087524414,
+      "control_target_logit": -9.542706489562988,
+      "targeted_target_logit_increase": 0.10839080810546875,
+      "control_target_logit_increase": -0.24064159393310547,
+      "target_logit_increase_difference": 0.3490324020385742,
+      "original_target_margin": -20.296844482421875,
+      "targeted_target_margin": -20.298097610473633,
+      "control_target_margin": -21.082204818725586,
+      "targeted_target_margin_increase": -0.0012531280517578125,
+      "control_target_margin_increase": -0.7853603363037109,
+      "target_margin_increase_difference": 0.7841072082519531,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        57325
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.787214994430542
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 1374,
+      "true_label": 0,
+      "target_class": 34,
+      "original_pred": 0,
+      "targeted_pred": 0,
+      "control_pred": 0,
+      "original_target_confidence": 1.306085437136062e-06,
+      "targeted_target_confidence": 1.227135044246097e-06,
+      "control_target_confidence": 2.063606871161028e-06,
+      "targeted_target_confidence_increase": -7.895039288996486e-08,
+      "control_target_confidence_increase": 7.575214340249659e-07,
+      "target_confidence_increase_difference": -8.364718269149307e-07,
+      "original_target_logit": -6.389493465423584,
+      "targeted_target_logit": -6.003785133361816,
+      "control_target_logit": -6.373873710632324,
+      "targeted_target_logit_increase": 0.3857083320617676,
+      "control_target_logit_increase": 0.015619754791259766,
+      "target_logit_increase_difference": 0.3700885772705078,
+      "original_target_margin": -13.547981262207031,
+      "targeted_target_margin": -13.610574722290039,
+      "control_target_margin": -13.090243339538574,
+      "targeted_target_margin_increase": -0.06259346008300781,
+      "control_target_margin_increase": 0.45773792266845703,
+      "target_margin_increase_difference": -0.5203313827514648,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        33904
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.7299095392227173
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 965,
+      "true_label": 30,
+      "target_class": 34,
+      "original_pred": 30,
+      "targeted_pred": 30,
+      "control_pred": 30,
+      "original_target_confidence": 6.839436395011944e-08,
+      "targeted_target_confidence": 1.530466136046016e-07,
+      "control_target_confidence": 7.787824785054909e-08,
+      "targeted_target_confidence_increase": 8.465224965448215e-08,
+      "control_target_confidence_increase": 9.483883900429646e-09,
+      "target_confidence_increase_difference": 7.51683657540525e-08,
+      "original_target_logit": -4.891311168670654,
+      "targeted_target_logit": -4.170351028442383,
+      "control_target_logit": -4.904933452606201,
+      "targeted_target_logit_increase": 0.7209601402282715,
+      "control_target_logit_increase": -0.013622283935546875,
+      "target_logit_increase_difference": 0.7345824241638184,
+      "original_target_margin": -16.497970581054688,
+      "targeted_target_margin": -15.69251823425293,
+      "control_target_margin": -16.368114471435547,
+      "targeted_target_margin_increase": 0.8054523468017578,
+      "control_target_margin_increase": 0.12985610961914062,
+      "target_margin_increase_difference": 0.6755962371826172,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        11086
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.0777456760406494
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 8,
+      "true_label": 36,
+      "target_class": 34,
+      "original_pred": 36,
+      "targeted_pred": 36,
+      "control_pred": 36,
+      "original_target_confidence": 7.624232267744446e-08,
+      "targeted_target_confidence": 1.0051598309246401e-07,
+      "control_target_confidence": 6.131865148972793e-08,
+      "targeted_target_confidence_increase": 2.427366041501955e-08,
+      "control_target_confidence_increase": -1.4923671187716536e-08,
+      "target_confidence_increase_difference": 3.9197331602736085e-08,
+      "original_target_logit": -10.156492233276367,
+      "targeted_target_logit": -9.751228332519531,
+      "control_target_logit": -10.182741165161133,
+      "targeted_target_logit_increase": 0.40526390075683594,
+      "control_target_logit_increase": -0.026248931884765625,
+      "target_logit_increase_difference": 0.43151283264160156,
+      "original_target_margin": -16.239816665649414,
+      "targeted_target_margin": -16.00490951538086,
+      "control_target_margin": -16.366167068481445,
+      "targeted_target_margin_increase": 0.2349071502685547,
+      "control_target_margin_increase": -0.12635040283203125,
+      "target_margin_increase_difference": 0.36125755310058594,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        35111
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        2.058458089828491
+      ],
+      "number_features_inserted": 1
+    },
+    {
+      "image_index": 2125,
+      "true_label": 15,
+      "target_class": 34,
+      "original_pred": 15,
+      "targeted_pred": 15,
+      "control_pred": 15,
+      "original_target_confidence": 1.4299062058853451e-06,
+      "targeted_target_confidence": 2.1872995148441987e-06,
+      "control_target_confidence": 8.704322453922941e-07,
+      "targeted_target_confidence_increase": 7.573933089588536e-07,
+      "control_target_confidence_increase": -5.59473960493051e-07,
+      "target_confidence_increase_difference": 1.3168672694519046e-06,
+      "original_target_logit": -3.6921112537384033,
+      "targeted_target_logit": -3.098221778869629,
+      "control_target_logit": -4.018930435180664,
+      "targeted_target_logit_increase": 0.5938894748687744,
+      "control_target_logit_increase": -0.32681918144226074,
+      "target_logit_increase_difference": 0.9207086563110352,
+      "original_target_margin": -13.457124710083008,
+      "targeted_target_margin": -13.032303810119629,
+      "control_target_margin": -13.953350067138672,
+      "targeted_target_margin_increase": 0.4248208999633789,
+      "control_target_margin_increase": -0.49622535705566406,
+      "target_margin_increase_difference": 0.921046257019043,
+      "target_neuron_ids": [
+        81345
+      ],
+      "control_neuron_ids": [
+        22982
+      ],
+      "removed_source_neuron_ids": [
+        74983
+      ],
+      "target_inserted_activations": [
+        8.732405662536621
+      ],
+      "control_inserted_activations": [
+        8.653112411499023
+      ],
+      "removed_source_activations": [
+        1.2668836116790771
+      ],
+      "number_features_inserted": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+### Starting TaskPrologue of job 1813510 on tg090 at Tue Sep 15 09:46:01 AM CEST 2026
+Running on cores 96-127 with governor ondemand
+Tue Sep 15 09:46:01 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   43C    P0             56W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+Loading feature stats and k-SAE...
+Target class: 18
+Selected high-purity target features: 34
+Loading dataset...
+Source class: 25 pug
+Number of source images: 8
+First source indices: [1, 170, 200, 204, 220, 312, 342, 379]
+Loading Stable Diffusion feature extractor via ImageClassifer...
+Done source_index=1 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00001
+Done source_index=170 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00170
+Done source_index=200 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00200
+Done source_index=204 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00204
+Done source_index=220 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00220
+Done source_index=312 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00312
+Done source_index=342 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00342
+Done source_index=379 label=pug saved_to=/home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/img_00379
+Saved summary to: /home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug/summary.json
+=== JOB_STATISTICS ===
+=== current date     : Tue Sep 15 09:46:53 AM CEST 2026
+= Job-ID             : 1813510 on tinygpu
+= Job-Name           : qualitative_sae_intervention
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_qualitative_sae_intervention.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:59
+= Total RAM usage    : 6.5 GiB of requested  GiB (%)   
+= Node list          : tg090
+= Subm/Elig/Start/End: 2026-09-15T09:44:29 / 2026-09-15T09:44:29 / 2026-09-15T09:45:54 / 2026-09-15T09:46:53
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:C1:00.0, 3717085, 9 %, 2 %, 7252 MiB, 40367 ms

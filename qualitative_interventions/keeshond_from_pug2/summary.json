@@ -1,0 +1,635 @@
+{
+  "target_class": 18,
+  "target_class_name": "keeshond",
+  "source_class": 25,
+  "source_class_name": "pug",
+  "source_indices": [
+    1713,
+    1697,
+    3368,
+    565,
+    2341
+  ],
+  "diffusion_timestep": 25,
+  "diffusion_layer": "up_ft:1",
+  "amplification_factor": 2.0,
+  "insertion_scale": 2.0,
+  "n_qualifying_target_features": 34,
+  "images": [
+    {
+      "source_index": 1713,
+      "source_label": 25,
+      "source_label_name": "pug",
+      "conditions": {
+        "baseline": {},
+        "target_ablation": {
+          "mode": "target_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_ablation": {
+          "mode": "control_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_amplification": {
+          "mode": "target_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_amplification": {
+          "mode": "control_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_insertion": {
+          "mode": "target_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            22161,
+            76192,
+            23265,
+            26620,
+            7677
+          ],
+          "target_inserted_values": [
+            14.562467575073242,
+            15.747325897216797,
+            14.96200180053711,
+            14.535438537597656,
+            12.817766189575195
+          ],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 34.74808120727539
+        },
+        "control_insertion": {
+          "mode": "control_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            22161,
+            76192,
+            23265,
+            26620,
+            7677
+          ],
+          "target_inserted_values": [],
+          "control_inserted_values": [
+            14.444404602050781,
+            15.817178726196289,
+            15.04793643951416,
+            14.257119178771973,
+            12.683552742004395
+          ],
+          "edited_active_count": 32,
+          "delta_l2": 32.65830993652344
+        }
+      },
+      "baseline_pixel_mse_vs_source": 0.0050832368433475494
+    },
+    {
+      "source_index": 1697,
+      "source_label": 25,
+      "source_label_name": "pug",
+      "conditions": {
+        "baseline": {},
+        "target_ablation": {
+          "mode": "target_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_ablation": {
+          "mode": "control_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_amplification": {
+          "mode": "target_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_amplification": {
+          "mode": "control_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_insertion": {
+          "mode": "target_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            23265,
+            13424,
+            54868,
+            42109,
+            8314
+          ],
+          "target_inserted_values": [
+            14.562467575073242,
+            15.747325897216797,
+            14.96200180053711,
+            14.535438537597656,
+            12.817766189575195
+          ],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 34.72275924682617
+        },
+        "control_insertion": {
+          "mode": "control_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            23265,
+            13424,
+            54868,
+            42109,
+            8314
+          ],
+          "target_inserted_values": [],
+          "control_inserted_values": [
+            14.444404602050781,
+            15.817178726196289,
+            15.04793643951416,
+            14.257119178771973,
+            12.683552742004395
+          ],
+          "edited_active_count": 32,
+          "delta_l2": 32.579368591308594
+        }
+      },
+      "baseline_pixel_mse_vs_source": 0.0012444735039025545
+    },
+    {
+      "source_index": 3368,
+      "source_label": 25,
+      "source_label_name": "pug",
+      "conditions": {
+        "baseline": {},
+        "target_ablation": {
+          "mode": "target_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_ablation": {
+          "mode": "control_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_amplification": {
+          "mode": "target_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_amplification": {
+          "mode": "control_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_insertion": {
+          "mode": "target_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            33542,
+            46025,
+            43844,
+            74447,
+            15306
+          ],
+          "target_inserted_values": [
+            14.562467575073242,
+            15.747325897216797,
+            14.96200180053711,
+            14.535438537597656,
+            12.817766189575195
+          ],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 34.838443756103516
+        },
+        "control_insertion": {
+          "mode": "control_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            33542,
+            46025,
+            43844,
+            74447,
+            15306
+          ],
+          "target_inserted_values": [],
+          "control_inserted_values": [
+            14.444404602050781,
+            15.817178726196289,
+            15.04793643951416,
+            14.257119178771973,
+            12.683552742004395
+          ],
+          "edited_active_count": 32,
+          "delta_l2": 32.87192916870117
+        }
+      },
+      "baseline_pixel_mse_vs_source": 0.0016729315975680947
+    },
+    {
+      "source_index": 565,
+      "source_label": 25,
+      "source_label_name": "pug",
+      "conditions": {
+        "baseline": {},
+        "target_ablation": {
+          "mode": "target_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_ablation": {
+          "mode": "control_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_amplification": {
+          "mode": "target_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_amplification": {
+          "mode": "control_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_insertion": {
+          "mode": "target_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            3426,
+            56295,
+            81217,
+            33522,
+            14841
+          ],
+          "target_inserted_values": [
+            14.562467575073242,
+            15.747325897216797,
+            14.96200180053711,
+            14.535438537597656,
+            12.817766189575195
+          ],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 34.95769500732422
+        },
+        "control_insertion": {
+          "mode": "control_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            61691,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            3426,
+            56295,
+            81217,
+            33522,
+            14841
+          ],
+          "target_inserted_values": [],
+          "control_inserted_values": [
+            14.444404602050781,
+            15.817178726196289,
+            15.04793643951416,
+            14.257119178771973,
+            12.683552742004395
+          ],
+          "edited_active_count": 32,
+          "delta_l2": 32.75511169433594
+        }
+      },
+      "baseline_pixel_mse_vs_source": 0.006676123943179846
+    },
+    {
+      "source_index": 2341,
+      "source_label": 25,
+      "source_label_name": "pug",
+      "conditions": {
+        "baseline": {},
+        "target_ablation": {
+          "mode": "target_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_ablation": {
+          "mode": "control_ablation",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_amplification": {
+          "mode": "target_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "control_amplification": {
+          "mode": "control_amplification",
+          "original_active_count": 32,
+          "target_feature_ids": [],
+          "control_feature_ids": [],
+          "removed_source_feature_ids": [],
+          "target_inserted_values": [],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 0.0
+        },
+        "target_insertion": {
+          "mode": "target_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            10121,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            73001,
+            15560,
+            14841,
+            61691,
+            14249
+          ],
+          "target_inserted_values": [
+            14.562467575073242,
+            15.747325897216797,
+            14.96200180053711,
+            14.535438537597656,
+            12.817766189575195
+          ],
+          "control_inserted_values": [],
+          "edited_active_count": 32,
+          "delta_l2": 35.018760681152344
+        },
+        "control_insertion": {
+          "mode": "control_insertion",
+          "original_active_count": 32,
+          "target_feature_ids": [
+            19653,
+            59902,
+            28415,
+            76977,
+            77963
+          ],
+          "control_feature_ids": [
+            75237,
+            76520,
+            8541,
+            10121,
+            32492
+          ],
+          "removed_source_feature_ids": [
+            73001,
+            15560,
+            14841,
+            61691,
+            14249
+          ],
+          "target_inserted_values": [],
+          "control_inserted_values": [
+            14.444404602050781,
+            15.817178726196289,
+            15.04793643951416,
+            14.823001861572266,
+            12.683552742004395
+          ],
+          "edited_active_count": 32,
+          "delta_l2": 33.800209045410156
+        }
+      },
+      "baseline_pixel_mse_vs_source": 0.0011624344624578953
+    }
+  ]
+}

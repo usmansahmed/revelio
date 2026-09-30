@@ -13,7 +13,7 @@ WORK=/home/woody/rlvl/rlvl172v
 PROJECT_DIR="$WORK/revelio/diffc_image_classification"
 
 mkdir -p "$PROJECT_DIR/logs"
-mkdir -p "$WORK/revelio/qualitative_interventions/keeshond_from_pug_multistep"
+mkdir -p "$WORK/revelio/qualitative_interventions/keeshond_from_keeshond_multistep"
 
 module load python
 conda activate "$WORK/conda_envs/revelio"

@@ -1,0 +1,31 @@
+{
+  "target_class": 28,
+  "target_class_name": "saint_bernard",
+  "selected_feature_count": 0,
+  "selected_feature_ids": [],
+  "insertion_scale": 1.0,
+  "max_insert_per_image": 3,
+  "metadata": {
+    "eligible_target_features": []
+  },
+  "summary": {
+    "n_inserted": 0,
+    "mean_target_confidence_difference": null,
+    "mean_target_logit_difference": null,
+    "median_target_logit_difference": null,
+    "mean_target_margin_difference": null,
+    "median_target_margin_difference": null,
+    "ci_95_low": null,
+    "ci_95_high": null,
+    "positive_images": 0,
+    "negative_images": 0,
+    "fraction_positive": null,
+    "wilcoxon_p": null,
+    "sign_test_p": null,
+    "targeted_flip_count": 0,
+    "control_flip_count": 0,
+    "targeted_flip_fraction": null,
+    "control_flip_fraction": null
+  },
+  "per_image_results": []
+}

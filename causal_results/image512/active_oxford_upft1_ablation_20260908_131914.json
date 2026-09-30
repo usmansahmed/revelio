@@ -1,0 +1,454 @@
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "target_class": 35,
+        "num_classes": 37,
+        "split": "test",
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "prompt_type": "empty",
+        "pooling_strategy": "GAP",
+        "diffusion_step_type": "onestep",
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/image512/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_upft1_ablation.json",
+        "min_purity": 0.8,
+        "min_valid": 10,
+        "max_ablate_per_image": 5,
+        "active_feature_ranking": "purity_actual_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42,
+        "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
+        "target_feature_ids": [
+            642,
+            2573,
+            6157,
+            7543,
+            10286,
+            21314,
+            27731,
+            30180,
+            33248,
+            33789,
+            42334,
+            44566,
+            45477,
+            47212,
+            47614,
+            51310,
+            52404,
+            59917,
+            64910,
+            67517,
+            70655
+        ],
+        "target_class_name": "wheaten_terrier"
+    },
+    "metrics": {
+        "original": {
+            "accuracy": 0.875,
+            "cross_entropy": 0.3905278122983873,
+            "true_class_confidence": 0.8382350578904152,
+            "target_class_confidence": 0.8382350578904152,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.8125,
+            "cross_entropy": 0.5152974762022495,
+            "true_class_confidence": 0.7422379106283188,
+            "target_class_confidence": 0.7422379106283188,
+            "total": 64
+        },
+        "active_targeted_ablation": {
+            "accuracy": 0.859375,
+            "cross_entropy": 0.3941039638593793,
+            "true_class_confidence": 0.8363743424415588,
+            "target_class_confidence": 0.8363743424415588,
+            "total": 64
+        },
+        "active_random_ablation": {
+            "accuracy": 0.875,
+            "cross_entropy": 0.39354940596967936,
+            "true_class_confidence": 0.83719801902771,
+            "target_class_confidence": 0.83719801902771,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.0959971472620964,
+        "active_targeted_ablation": 0.0018607154488563538,
+        "active_random_ablation": 0.0010370388627052307
+    },
+    "activation_summary": {
+        "total_images": 64,
+        "ksae_k": 32,
+        "total_active_features_seen": 2048,
+        "total_target_ablated": 46,
+        "total_random_ablated": 46,
+        "images_with_target_features": 21,
+        "fraction_images_with_target_features": 0.328125,
+        "avg_target_ablated_per_image": 0.71875,
+        "avg_random_ablated_per_image": 0.71875,
+        "random_control": "active non-target-class features matched without replacement on absolute activation magnitude"
+    },
+    "top_target_ablated_features": [
+        {
+            "feature_id": 27731,
+            "count": 7,
+            "activation_sum": 24.20658564567566,
+            "avg_activation_when_selected": 3.4580836636679515,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 3.770905017852783,
+            "sparsity": 0.022554347291588783
+        },
+        {
+            "feature_id": 6157,
+            "count": 5,
+            "activation_sum": 20.050695180892944,
+            "avg_activation_when_selected": 4.010139036178589,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 6.1973090171813965,
+            "sparsity": 0.004076086916029453
+        },
+        {
+            "feature_id": 30180,
+            "count": 5,
+            "activation_sum": 17.754082679748535,
+            "avg_activation_when_selected": 3.550816535949707,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 6.946805000305176,
+            "sparsity": 0.0027173911221325397
+        },
+        {
+            "feature_id": 47614,
+            "count": 4,
+            "activation_sum": 18.59314465522766,
+            "avg_activation_when_selected": 4.648286163806915,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 5.645300388336182,
+            "sparsity": 0.004076086916029453
+        },
+        {
+            "feature_id": 44566,
+            "count": 3,
+            "activation_sum": 11.243305683135986,
+            "avg_activation_when_selected": 3.7477685610453286,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 4.5468831062316895,
+            "sparsity": 0.006521739065647125
+        },
+        {
+            "feature_id": 33789,
+            "count": 3,
+            "activation_sum": 10.604633212089539,
+            "avg_activation_when_selected": 3.5348777373631797,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 5.077060699462891,
+            "sparsity": 0.00624999962747097
+        },
+        {
+            "feature_id": 21314,
+            "count": 3,
+            "activation_sum": 10.397384643554688,
+            "avg_activation_when_selected": 3.465794881184896,
+            "purity": 1.0,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 5.717720031738281,
+            "sparsity": 0.004347825888544321
+        },
+        {
+            "feature_id": 2573,
+            "count": 3,
+            "activation_sum": 7.36472761631012,
+            "avg_activation_when_selected": 2.4549092054367065,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 5.892236232757568,
+            "sparsity": 0.0032608695328235626
+        },
+        {
+            "feature_id": 59917,
+            "count": 3,
+            "activation_sum": 5.982126355171204,
+            "avg_activation_when_selected": 1.9940421183904011,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 3.327680826187134,
+            "sparsity": 0.010326086543500423
+        },
+        {
+            "feature_id": 52404,
+            "count": 2,
+            "activation_sum": 6.748404264450073,
+            "avg_activation_when_selected": 3.3742021322250366,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 4.021731853485107,
+            "sparsity": 0.007608695421367884
+        },
+        {
+            "feature_id": 7543,
+            "count": 2,
+            "activation_sum": 5.02014696598053,
+            "avg_activation_when_selected": 2.510073482990265,
+            "purity": 1.0,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 4.4466552734375,
+            "sparsity": 0.004347825888544321
+        },
+        {
+            "feature_id": 47212,
+            "count": 2,
+            "activation_sum": 2.5644805431365967,
+            "avg_activation_when_selected": 1.2822402715682983,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 4.431890964508057,
+            "sparsity": 0.00624999962747097
+        },
+        {
+            "feature_id": 45477,
+            "count": 1,
+            "activation_sum": 5.665492057800293,
+            "avg_activation_when_selected": 5.665492057800293,
+            "purity": 0.800000011920929,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 3.0185067653656006,
+            "sparsity": 0.009510869160294533
+        },
+        {
+            "feature_id": 642,
+            "count": 1,
+            "activation_sum": 2.862125873565674,
+            "avg_activation_when_selected": 2.862125873565674,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 5.874372482299805,
+            "sparsity": 0.004619564861059189
+        },
+        {
+            "feature_id": 51310,
+            "count": 1,
+            "activation_sum": 2.357877254486084,
+            "avg_activation_when_selected": 2.357877254486084,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 6.519217014312744,
+            "sparsity": 0.0027173911221325397
+        },
+        {
+            "feature_id": 67517,
+            "count": 1,
+            "activation_sum": 2.004892110824585,
+            "avg_activation_when_selected": 2.004892110824585,
+            "purity": 0.8999999761581421,
+            "majority_label": 35,
+            "valid_count": 10,
+            "mean_activation": 6.2018327713012695,
+            "sparsity": 0.0027173911221325397
+        }
+    ],
+    "top_random_ablated_features": [
+        {
+            "feature_id": 5852,
+            "count": 2
+        },
+        {
+            "feature_id": 3759,
+            "count": 2
+        },
+        {
+            "feature_id": 5744,
+            "count": 2
+        },
+        {
+            "feature_id": 62762,
+            "count": 1
+        },
+        {
+            "feature_id": 36654,
+            "count": 1
+        },
+        {
+            "feature_id": 45979,
+            "count": 1
+        },
+        {
+            "feature_id": 53880,
+            "count": 1
+        },
+        {
+            "feature_id": 76644,
+            "count": 1
+        },
+        {
+            "feature_id": 10808,
+            "count": 1
+        },
+        {
+            "feature_id": 1829,
+            "count": 1
+        },
+        {
+            "feature_id": 31004,
+            "count": 1
+        },
+        {
+            "feature_id": 12580,
+            "count": 1
+        },
+        {
+            "feature_id": 17046,
+            "count": 1
+        },
+        {
+            "feature_id": 20323,
+            "count": 1
+        },
+        {
+            "feature_id": 11835,
+            "count": 1
+        },
+        {
+            "feature_id": 49273,
+            "count": 1
+        },
+        {
+            "feature_id": 21983,
+            "count": 1
+        },
+        {
+            "feature_id": 3328,
+            "count": 1
+        },
+        {
+            "feature_id": 40768,
+            "count": 1
+        },
+        {
+            "feature_id": 38387,
+            "count": 1
+        },
+        {
+            "feature_id": 5432,
+            "count": 1
+        },
+        {
+            "feature_id": 39309,
+            "count": 1
+        },
+        {
+            "feature_id": 37970,
+            "count": 1
+        },
+        {
+            "feature_id": 57528,
+            "count": 1
+        },
+        {
+            "feature_id": 75789,
+            "count": 1
+        },
+        {
+            "feature_id": 45217,
+            "count": 1
+        },
+        {
+            "feature_id": 8630,
+            "count": 1
+        },
+        {
+            "feature_id": 58142,
+            "count": 1
+        },
+        {
+            "feature_id": 29947,
+            "count": 1
+        },
+        {
+            "feature_id": 78376,
+            "count": 1
+        },
+        {
+            "feature_id": 38647,
+            "count": 1
+        },
+        {
+            "feature_id": 61662,
+            "count": 1
+        },
+        {
+            "feature_id": 36175,
+            "count": 1
+        },
+        {
+            "feature_id": 11011,
+            "count": 1
+        },
+        {
+            "feature_id": 61667,
+            "count": 1
+        },
+        {
+            "feature_id": 28075,
+            "count": 1
+        },
+        {
+            "feature_id": 61754,
+            "count": 1
+        },
+        {
+            "feature_id": 76114,
+            "count": 1
+        },
+        {
+            "feature_id": 49808,
+            "count": 1
+        },
+        {
+            "feature_id": 56484,
+            "count": 1
+        },
+        {
+            "feature_id": 29499,
+            "count": 1
+        },
+        {
+            "feature_id": 5717,
+            "count": 1
+        },
+        {
+            "feature_id": 55273,
+            "count": 1
+        }
+    ]
+}

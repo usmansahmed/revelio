@@ -1,0 +1,15 @@
+2026-09-17 09:33:47 PID=2527064 __init__.py:49 setup_logging() INFO → 'standard' logger initialized.
+/home/woody/rlvl/rlvl172v/conda_envs/revelio/lib/python3.10/site-packages/xformers/ops/fmha/flash.py:211: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_fwd")
+/home/woody/rlvl/rlvl172v/conda_envs/revelio/lib/python3.10/site-packages/xformers/ops/fmha/flash.py:344: FutureWarning: `torch.library.impl_abstract` was renamed to `torch.library.register_fake`. Please use that instead; we will remove `torch.library.impl_abstract` in a future version of PyTorch.
+  @torch.library.impl_abstract("xformers_flash::flash_bwd")
+2026-09-17 09:33:49 PID=2527064 base_encoder.py:44 __init__() WARNING → Unfreezing MM Vision Tower: False
+Couldn't connect to the Hub: Cannot reach https://huggingface.co/api/models/facebook/DiT-XL-2-512: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable..
+Will try to load from local cache.
+Loading pipeline components...:   0%|          | 0/3 [00:00<?, ?it/s]An error occurred while trying to fetch /home/woody/rlvl/rlvl172v/hf_cache/hub/models--facebook--DiT-XL-2-512/snapshots/101a3d462b22d64c4afdd4d0c8c59a2c0b961b99/transformer: Error no file named diffusion_pytorch_model.safetensors found in directory /home/woody/rlvl/rlvl172v/hf_cache/hub/models--facebook--DiT-XL-2-512/snapshots/101a3d462b22d64c4afdd4d0c8c59a2c0b961b99/transformer.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...:  67%|██████▋   | 2/3 [00:22<00:11, 11.13s/it]An error occurred while trying to fetch /home/woody/rlvl/rlvl172v/hf_cache/hub/models--facebook--DiT-XL-2-512/snapshots/101a3d462b22d64c4afdd4d0c8c59a2c0b961b99/vae: Error no file named diffusion_pytorch_model.safetensors found in directory /home/woody/rlvl/rlvl172v/hf_cache/hub/models--facebook--DiT-XL-2-512/snapshots/101a3d462b22d64c4afdd4d0c8c59a2c0b961b99/vae.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.
+Loading pipeline components...: 100%|██████████| 3/3 [00:23<00:00,  6.94s/it]Loading pipeline components...: 100%|██████████| 3/3 [00:23<00:00,  7.78s/it]
+An error occurred while trying to fetch facebook/DiT-XL-2-512: facebook/DiT-XL-2-512 does not appear to have a file named diffusion_pytorch_model.safetensors.
+Defaulting to unsafe serialization. Pass `allow_pickle=False` to raise an error instead.

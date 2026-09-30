@@ -1,0 +1,363 @@
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "dataset_name": "oxfordpet",
+        "target_class": 19,
+        "target_class_name": "class_19",
+        "num_classes": 37,
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/d0p5pu4r/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/oxford_class19_upft1_ablation.json",
+        "min_purity": 0.6,
+        "min_valid": 5,
+        "top_n": 20,
+        "ranking_method": "purity_mean_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42
+    },
+    "selected_features": [
+        {
+            "feature_id": 8797,
+            "purity": 1.0,
+            "valid_count": 6,
+            "mean_activation": 6.15558385848999,
+            "sparsity": 0.0016304347664117813,
+            "score": 6.15558385848999
+        },
+        {
+            "feature_id": 25121,
+            "purity": 0.800000011920929,
+            "valid_count": 5,
+            "mean_activation": 6.349658012390137,
+            "sparsity": 0.0013586955610662699,
+            "score": 5.079726696014404
+        },
+        {
+            "feature_id": 32779,
+            "purity": 0.800000011920929,
+            "valid_count": 5,
+            "mean_activation": 5.522035598754883,
+            "sparsity": 0.0013586955610662699,
+            "score": 4.417628765106201
+        },
+        {
+            "feature_id": 14209,
+            "purity": 0.800000011920929,
+            "valid_count": 5,
+            "mean_activation": 5.500058174133301,
+            "sparsity": 0.0013586955610662699,
+            "score": 4.4000468254089355
+        },
+        {
+            "feature_id": 13480,
+            "purity": 0.800000011920929,
+            "valid_count": 5,
+            "mean_activation": 5.475677967071533,
+            "sparsity": 0.0013586955610662699,
+            "score": 4.380542278289795
+        },
+        {
+            "feature_id": 25330,
+            "purity": 0.8333333134651184,
+            "valid_count": 6,
+            "mean_activation": 4.876803874969482,
+            "sparsity": 0.0016304347664117813,
+            "score": 4.064002990722656
+        },
+        {
+            "feature_id": 4881,
+            "purity": 0.75,
+            "valid_count": 8,
+            "mean_activation": 4.645173072814941,
+            "sparsity": 0.0021739129442721605,
+            "score": 3.483879804611206
+        },
+        {
+            "feature_id": 64273,
+            "purity": 0.800000011920929,
+            "valid_count": 10,
+            "mean_activation": 4.245300769805908,
+            "sparsity": 0.002989130327478051,
+            "score": 3.396240711212158
+        },
+        {
+            "feature_id": 18354,
+            "purity": 0.6666666865348816,
+            "valid_count": 6,
+            "mean_activation": 5.090161323547363,
+            "sparsity": 0.0016304347664117813,
+            "score": 3.3934409618377686
+        },
+        {
+            "feature_id": 11184,
+            "purity": 0.6000000238418579,
+            "valid_count": 5,
+            "mean_activation": 5.491025447845459,
+            "sparsity": 0.0013586955610662699,
+            "score": 3.2946155071258545
+        },
+        {
+            "feature_id": 46409,
+            "purity": 0.6000000238418579,
+            "valid_count": 5,
+            "mean_activation": 5.4586992263793945,
+            "sparsity": 0.0013586955610662699,
+            "score": 3.275219678878784
+        },
+        {
+            "feature_id": 63412,
+            "purity": 0.8333333134651184,
+            "valid_count": 6,
+            "mean_activation": 3.890962600708008,
+            "sparsity": 0.0016304347664117813,
+            "score": 3.24246883392334
+        },
+        {
+            "feature_id": 31948,
+            "purity": 0.800000011920929,
+            "valid_count": 10,
+            "mean_activation": 4.050730228424072,
+            "sparsity": 0.004619564861059189,
+            "score": 3.240584135055542
+        },
+        {
+            "feature_id": 34950,
+            "purity": 0.8999999761581421,
+            "valid_count": 10,
+            "mean_activation": 3.5575475692749023,
+            "sparsity": 0.0032608695328235626,
+            "score": 3.2017927169799805
+        },
+        {
+            "feature_id": 28444,
+            "purity": 0.6666666865348816,
+            "valid_count": 6,
+            "mean_activation": 4.7908220291137695,
+            "sparsity": 0.0016304347664117813,
+            "score": 3.1938815116882324
+        },
+        {
+            "feature_id": 60506,
+            "purity": 0.800000011920929,
+            "valid_count": 10,
+            "mean_activation": 3.909200429916382,
+            "sparsity": 0.002989130327478051,
+            "score": 3.1273603439331055
+        },
+        {
+            "feature_id": 14337,
+            "purity": 0.800000011920929,
+            "valid_count": 10,
+            "mean_activation": 3.764056444168091,
+            "sparsity": 0.005163043271750212,
+            "score": 3.0112452507019043
+        },
+        {
+            "feature_id": 32633,
+            "purity": 0.699999988079071,
+            "valid_count": 10,
+            "mean_activation": 4.213290214538574,
+            "sparsity": 0.004076086916029453,
+            "score": 2.949303150177002
+        },
+        {
+            "feature_id": 29203,
+            "purity": 0.699999988079071,
+            "valid_count": 10,
+            "mean_activation": 4.1754889488220215,
+            "sparsity": 0.003804347710683942,
+            "score": 2.922842264175415
+        },
+        {
+            "feature_id": 22307,
+            "purity": 0.8999999761581421,
+            "valid_count": 10,
+            "mean_activation": 3.2360146045684814,
+            "sparsity": 0.0032608695328235626,
+            "score": 2.9124131202697754
+        }
+    ],
+    "target_feature_ids": [
+        8797,
+        25121,
+        32779,
+        14209,
+        13480,
+        25330,
+        4881,
+        64273,
+        18354,
+        11184,
+        46409,
+        63412,
+        31948,
+        34950,
+        28444,
+        60506,
+        14337,
+        32633,
+        29203,
+        22307
+    ],
+    "random_feature_ids": [
+        3278,
+        36064,
+        32111,
+        29268,
+        18295,
+        13437,
+        71502,
+        11398,
+        77417,
+        55319,
+        4165,
+        3905,
+        12283,
+        28668,
+        30507,
+        66257,
+        78927,
+        3478,
+        73583,
+        26072
+    ],
+    "total_matching_features": 48,
+    "metrics": {
+        "original": {
+            "accuracy": 0.9375,
+            "cross_entropy": 0.20631280073575908,
+            "true_class_confidence": 0.9309762939810753,
+            "target_class_confidence": 0.9309762939810753,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.765625,
+            "cross_entropy": 0.9742589173838496,
+            "true_class_confidence": 0.6870661415159702,
+            "target_class_confidence": 0.6870661415159702,
+            "total": 64
+        },
+        "targeted_ablation": {
+            "accuracy": 0.765625,
+            "cross_entropy": 0.9743219409137964,
+            "true_class_confidence": 0.6870034597814083,
+            "target_class_confidence": 0.6870034597814083,
+            "total": 64
+        },
+        "random_ablation": {
+            "accuracy": 0.765625,
+            "cross_entropy": 0.9742589173838496,
+            "true_class_confidence": 0.6870661415159702,
+            "target_class_confidence": 0.6870661415159702,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.24391015246510506,
+        "targeted_ablation": 0.24397283419966698,
+        "random_ablation": 0.24391015246510506
+    },
+    "extra_drop_after_reconstruction": {
+        "targeted_minus_reconstruction": 6.268173456192017e-05,
+        "random_minus_reconstruction": 0.0
+    },
+    "activation_stats": {
+        "target_active_counts": [
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+        ],
+        "target_activation_sums": [
+            0.0,
+            3.333178758621216,
+            0.0,
+            4.925221920013428,
+            5.57363224029541,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            5.019399642944336,
+            0.0
+        ],
+        "random_active_counts": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ],
+        "random_activation_sums": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+        ]
+    }
+}

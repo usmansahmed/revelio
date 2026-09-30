@@ -1,0 +1,143 @@
+{
+  "source_index": 2562,
+  "source_label": 18,
+  "source_label_name": "keeshond",
+  "conditions": {
+    "baseline": {},
+    "target_ablation": {
+      "mode": "target_ablation",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        80702
+      ],
+      "control_feature_ids": [],
+      "removed_source_feature_ids": [],
+      "target_inserted_values": [],
+      "control_inserted_values": [],
+      "edited_active_count": 31,
+      "delta_l2": 1.4918113946914673
+    },
+    "control_ablation": {
+      "mode": "control_ablation",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        80702
+      ],
+      "control_feature_ids": [
+        29299
+      ],
+      "removed_source_feature_ids": [],
+      "target_inserted_values": [],
+      "control_inserted_values": [],
+      "edited_active_count": 31,
+      "delta_l2": 1.4633080959320068
+    },
+    "target_amplification": {
+      "mode": "target_amplification",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        80702
+      ],
+      "control_feature_ids": [],
+      "removed_source_feature_ids": [],
+      "target_inserted_values": [],
+      "control_inserted_values": [],
+      "edited_active_count": 32,
+      "delta_l2": 1.4918113946914673
+    },
+    "control_amplification": {
+      "mode": "control_amplification",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        80702
+      ],
+      "control_feature_ids": [
+        29299
+      ],
+      "removed_source_feature_ids": [],
+      "target_inserted_values": [],
+      "control_inserted_values": [],
+      "edited_active_count": 32,
+      "delta_l2": 1.463308334350586
+    },
+    "target_insertion": {
+      "mode": "target_insertion",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        19653,
+        59902,
+        28415,
+        76977,
+        77963
+      ],
+      "control_feature_ids": [
+        75237,
+        76520,
+        8541,
+        61691,
+        32492
+      ],
+      "removed_source_feature_ids": [
+        5833,
+        78479,
+        29299,
+        62412,
+        43822
+      ],
+      "target_inserted_values": [
+        14.562467575073242,
+        15.747325897216797,
+        14.96200180053711,
+        14.535438537597656,
+        12.817766189575195
+      ],
+      "control_inserted_values": [],
+      "edited_active_count": 32,
+      "delta_l2": 34.69135284423828
+    },
+    "control_insertion": {
+      "mode": "control_insertion",
+      "original_active_count": 32,
+      "target_feature_ids": [
+        19653,
+        59902,
+        28415,
+        76977,
+        77963
+      ],
+      "control_feature_ids": [
+        75237,
+        76520,
+        8541,
+        61691,
+        32492
+      ],
+      "removed_source_feature_ids": [
+        5833,
+        78479,
+        29299,
+        62412,
+        43822
+      ],
+      "target_inserted_values": [],
+      "control_inserted_values": [
+        14.444404602050781,
+        15.817178726196289,
+        15.04793643951416,
+        14.257119178771973,
+        12.683552742004395
+      ],
+      "edited_active_count": 32,
+      "delta_l2": 32.47126770019531
+    }
+  },
+  "baseline_pixel_mse_vs_source": 0.0007445518276654184,
+  "target_insertion_pixel_mae": 5.521625280380249e-05,
+  "target_insertion_pixel_mse": 2.070464688586071e-08,
+  "control_insertion_pixel_mae": 5.351969230105169e-05,
+  "control_insertion_pixel_mse": 2.0087782104383223e-08,
+  "target_mae_per_delta_l2": 1.5916431120953846e-06,
+  "target_mse_per_delta_l2_sq": 1.7203838450502112e-11,
+  "control_mae_per_delta_l2": 1.6482169034851008e-06,
+  "control_mse_per_delta_l2_sq": 1.905168975372436e-11
+}

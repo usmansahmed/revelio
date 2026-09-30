@@ -1,0 +1,126 @@
+### Starting TaskPrologue of job 1808993 on tg090 at Thu Sep 10 10:03:56 AM CEST 2026
+Running on cores 96-127 with governor ondemand
+Thu Sep 10 10:03:56 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:C1:00.0 Off |                    0 |
+| N/A   45C    P0             57W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+Loading feature statistics...
+Loading k-SAE...
+k-SAE k: 32
+k-SAE n_features: 81920
+Loading dataset...
+Loading DiffC model...
+Loaded DiffC checkpoint epoch: 88
+
+======================================================================
+Class 18: keeshond
+Selected features: 34 | Test images: 64
+  Batch 0: target_counts=[4, 0, 2, 0, 2, 5, 4, 0]
+  Batch 1: target_counts=[4, 2, 5, 0, 5, 0, 0, 0]
+  Batch 2: target_counts=[1, 1, 1, 0, 1, 4, 0, 5]
+  Batch 3: target_counts=[0, 2, 0, 1, 0, 0, 0, 1]
+  Batch 4: target_counts=[0, 1, 0, 3, 1, 2, 2, 5]
+  Batch 5: target_counts=[5, 0, 0, 5, 0, 4, 0, 1]
+  Batch 6: target_counts=[0, 0, 4, 0, 0, 0, 0, 0]
+  Batch 7: target_counts=[0, 0, 2, 4, 0, 2, 1, 0]
+
+======================================================================
+Class 36: yorkshire_terrier
+Selected features: 20 | Test images: 64
+  Batch 0: target_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+  Batch 1: target_counts=[0, 1, 1, 0, 1, 0, 0, 0]
+  Batch 2: target_counts=[0, 1, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 1, 0, 0, 0, 0, 1, 1]
+  Batch 4: target_counts=[0, 2, 0, 1, 1, 1, 1, 1]
+  Batch 5: target_counts=[2, 0, 1, 1, 0, 0, 0, 3]
+  Batch 6: target_counts=[0, 0, 1, 1, 1, 0, 0, 1]
+  Batch 7: target_counts=[0, 0, 2, 1, 0, 0, 0, 0]
+
+======================================================================
+Class 35: wheaten_terrier
+Selected features: 21 | Test images: 64
+  Batch 0: target_counts=[0, 0, 5, 0, 4, 0, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 0, 3, 0, 0]
+  Batch 2: target_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+  Batch 3: target_counts=[0, 2, 0, 0, 0, 2, 5, 1]
+  Batch 4: target_counts=[0, 1, 0, 0, 0, 1, 2, 1]
+  Batch 5: target_counts=[1, 0, 0, 1, 0, 0, 4, 1]
+  Batch 6: target_counts=[0, 5, 0, 0, 0, 2, 0, 0]
+  Batch 7: target_counts=[0, 0, 1, 1, 1, 0, 2, 0]
+
+======================================================================
+Class 33: sphynx
+Selected features: 20 | Test images: 64
+  Batch 0: target_counts=[0, 2, 0, 0, 0, 4, 3, 0]
+  Batch 1: target_counts=[1, 0, 0, 3, 1, 0, 3, 1]
+  Batch 2: target_counts=[2, 1, 2, 0, 0, 5, 0, 0]
+  Batch 3: target_counts=[5, 3, 0, 3, 4, 1, 0, 0]
+  Batch 4: target_counts=[0, 5, 1, 0, 0, 0, 2, 0]
+  Batch 5: target_counts=[5, 0, 0, 4, 0, 0, 0, 0]
+  Batch 6: target_counts=[2, 5, 1, 3, 0, 3, 1, 1]
+  Batch 7: target_counts=[3, 5, 0, 2, 5, 5, 5, 4]
+
+======================================================================
+Class 15: great_pyrenees
+Selected features: 16 | Test images: 64
+  Batch 0: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 1: target_counts=[0, 0, 0, 0, 1, 1, 3, 0]
+  Batch 2: target_counts=[0, 1, 1, 0, 0, 2, 0, 0]
+  Batch 3: target_counts=[0, 0, 0, 0, 0, 1, 0, 0]
+  Batch 4: target_counts=[1, 0, 1, 1, 0, 0, 1, 0]
+  Batch 5: target_counts=[3, 0, 0, 0, 0, 0, 3, 0]
+  Batch 6: target_counts=[0, 0, 0, 0, 0, 0, 1, 0]
+  Batch 7: target_counts=[0, 0, 1, 1, 2, 1, 0, 1]
+
+======================================================================
+ class_id        class_name  n_selected_features  n_treated  mean_margin_difference  median_margin_difference  ci_95_low  ci_95_high  fraction_positive   wilcoxon_p  sign_test_p
+       15    great_pyrenees                   16         20                0.154323                  0.125618   0.083251    0.237569           0.900000 5.083084e-04 2.012253e-04
+       18          keeshond                   34         33                0.850301                  0.462717   0.554721    1.173545           0.939394 3.573950e-08 6.542541e-08
+       33            sphynx                   20         36                0.849899                  0.686458   0.635155    1.102487           0.972222 4.365575e-11 5.384209e-10
+       35   wheaten_terrier                   21         21                0.397103                  0.323614   0.201059    0.618495           0.857143 3.037453e-04 7.448196e-04
+       36 yorkshire_terrier                   20         24                0.600693                  0.437431   0.403793    0.796119           0.958333 1.788139e-07 1.490116e-06
+
+Saved run to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/combined/run_20260910_100511
+Summary CSV: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/combined/run_20260910_100511/causal_statistical_summary.csv
+Combined JSON: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/combined/run_20260910_100511/combined_summary.json
+=== JOB_STATISTICS ===
+=== current date     : Thu Sep 10 10:05:37 AM CEST 2026
+= Job-ID             : 1808993 on tinygpu
+= Job-Name           : active_causal_combine
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_combined_causal_ablation.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:01:58
+= Total RAM usage    : 10.3 GiB of requested  GiB (%)   
+= Node list          : tg090
+= Subm/Elig/Start/End: 2026-09-10T10:03:24 / 2026-09-10T10:03:24 / 2026-09-10T10:03:39 / 2026-09-10T10:05:37
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:C1:00.0, 1466771, 34 %, 12 %, 17118 MiB, 52324 ms

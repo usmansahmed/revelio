@@ -1,0 +1,592 @@
+### Starting TaskPrologue of job 1812628 on tg091 at Mon Sep 14 03:57:13 PM CEST 2026
+Running on cores 0-31 with governor ondemand
+Mon Sep 14 15:57:13 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:01:00.0 Off |                    0 |
+| N/A   46C    P0             57W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+k-SAE k: 32 | n_features: 81920
+Loaded DiffC checkpoint epoch: 88
+Loading train/test datasets...
+Loading cached reference activations: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/reference_activation_medians.pt
+
+========================================================================
+Target class 0: abyssinian
+High-purity target features: 0 | candidate non-target images: 3571
+
+========================================================================
+Target class 1: american_bulldog
+High-purity target features: 7 | candidate non-target images: 3569
+  target 1 batch 0: selected 8/64
+  target 1 batch 1: selected 16/64
+  target 1 batch 2: selected 21/64
+  target 1 batch 3: selected 29/64
+  target 1 batch 4: selected 35/64
+  target 1 batch 5: selected 43/64
+  target 1 batch 6: selected 48/64
+  target 1 batch 7: selected 56/64
+  target 1 batch 8: selected 63/64
+  target 1 batch 9: selected 64/64
+
+========================================================================
+Target class 2: american_pit_bull_terrier
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 3: basset_hound
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 4: beagle
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 5: bengal
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 6: birman
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 7: bombay
+High-purity target features: 1 | candidate non-target images: 3581
+  target 7 batch 0: selected 6/64
+  target 7 batch 1: selected 10/64
+  target 7 batch 2: selected 16/64
+  target 7 batch 3: selected 23/64
+  target 7 batch 4: selected 31/64
+  target 7 batch 5: selected 36/64
+  target 7 batch 6: selected 44/64
+  target 7 batch 7: selected 51/64
+  target 7 batch 8: selected 59/64
+  target 7 batch 9: selected 64/64
+
+========================================================================
+Target class 8: boxer
+High-purity target features: 2 | candidate non-target images: 3570
+  target 8 batch 0: selected 8/64
+  target 8 batch 1: selected 14/64
+  target 8 batch 2: selected 20/64
+  target 8 batch 3: selected 26/64
+  target 8 batch 4: selected 32/64
+  target 8 batch 5: selected 40/64
+  target 8 batch 6: selected 48/64
+  target 8 batch 7: selected 56/64
+  target 8 batch 8: selected 62/64
+  target 8 batch 9: selected 64/64
+
+========================================================================
+Target class 9: british_shorthair
+High-purity target features: 6 | candidate non-target images: 3569
+  target 9 batch 0: selected 6/64
+  target 9 batch 1: selected 13/64
+  target 9 batch 2: selected 19/64
+  target 9 batch 3: selected 27/64
+  target 9 batch 4: selected 35/64
+  target 9 batch 5: selected 42/64
+  target 9 batch 6: selected 48/64
+  target 9 batch 7: selected 55/64
+  target 9 batch 8: selected 61/64
+  target 9 batch 9: selected 64/64
+
+========================================================================
+Target class 10: chihuahua
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 11: egyptian_mau
+High-purity target features: 1 | candidate non-target images: 3572
+  target 11 batch 0: selected 7/64
+  target 11 batch 1: selected 13/64
+  target 11 batch 2: selected 21/64
+  target 11 batch 3: selected 27/64
+  target 11 batch 4: selected 32/64
+  target 11 batch 5: selected 39/64
+  target 11 batch 6: selected 47/64
+  target 11 batch 7: selected 55/64
+  target 11 batch 8: selected 61/64
+  target 11 batch 9: selected 64/64
+
+========================================================================
+Target class 12: english_cocker_spaniel
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 13: english_setter
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 14: german_shorthaired
+High-purity target features: 2 | candidate non-target images: 3569
+  target 14 batch 0: selected 6/64
+  target 14 batch 1: selected 13/64
+  target 14 batch 2: selected 21/64
+  target 14 batch 3: selected 28/64
+  target 14 batch 4: selected 35/64
+  target 14 batch 5: selected 42/64
+  target 14 batch 6: selected 48/64
+  target 14 batch 7: selected 52/64
+  target 14 batch 8: selected 59/64
+  target 14 batch 9: selected 64/64
+
+========================================================================
+Target class 15: great_pyrenees
+High-purity target features: 16 | candidate non-target images: 3569
+  target 15 batch 0: selected 8/64
+  target 15 batch 1: selected 16/64
+  target 15 batch 2: selected 23/64
+  target 15 batch 3: selected 29/64
+  target 15 batch 4: selected 36/64
+  target 15 batch 5: selected 41/64
+  target 15 batch 6: selected 46/64
+  target 15 batch 7: selected 53/64
+  target 15 batch 8: selected 61/64
+  target 15 batch 9: selected 64/64
+
+========================================================================
+Target class 16: havanese
+High-purity target features: 1 | candidate non-target images: 3569
+  target 16 batch 0: selected 6/64
+  target 16 batch 1: selected 11/64
+  target 16 batch 2: selected 18/64
+  target 16 batch 3: selected 25/64
+  target 16 batch 4: selected 33/64
+  target 16 batch 5: selected 40/64
+  target 16 batch 6: selected 48/64
+  target 16 batch 7: selected 54/64
+  target 16 batch 8: selected 62/64
+  target 16 batch 9: selected 64/64
+
+========================================================================
+Target class 17: japanese_chin
+High-purity target features: 1 | candidate non-target images: 3569
+  target 17 batch 0: selected 8/64
+  target 17 batch 1: selected 15/64
+  target 17 batch 2: selected 23/64
+  target 17 batch 3: selected 30/64
+  target 17 batch 4: selected 37/64
+  target 17 batch 5: selected 44/64
+  target 17 batch 6: selected 49/64
+  target 17 batch 7: selected 55/64
+  target 17 batch 8: selected 63/64
+  target 17 batch 9: selected 64/64
+
+========================================================================
+Target class 18: keeshond
+High-purity target features: 34 | candidate non-target images: 3570
+  target 18 batch 0: selected 8/64
+  target 18 batch 1: selected 13/64
+  target 18 batch 2: selected 21/64
+  target 18 batch 3: selected 29/64
+  target 18 batch 4: selected 37/64
+  target 18 batch 5: selected 43/64
+  target 18 batch 6: selected 50/64
+  target 18 batch 7: selected 57/64
+  target 18 batch 8: selected 64/64
+
+========================================================================
+Target class 19: leonberger
+High-purity target features: 13 | candidate non-target images: 3569
+  target 19 batch 0: selected 5/64
+  target 19 batch 1: selected 12/64
+  target 19 batch 2: selected 17/64
+  target 19 batch 3: selected 25/64
+  target 19 batch 4: selected 33/64
+  target 19 batch 5: selected 37/64
+  target 19 batch 6: selected 42/64
+  target 19 batch 7: selected 47/64
+  target 19 batch 8: selected 54/64
+  target 19 batch 9: selected 61/64
+  target 19 batch 10: selected 64/64
+
+========================================================================
+Target class 20: maine_coon
+High-purity target features: 1 | candidate non-target images: 3569
+  target 20 batch 0: selected 7/64
+  target 20 batch 1: selected 15/64
+  target 20 batch 2: selected 22/64
+  target 20 batch 3: selected 28/64
+  target 20 batch 4: selected 36/64
+  target 20 batch 5: selected 44/64
+  target 20 batch 6: selected 50/64
+  target 20 batch 7: selected 58/64
+  target 20 batch 8: selected 64/64
+
+========================================================================
+Target class 21: miniature_pinscher
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 22: newfoundland
+High-purity target features: 13 | candidate non-target images: 3569
+  target 22 batch 0: selected 7/64
+  target 22 batch 1: selected 15/64
+  target 22 batch 2: selected 20/64
+  target 22 batch 3: selected 27/64
+  target 22 batch 4: selected 34/64
+  target 22 batch 5: selected 40/64
+  target 22 batch 6: selected 46/64
+  target 22 batch 7: selected 54/64
+  target 22 batch 8: selected 62/64
+  target 22 batch 9: selected 64/64
+
+========================================================================
+Target class 23: persian
+High-purity target features: 11 | candidate non-target images: 3569
+  target 23 batch 0: selected 7/64
+  target 23 batch 1: selected 12/64
+  target 23 batch 2: selected 20/64
+  target 23 batch 3: selected 26/64
+  target 23 batch 4: selected 32/64
+  target 23 batch 5: selected 39/64
+  target 23 batch 6: selected 42/64
+  target 23 batch 7: selected 47/64
+  target 23 batch 8: selected 54/64
+  target 23 batch 9: selected 60/64
+  target 23 batch 10: selected 64/64
+
+========================================================================
+Target class 24: pomeranian
+High-purity target features: 3 | candidate non-target images: 3569
+  target 24 batch 0: selected 7/64
+  target 24 batch 1: selected 13/64
+  target 24 batch 2: selected 21/64
+  target 24 batch 3: selected 29/64
+  target 24 batch 4: selected 34/64
+  target 24 batch 5: selected 42/64
+  target 24 batch 6: selected 48/64
+  target 24 batch 7: selected 55/64
+  target 24 batch 8: selected 63/64
+  target 24 batch 9: selected 64/64
+
+========================================================================
+Target class 25: pug
+High-purity target features: 2 | candidate non-target images: 3569
+  target 25 batch 0: selected 8/64
+  target 25 batch 1: selected 16/64
+  target 25 batch 2: selected 21/64
+  target 25 batch 3: selected 27/64
+  target 25 batch 4: selected 32/64
+  target 25 batch 5: selected 39/64
+  target 25 batch 6: selected 47/64
+  target 25 batch 7: selected 54/64
+  target 25 batch 8: selected 61/64
+  target 25 batch 9: selected 64/64
+
+========================================================================
+Target class 26: ragdoll
+High-purity target features: 1 | candidate non-target images: 3569
+  target 26 batch 0: selected 6/64
+  target 26 batch 1: selected 12/64
+  target 26 batch 2: selected 18/64
+  target 26 batch 3: selected 26/64
+  target 26 batch 4: selected 34/64
+  target 26 batch 5: selected 42/64
+  target 26 batch 6: selected 49/64
+  target 26 batch 7: selected 56/64
+  target 26 batch 8: selected 63/64
+  target 26 batch 9: selected 64/64
+
+========================================================================
+Target class 27: russian_blue
+High-purity target features: 1 | candidate non-target images: 3569
+  target 27 batch 0: selected 8/64
+  target 27 batch 1: selected 15/64
+  target 27 batch 2: selected 22/64
+  target 27 batch 3: selected 29/64
+  target 27 batch 4: selected 37/64
+  target 27 batch 5: selected 44/64
+  target 27 batch 6: selected 50/64
+  target 27 batch 7: selected 56/64
+  target 27 batch 8: selected 63/64
+  target 27 batch 9: selected 64/64
+
+========================================================================
+Target class 28: saint_bernard
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 29: samoyed
+High-purity target features: 8 | candidate non-target images: 3569
+  target 29 batch 0: selected 7/64
+  target 29 batch 1: selected 15/64
+  target 29 batch 2: selected 23/64
+  target 29 batch 3: selected 29/64
+  target 29 batch 4: selected 37/64
+  target 29 batch 5: selected 43/64
+  target 29 batch 6: selected 51/64
+  target 29 batch 7: selected 59/64
+  target 29 batch 8: selected 64/64
+
+========================================================================
+Target class 30: scottish_terrier
+High-purity target features: 0 | candidate non-target images: 3570
+
+========================================================================
+Target class 31: shiba_inu
+High-purity target features: 4 | candidate non-target images: 3569
+  target 31 batch 0: selected 7/64
+  target 31 batch 1: selected 14/64
+  target 31 batch 2: selected 21/64
+  target 31 batch 3: selected 26/64
+  target 31 batch 4: selected 33/64
+  target 31 batch 5: selected 39/64
+  target 31 batch 6: selected 45/64
+  target 31 batch 7: selected 52/64
+  target 31 batch 8: selected 57/64
+  target 31 batch 9: selected 63/64
+  target 31 batch 10: selected 64/64
+
+========================================================================
+Target class 32: siamese
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 33: sphynx
+High-purity target features: 20 | candidate non-target images: 3569
+  target 33 batch 0: selected 8/64
+  target 33 batch 1: selected 13/64
+  target 33 batch 2: selected 20/64
+  target 33 batch 3: selected 28/64
+  target 33 batch 4: selected 36/64
+  target 33 batch 5: selected 41/64
+  target 33 batch 6: selected 47/64
+  target 33 batch 7: selected 55/64
+  target 33 batch 8: selected 62/64
+  target 33 batch 9: selected 64/64
+
+========================================================================
+Target class 34: staffordshire_bull_terrier
+High-purity target features: 1 | candidate non-target images: 3580
+  target 34 batch 0: selected 7/64
+  target 34 batch 1: selected 13/64
+  target 34 batch 2: selected 20/64
+  target 34 batch 3: selected 27/64
+  target 34 batch 4: selected 32/64
+  target 34 batch 5: selected 38/64
+  target 34 batch 6: selected 45/64
+  target 34 batch 7: selected 53/64
+  target 34 batch 8: selected 60/64
+  target 34 batch 9: selected 64/64
+
+========================================================================
+Target class 35: wheaten_terrier
+High-purity target features: 21 | candidate non-target images: 3569
+  target 35 batch 0: selected 7/64
+  target 35 batch 1: selected 11/64
+  target 35 batch 2: selected 19/64
+  target 35 batch 3: selected 26/64
+  target 35 batch 4: selected 33/64
+  target 35 batch 5: selected 40/64
+  target 35 batch 6: selected 47/64
+  target 35 batch 7: selected 55/64
+  target 35 batch 8: selected 61/64
+  target 35 batch 9: selected 64/64
+
+========================================================================
+Target class 36: yorkshire_terrier
+High-purity target features: 20 | candidate non-target images: 3569
+  target 36 batch 0: selected 6/64
+  target 36 batch 1: selected 13/64
+  target 36 batch 2: selected 21/64
+  target 36 batch 3: selected 29/64
+  target 36 batch 4: selected 37/64
+  target 36 batch 5: selected 44/64
+  target 36 batch 6: selected 52/64
+  target 36 batch 7: selected 59/64
+  target 36 batch 8: selected 64/64
+
+========================================================================
+ target_class          target_class_name  insertion_scale  n_source_images  mean_original_target_margin  mean_targeted_target_margin  mean_control_target_margin  mean_targeted_margin_increase  mean_control_margin_increase  mean_target_margin_difference  targeted_crossed_zero_count  control_crossed_zero_count  fraction_positive wilcoxon_fdr_within_scale
+            0                 abyssinian              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            1           american_bulldog              0.5               64                   -15.768934                   -15.070005                  -15.471580                       0.698928                      0.297354                       0.401575                            0                           0           0.687500                  0.000036
+            2  american_pit_bull_terrier              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            3               basset_hound              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            4                     beagle              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            5                     bengal              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            6                     birman              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            7                     bombay              0.5               64                   -14.676604                   -14.316004                  -14.547499                       0.360599                      0.129105                       0.231494                            0                           0           0.734375                  0.000439
+            8                      boxer              0.5               64                   -14.676048                   -14.179002                  -14.532400                       0.497046                      0.143648                       0.353397                            0                           0           0.937500                       0.0
+            9          british_shorthair              0.5               64                   -14.232462                   -13.565017                  -14.234561                       0.667445                     -0.002099                       0.669544                            0                           0           0.906250                       0.0
+           10                  chihuahua              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           11               egyptian_mau              0.5               64                   -14.802713                   -14.071123                  -14.798961                       0.731589                      0.003752                       0.727837                            0                           0           0.937500                       0.0
+           12     english_cocker_spaniel              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           13             english_setter              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           14         german_shorthaired              0.5               64                   -14.587067                   -14.028247                  -14.593929                       0.558820                     -0.006862                       0.565683                            0                           0           0.968750                       0.0
+           15             great_pyrenees              0.5               64                   -14.881319                   -14.151312                  -14.706960                       0.730007                      0.174358                       0.555648                            0                           0           0.937500                       0.0
+           16                   havanese              0.5               64                   -14.442504                   -14.106539                  -14.494151                       0.335965                     -0.051647                       0.387612                            0                           0           0.953125                       0.0
+           17              japanese_chin              0.5               64                   -14.602459                   -14.473458                  -14.492872                       0.129001                      0.109586                       0.019414                            0                           0           0.468750                   0.55511
+           18                   keeshond              0.5               64                   -14.142730                   -13.368677                  -13.824738                       0.774053                      0.317992                       0.456061                            0                           0           0.656250                  0.000236
+           19                 leonberger              0.5               64                   -14.584765                   -14.033939                  -14.318780                       0.550826                      0.265985                       0.284841                            0                           0           0.687500                  0.000236
+           20                 maine_coon              0.5               64                   -15.147378                   -14.977818                  -15.095611                       0.169560                      0.051767                       0.117793                            0                           0           0.781250                  0.000001
+           21         miniature_pinscher              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           22               newfoundland              0.5               64                   -15.662522                   -14.795223                  -15.723315                       0.867299                     -0.060793                       0.928092                            0                           0           0.875000                       0.0
+           23                    persian              0.5               64                   -15.589997                   -14.473530                  -15.322413                       1.116467                      0.267583                       0.848883                            0                           0           0.953125                       0.0
+           24                 pomeranian              0.5               64                   -14.498680                   -14.028309                  -14.794215                       0.470372                     -0.295535                       0.765907                            0                           0           0.890625                       0.0
+           25                        pug              0.5               64                   -14.901349                   -14.531220                  -14.884978                       0.370129                      0.016371                       0.353757                            0                           0           0.781250                       0.0
+           26                    ragdoll              0.5               64                   -15.591253                   -15.356420                  -15.551524                       0.234833                      0.039729                       0.195104                            0                           0           0.781250                       0.0
+           27               russian_blue              0.5               64                   -14.459588                   -14.311312                  -14.479435                       0.148276                     -0.019847                       0.168123                            0                           0           0.671875                  0.000068
+           28              saint_bernard              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           29                    samoyed              0.5               64                   -15.322057                   -14.971216                  -14.942764                       0.350841                      0.379293                      -0.028452                            0                           0           0.515625                  0.602882
+           30           scottish_terrier              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           31                  shiba_inu              0.5               64                   -14.320168                   -14.027058                  -14.174931                       0.293110                      0.145238                       0.147873                            0                           0           0.625000                  0.006141
+           32                    siamese              0.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           33                     sphynx              0.5               64                   -15.286527                   -14.251014                  -15.061515                       1.035513                      0.225012                       0.810501                            0                           0           0.968750                       0.0
+           34 staffordshire_bull_terrier              0.5               64                   -13.578031                   -13.351445                  -13.636011                       0.226587                     -0.057979                       0.284566                            0                           0           0.796875                  0.000001
+           35            wheaten_terrier              0.5               64                   -15.397148                   -14.126626                  -15.036886                       1.270522                      0.360261                       0.910261                            0                           0           0.984375                       0.0
+           36          yorkshire_terrier              0.5               64                   -14.415498                   -12.856778                  -14.199256                       1.558720                      0.216242                       1.342478                            0                           0           0.984375                       0.0
+            0                 abyssinian              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            1           american_bulldog              1.0               64                   -15.768934                   -14.332954                  -15.189207                       1.435980                      0.579726                       0.856254                            0                           0           0.718750                  0.000012
+            2  american_pit_bull_terrier              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            3               basset_hound              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            4                     beagle              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            5                     bengal              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            6                     birman              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            7                     bombay              1.0               64                   -14.676604                   -13.972640                  -14.445459                       0.703964                      0.231145                       0.472819                            1                           0           0.734375                   0.00025
+            8                      boxer              1.0               64                   -14.676048                   -13.717078                  -14.427844                       0.958970                      0.248203                       0.710766                            0                           0           0.937500                       0.0
+            9          british_shorthair              1.0               64                   -14.232462                   -12.697043                  -14.265355                       1.535419                     -0.032893                       1.568312                            0                           0           0.953125                       0.0
+           10                  chihuahua              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           11               egyptian_mau              1.0               64                   -14.802713                   -13.250880                  -14.763173                       1.551833                      0.039540                       1.512293                            1                           0           0.937500                       0.0
+           12     english_cocker_spaniel              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           13             english_setter              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           14         german_shorthaired              1.0               64                   -14.587067                   -13.437872                  -14.651487                       1.149195                     -0.064420                       1.213615                            0                           0           0.984375                       0.0
+           15             great_pyrenees              1.0               64                   -14.881319                   -13.422566                  -14.573947                       1.458753                      0.307371                       1.151381                            0                           0           0.953125                       0.0
+           16                   havanese              1.0               64                   -14.442504                   -13.750048                  -14.535785                       0.692456                     -0.093281                       0.785736                            0                           0           0.953125                       0.0
+           17              japanese_chin              1.0               64                   -14.602459                   -14.374082                  -14.414932                       0.228376                      0.187527                       0.040849                            0                           0           0.468750                  0.535656
+           18                   keeshond              1.0               64                   -14.142730                   -12.491426                  -13.492134                       1.651304                      0.650596                       1.000708                            0                           0           0.687500                  0.000061
+           19                 leonberger              1.0               64                   -14.584765                   -13.436864                  -14.054036                       1.147902                      0.530729                       0.617173                            0                           0           0.687500                  0.000108
+           20                 maine_coon              1.0               64                   -15.147378                   -14.815770                  -15.056085                       0.331609                      0.091293                       0.240315                            0                           0           0.781250                       0.0
+           21         miniature_pinscher              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           22               newfoundland              1.0               64                   -15.662522                   -13.731148                  -15.739612                       1.931374                     -0.077090                       2.008464                            0                           0           0.906250                       0.0
+           23                    persian              1.0               64                   -15.589997                   -13.303496                  -15.139834                       2.286501                      0.450163                       1.836338                            0                           0           0.984375                       0.0
+           24                 pomeranian              1.0               64                   -14.498680                   -13.479836                  -15.121197                       1.018844                     -0.622517                       1.641361                            0                           0           0.890625                       0.0
+           25                        pug              1.0               64                   -14.901349                   -14.051825                  -14.886475                       0.849524                      0.014874                       0.834650                            0                           0           0.812500                       0.0
+           26                    ragdoll              1.0               64                   -15.591253                   -15.150961                  -15.534016                       0.440292                      0.057237                       0.383055                            0                           0           0.781250                       0.0
+           27               russian_blue              1.0               64                   -14.459588                   -14.173863                  -14.514387                       0.285725                     -0.054799                       0.340525                            0                           0           0.687500                  0.000061
+           28              saint_bernard              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           29                    samoyed              1.0               64                   -15.322057                   -14.648287                  -14.568123                       0.673770                      0.753934                      -0.080164                            0                           0           0.515625                  0.623358
+           30           scottish_terrier              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           31                  shiba_inu              1.0               64                   -14.320168                   -13.608568                  -14.006746                       0.711600                      0.313423                       0.398177                            1                           0           0.671875                  0.000225
+           32                    siamese              1.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           33                     sphynx              1.0               64                   -15.286527                   -13.229597                  -14.868481                       2.056930                      0.418046                       1.638885                            0                           0           0.968750                       0.0
+           34 staffordshire_bull_terrier              1.0               64                   -13.578031                   -13.112322                  -13.698672                       0.465709                     -0.120641                       0.586350                            0                           0           0.796875                  0.000001
+           35            wheaten_terrier              1.0               64                   -15.397148                   -12.752832                  -14.750528                       2.644316                      0.646620                       1.997696                            0                           0           1.000000                       0.0
+           36          yorkshire_terrier              1.0               64                   -14.415498                   -11.087552                  -14.067180                       3.327946                      0.348318                       2.979628                            0                           0           1.000000                       0.0
+            0                 abyssinian              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            1           american_bulldog              1.5               64                   -15.768934                   -13.474548                  -14.847322                       2.294385                      0.921612                       1.372773                            0                           0           0.718750                  0.000004
+            2  american_pit_bull_terrier              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            3               basset_hound              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            4                     beagle              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            5                     bengal              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            6                     birman              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            7                     bombay              1.5               64                   -14.676604                   -13.598319                  -14.327557                       1.078285                      0.349046                       0.729239                            1                           0           0.734375                  0.000154
+            8                      boxer              1.5               64                   -14.676048                   -13.234396                  -14.307848                       1.441652                      0.368199                       1.073452                            0                           0           0.937500                       0.0
+            9          british_shorthair              1.5               64                   -14.232462                   -11.584192                  -14.280311                       2.648270                     -0.047849                       2.696118                            1                           0           0.984375                       0.0
+           10                  chihuahua              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           11               egyptian_mau              1.5               64                   -14.802713                   -12.343556                  -14.696409                       2.459157                      0.106304                       2.352853                            2                           0           0.953125                       0.0
+           12     english_cocker_spaniel              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           13             english_setter              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           14         german_shorthaired              1.5               64                   -14.587067                   -12.743239                  -14.693644                       1.843828                     -0.106577                       1.950406                            1                           0           0.984375                       0.0
+           15             great_pyrenees              1.5               64                   -14.881319                   -12.626892                  -14.413469                       2.254426                      0.467850                       1.786576                            0                           0           0.953125                       0.0
+           16                   havanese              1.5               64                   -14.442504                   -13.378700                  -14.572729                       1.063804                     -0.130225                       1.194029                            0                           0           0.953125                       0.0
+           17              japanese_chin              1.5               64                   -14.602459                   -14.266050                  -14.329898                       0.336409                      0.272561                       0.063848                            0                           0           0.468750                  0.532874
+           18                   keeshond              1.5               64                   -14.142730                   -11.497813                  -13.160193                       2.644917                      0.982537                       1.662379                            0                           0           0.718750                  0.000008
+           19                 leonberger              1.5               64                   -14.584765                   -12.732035                  -13.747550                       1.852731                      0.837215                       1.015515                            0                           0           0.703125                  0.000034
+           20                 maine_coon              1.5               64                   -15.147378                   -14.646924                  -15.014296                       0.500455                      0.133082                       0.367373                            0                           0           0.781250                       0.0
+           21         miniature_pinscher              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           22               newfoundland              1.5               64                   -15.662522                   -12.424639                  -15.671864                       3.237883                     -0.009342                       3.247225                            0                           0           0.953125                       0.0
+           23                    persian              1.5               64                   -15.589997                   -12.040281                  -14.927106                       3.549716                      0.662890                       2.886825                            0                           0           0.984375                       0.0
+           24                 pomeranian              1.5               64                   -14.498680                   -12.800897                  -15.424957                       1.697783                     -0.926276                       2.624059                            0                           0           0.921875                       0.0
+           25                        pug              1.5               64                   -14.901349                   -13.415479                  -14.864597                       1.485870                      0.036752                       1.449118                            0                           0           0.859375                       0.0
+           26                    ragdoll              1.5               64                   -15.591253                   -14.942223                  -15.505771                       0.649030                      0.085482                       0.563548                            0                           0           0.781250                       0.0
+           27               russian_blue              1.5               64                   -14.459588                   -14.025608                  -14.542826                       0.433980                     -0.083237                       0.517217                            0                           0           0.687500                  0.000052
+           28              saint_bernard              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           29                    samoyed              1.5               64                   -15.322057                   -14.284907                  -14.127284                       1.037151                      1.194773                      -0.157623                            0                           0           0.515625                  0.648468
+           30           scottish_terrier              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           31                  shiba_inu              1.5               64                   -14.320168                   -13.048192                  -13.806047                       1.271977                      0.514122                       0.757855                            2                           0           0.687500                   0.00001
+           32                    siamese              1.5                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           33                     sphynx              1.5               64                   -15.286527                   -12.181135                  -14.654441                       3.105392                      0.632086                       2.473306                            0                           0           0.984375                       0.0
+           34 staffordshire_bull_terrier              1.5               64                   -13.578031                   -12.833662                  -13.737655                       0.744370                     -0.159623                       0.903993                            0                           0           0.796875                       0.0
+           35            wheaten_terrier              1.5               64                   -15.397148                   -11.186406                  -14.449957                       4.210741                      0.947191                       3.263551                            0                           0           1.000000                       0.0
+           36          yorkshire_terrier              1.5               64                   -14.415498                    -9.071715                  -13.921008                       5.343783                      0.494490                       4.849292                            0                           0           1.000000                       0.0
+            0                 abyssinian              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            1           american_bulldog              2.0               64                   -15.768934                   -12.513498                  -14.461988                       3.255435                      1.306946                       1.948490                            0                           0           0.734375                  0.000001
+            2  american_pit_bull_terrier              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            3               basset_hound              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            4                     beagle              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            5                     bengal              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            6                     birman              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+            7                     bombay              2.0               64                   -14.676604                   -13.197943                  -14.192480                       1.478661                      0.484124                       0.994536                            1                           0           0.734375                  0.000128
+            8                      boxer              2.0               64                   -14.676048                   -12.732006                  -14.173079                       1.944042                      0.502968                       1.441073                            1                           0           0.937500                       0.0
+            9          british_shorthair              2.0               64                   -14.232462                   -10.283592                  -14.278507                       3.948870                     -0.046045                       3.994915                            2                           0           0.984375                       0.0
+           10                  chihuahua              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           11               egyptian_mau              2.0               64                   -14.802713                   -11.343648                  -14.605624                       3.459065                      0.197089                       3.261976                            3                           0           0.984375                       0.0
+           12     english_cocker_spaniel              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           13             english_setter              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           14         german_shorthaired              2.0               64                   -14.587067                   -11.960089                  -14.720930                       2.626978                     -0.133863                       2.760841                            1                           0           1.000000                       0.0
+           15             great_pyrenees              2.0               64                   -14.881319                   -11.766900                  -14.233402                       3.114419                      0.647916                       2.466503                            0                           0           0.953125                       0.0
+           16                   havanese              2.0               64                   -14.442504                   -12.993621                  -14.604940                       1.448883                     -0.162436                       1.611319                            2                           0           0.953125                       0.0
+           17              japanese_chin              2.0               64                   -14.602459                   -14.149582                  -14.238763                       0.452876                      0.363696                       0.089181                            0                           0           0.468750                  0.513388
+           18                   keeshond              2.0               64                   -14.142730                   -10.420599                  -12.820646                       3.722131                      1.322084                       2.400048                            0                           0           0.718750                  0.000001
+           19                 leonberger              2.0               64                   -14.584765                   -11.917683                  -13.413550                       2.667082                      1.171215                       1.495867                            0                           0           0.718750                  0.000009
+           20                 maine_coon              2.0               64                   -15.147378                   -14.470980                  -14.970126                       0.676398                      0.177252                       0.499146                            0                           0           0.796875                       0.0
+           21         miniature_pinscher              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           22               newfoundland              2.0               64                   -15.662522                   -10.952625                  -15.514117                       4.709897                      0.148405                       4.561492                            1                           0           0.968750                       0.0
+           23                    persian              2.0               64                   -15.589997                   -10.650385                  -14.699345                       4.939612                      0.890652                       4.048960                            1                           0           1.000000                       0.0
+           24                 pomeranian              2.0               64                   -14.498680                   -12.004097                  -15.702122                       2.494584                     -1.203442                       3.698025                            0                           0           0.937500                       0.0
+           25                        pug              2.0               64                   -14.901349                   -12.636571                  -14.825368                       2.264778                      0.075981                       2.188797                            0                           0           0.890625                       0.0
+           26                    ragdoll              2.0               64                   -15.591253                   -14.733697                  -15.466905                       0.857556                      0.124347                       0.733209                            0                           0           0.781250                       0.0
+           27               russian_blue              2.0               64                   -14.459588                   -13.870018                  -14.564681                       0.589570                     -0.105093                       0.694663                            0                           0           0.687500                  0.000062
+           28              saint_bernard              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           29                    samoyed              2.0               64                   -15.322057                   -13.867496                  -13.629569                       1.454561                      1.692489                      -0.237927                            0                           0           0.531250                  0.643494
+           30           scottish_terrier              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           31                  shiba_inu              2.0               64                   -14.320168                   -12.341489                  -13.590376                       1.978680                      0.729792                       1.248887                            3                           1           0.765625                       0.0
+           32                    siamese              2.0                0                          NaN                          NaN                         NaN                            NaN                           NaN                            NaN                            0                           0                NaN                      None
+           33                     sphynx              2.0               64                   -15.286527                   -11.103349                  -14.424956                       4.183177                      0.861570                       3.321607                            1                           0           0.984375                       0.0
+           34 staffordshire_bull_terrier              2.0               64                   -13.578031                   -12.514331                  -13.756922                       1.063700                     -0.178891                       1.242591                            0                           0           0.796875                       0.0
+           35            wheaten_terrier              2.0               64                   -15.397148                    -9.444937                  -14.137031                       5.952211                      1.260117                       4.692094                            0                           0           1.000000                       0.0
+           36          yorkshire_terrier              2.0               64                   -14.415498                    -6.844869                  -13.763686                       7.570629                      0.651812                       6.918817                            5                           0           1.000000                       0.0
+
+Saved run to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency_dose_response/run_20260914_155803
+Summary CSV: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency_dose_response/run_20260914_155803/sufficiency_dose_response_summary.csv
+=== JOB_STATISTICS ===
+=== current date     : Mon Sep 14 04:00:23 PM CEST 2026
+= Job-ID             : 1812628 on tinygpu
+= Job-Name           : sufficiency_dose_response
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_sufficiency_dose_response.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:03:14
+= Total RAM usage    : 10.5 GiB of requested  GiB (%)   
+= Node list          : tg091
+= Subm/Elig/Start/End: 2026-09-14T15:56:12 / 2026-09-14T15:56:12 / 2026-09-14T15:57:09 / 2026-09-14T16:00:23
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:01:00.0, 1613349, 61 %, 23 %, 16060 MiB, 174996 ms

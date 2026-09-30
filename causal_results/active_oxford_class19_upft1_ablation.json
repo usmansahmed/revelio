@@ -1,0 +1,164 @@
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "target_class": 19,
+        "target_class_name": "class_19",
+        "num_classes": 37,
+        "split": "test",
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "prompt_type": "empty",
+        "pooling_strategy": "GAP",
+        "diffusion_step_type": "onestep",
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/d0p5pu4r/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/active_oxford_class19_upft1_ablation.json",
+        "min_purity": 0.6,
+        "min_valid": 5,
+        "max_ablate_per_image": 10,
+        "active_feature_ranking": "purity_actual_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42
+    },
+    "metrics": {
+        "original": {
+            "accuracy": 0.9375,
+            "cross_entropy": 0.20663691603476764,
+            "true_class_confidence": 0.9348851591348648,
+            "target_class_confidence": 0.9348851591348648,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.78125,
+            "cross_entropy": 0.942296258173883,
+            "true_class_confidence": 0.6958339959383011,
+            "target_class_confidence": 0.6958339959383011,
+            "total": 64
+        },
+        "active_targeted_ablation": {
+            "accuracy": 0.78125,
+            "cross_entropy": 0.9329076763242483,
+            "true_class_confidence": 0.6958054453134537,
+            "target_class_confidence": 0.6958054453134537,
+            "total": 64
+        },
+        "active_random_ablation": {
+            "accuracy": 0.78125,
+            "cross_entropy": 0.9428112991154194,
+            "true_class_confidence": 0.6958134919404984,
+            "target_class_confidence": 0.6958134919404984,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.23905116319656372,
+        "active_targeted_ablation": 0.23907971382141113,
+        "active_random_ablation": 0.23907166719436646
+    },
+    "extra_drop_after_reconstruction": {
+        "active_targeted_minus_reconstruction": 2.855062484741211e-05,
+        "active_random_minus_reconstruction": 2.0503997802734375e-05
+    },
+    "activation_summary": {
+        "total_images": 64,
+        "ksae_k": 32,
+        "total_active_features_seen": 2048,
+        "total_target_ablated": 6,
+        "total_random_ablated": 6,
+        "images_with_target_features": 3,
+        "fraction_images_with_target_features": 0.046875,
+        "avg_target_ablated_per_image": 0.09375,
+        "avg_random_ablated_per_image": 0.09375
+    },
+    "top_target_ablated_features": [
+        {
+            "feature_id": 2295,
+            "count": 2,
+            "activation_sum": 7.068959712982178,
+            "avg_activation_when_selected": 3.534479856491089,
+            "purity": 0.699999988079071,
+            "majority_label": 19,
+            "valid_count": 10,
+            "mean_activation": 2.617096185684204,
+            "sparsity": 0.007065217010676861
+        },
+        {
+            "feature_id": 13480,
+            "count": 1,
+            "activation_sum": 5.57363224029541,
+            "avg_activation_when_selected": 5.57363224029541,
+            "purity": 0.800000011920929,
+            "majority_label": 19,
+            "valid_count": 5,
+            "mean_activation": 5.475677967071533,
+            "sparsity": 0.0013586955610662699
+        },
+        {
+            "feature_id": 29203,
+            "count": 1,
+            "activation_sum": 5.019399642944336,
+            "avg_activation_when_selected": 5.019399642944336,
+            "purity": 0.699999988079071,
+            "majority_label": 19,
+            "valid_count": 10,
+            "mean_activation": 4.1754889488220215,
+            "sparsity": 0.003804347710683942
+        },
+        {
+            "feature_id": 14209,
+            "count": 1,
+            "activation_sum": 4.925221920013428,
+            "avg_activation_when_selected": 4.925221920013428,
+            "purity": 0.800000011920929,
+            "majority_label": 19,
+            "valid_count": 5,
+            "mean_activation": 5.500058174133301,
+            "sparsity": 0.0013586955610662699
+        },
+        {
+            "feature_id": 25121,
+            "count": 1,
+            "activation_sum": 3.333178758621216,
+            "avg_activation_when_selected": 3.333178758621216,
+            "purity": 0.800000011920929,
+            "majority_label": 19,
+            "valid_count": 5,
+            "mean_activation": 6.349658012390137,
+            "sparsity": 0.0013586955610662699
+        }
+    ],
+    "top_random_ablated_features": [
+        {
+            "feature_id": 23402,
+            "count": 1
+        },
+        {
+            "feature_id": 58707,
+            "count": 1
+        },
+        {
+            "feature_id": 66583,
+            "count": 1
+        },
+        {
+            "feature_id": 64355,
+            "count": 1
+        },
+        {
+            "feature_id": 13257,
+            "count": 1
+        },
+        {
+            "feature_id": 28760,
+            "count": 1
+        }
+    ]
+}

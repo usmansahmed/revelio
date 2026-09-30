@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 2518,
+    "image_seed": 2560,
+    "true_label": 27,
+    "true_label_name": "russian_blue",
+    "target_class": 36,
+    "target_class_name": "yorkshire_terrier",
+    "insertion_scale": 2.0,
+    "original_pred": 27,
+    "original_pred_name": "russian_blue",
+    "target_neuron_ids": [
+      46602,
+      25022,
+      45935
+    ],
+    "control_neuron_ids": [
+      43575,
+      75509,
+      81345
+    ],
+    "removed_source_neuron_ids": [
+      27938,
+      24402,
+      25495
+    ],
+    "target_inserted_values": [
+      19.276351928710938,
+      17.780864715576172,
+      17.564239501953125
+    ],
+    "control_inserted_values": [
+      20.57680892944336,
+      17.986858367919922,
+      17.464811325073242
+    ],
+    "removed_source_values": [
+      3.735286235809326,
+      3.8994195461273193,
+      3.928844928741455
+    ],
+    "targeted_pred": 36,
+    "targeted_pred_name": "yorkshire_terrier",
+    "control_pred": 27,
+    "control_pred_name": "russian_blue",
+    "original_target_margin": -8.868816375732422,
+    "targeted_target_margin": 1.0113433599472046,
+    "control_target_margin": -8.73429012298584,
+    "targeted_target_margin_increase": 9.880159735679626,
+    "control_target_margin_increase": 0.13452625274658203,
+    "target_margin_increase_difference": 9.745633482933044,
+    "original_target_logit": -3.4690258502960205,
+    "targeted_target_logit": 2.1716291904449463,
+    "control_target_logit": -4.354669094085693,
+    "target_logit_increase_difference": 6.52629828453064,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 27,
+  "source_label_name": "russian_blue",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      46602,
+      25022,
+      45935
+    ],
+    "removed_source_neuron_ids": [
+      27938,
+      24402,
+      25495
+    ],
+    "inserted_values": [
+      19.276351928710938,
+      17.780864715576172,
+      17.564239501953125
+    ],
+    "delta_l2": 35.10370635986328
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      43575,
+      75509,
+      81345
+    ],
+    "removed_source_neuron_ids": [
+      27938,
+      24402,
+      25495
+    ],
+    "inserted_values": [
+      20.57680892944336,
+      17.986858367919922,
+      17.464811325073242
+    ],
+    "delta_l2": 32.94401931762695
+  },
+  "target_pixel_mae_vs_baseline": 3.5385291994316503e-05,
+  "target_pixel_mse_vs_baseline": 1.048041031737057e-08,
+  "control_pixel_mae_vs_baseline": 3.413483500480652e-05,
+  "control_pixel_mse_vs_baseline": 9.993830651922053e-09
+}

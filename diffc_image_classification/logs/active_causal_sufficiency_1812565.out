@@ -1,0 +1,501 @@
+### Starting TaskPrologue of job 1812565 on tg092 at Mon Sep 14 02:39:37 PM CEST 2026
+Running on cores 64-95 with governor ondemand
+Mon Sep 14 14:39:37 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   33C    P0             54W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+k-SAE k: 32 | n_features: 81920
+Loaded DiffC checkpoint epoch: 88
+Loading train/test datasets...
+Computing training-set reference activations. This is done once and then cached...
+  reference batch 0/460
+  reference batch 25/460
+  reference batch 50/460
+  reference batch 75/460
+  reference batch 100/460
+  reference batch 125/460
+  reference batch 150/460
+  reference batch 175/460
+  reference batch 200/460
+  reference batch 225/460
+  reference batch 250/460
+  reference batch 275/460
+  reference batch 300/460
+  reference batch 325/460
+  reference batch 350/460
+  reference batch 375/460
+  reference batch 400/460
+  reference batch 425/460
+  reference batch 450/460
+Saved reference activation cache: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/reference_activation_medians.pt
+
+========================================================================
+Target class 0: abyssinian
+High-purity target features: 0 | candidate non-target images: 3571
+
+========================================================================
+Target class 1: american_bulldog
+High-purity target features: 7 | candidate non-target images: 3569
+  target 1 batch 0: collected 8/64
+  target 1 batch 1: collected 16/64
+  target 1 batch 2: collected 21/64
+  target 1 batch 3: collected 29/64
+  target 1 batch 4: collected 35/64
+  target 1 batch 5: collected 43/64
+  target 1 batch 6: collected 48/64
+  target 1 batch 7: collected 56/64
+  target 1 batch 8: collected 63/64
+  target 1 batch 9: collected 64/64
+
+========================================================================
+Target class 2: american_pit_bull_terrier
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 3: basset_hound
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 4: beagle
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 5: bengal
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 6: birman
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 7: bombay
+High-purity target features: 1 | candidate non-target images: 3581
+  target 7 batch 0: collected 6/64
+  target 7 batch 1: collected 10/64
+  target 7 batch 2: collected 16/64
+  target 7 batch 3: collected 23/64
+  target 7 batch 4: collected 31/64
+  target 7 batch 5: collected 36/64
+  target 7 batch 6: collected 44/64
+  target 7 batch 7: collected 51/64
+  target 7 batch 8: collected 59/64
+  target 7 batch 9: collected 64/64
+
+========================================================================
+Target class 8: boxer
+High-purity target features: 2 | candidate non-target images: 3570
+  target 8 batch 0: collected 8/64
+  target 8 batch 1: collected 14/64
+  target 8 batch 2: collected 20/64
+  target 8 batch 3: collected 26/64
+  target 8 batch 4: collected 32/64
+  target 8 batch 5: collected 40/64
+  target 8 batch 6: collected 48/64
+  target 8 batch 7: collected 56/64
+  target 8 batch 8: collected 62/64
+  target 8 batch 9: collected 64/64
+
+========================================================================
+Target class 9: british_shorthair
+High-purity target features: 6 | candidate non-target images: 3569
+  target 9 batch 0: collected 6/64
+  target 9 batch 1: collected 13/64
+  target 9 batch 2: collected 19/64
+  target 9 batch 3: collected 27/64
+  target 9 batch 4: collected 35/64
+  target 9 batch 5: collected 42/64
+  target 9 batch 6: collected 48/64
+  target 9 batch 7: collected 55/64
+  target 9 batch 8: collected 61/64
+  target 9 batch 9: collected 64/64
+
+========================================================================
+Target class 10: chihuahua
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 11: egyptian_mau
+High-purity target features: 1 | candidate non-target images: 3572
+  target 11 batch 0: collected 7/64
+  target 11 batch 1: collected 13/64
+  target 11 batch 2: collected 21/64
+  target 11 batch 3: collected 27/64
+  target 11 batch 4: collected 32/64
+  target 11 batch 5: collected 39/64
+  target 11 batch 6: collected 47/64
+  target 11 batch 7: collected 55/64
+  target 11 batch 8: collected 61/64
+  target 11 batch 9: collected 64/64
+
+========================================================================
+Target class 12: english_cocker_spaniel
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 13: english_setter
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 14: german_shorthaired
+High-purity target features: 2 | candidate non-target images: 3569
+  target 14 batch 0: collected 6/64
+  target 14 batch 1: collected 13/64
+  target 14 batch 2: collected 21/64
+  target 14 batch 3: collected 28/64
+  target 14 batch 4: collected 35/64
+  target 14 batch 5: collected 42/64
+  target 14 batch 6: collected 48/64
+  target 14 batch 7: collected 52/64
+  target 14 batch 8: collected 59/64
+  target 14 batch 9: collected 64/64
+
+========================================================================
+Target class 15: great_pyrenees
+High-purity target features: 16 | candidate non-target images: 3569
+  target 15 batch 0: collected 8/64
+  target 15 batch 1: collected 16/64
+  target 15 batch 2: collected 23/64
+  target 15 batch 3: collected 29/64
+  target 15 batch 4: collected 36/64
+  target 15 batch 5: collected 41/64
+  target 15 batch 6: collected 46/64
+  target 15 batch 7: collected 53/64
+  target 15 batch 8: collected 61/64
+  target 15 batch 9: collected 64/64
+
+========================================================================
+Target class 16: havanese
+High-purity target features: 1 | candidate non-target images: 3569
+  target 16 batch 0: collected 6/64
+  target 16 batch 1: collected 11/64
+  target 16 batch 2: collected 18/64
+  target 16 batch 3: collected 25/64
+  target 16 batch 4: collected 33/64
+  target 16 batch 5: collected 40/64
+  target 16 batch 6: collected 48/64
+  target 16 batch 7: collected 54/64
+  target 16 batch 8: collected 62/64
+  target 16 batch 9: collected 64/64
+
+========================================================================
+Target class 17: japanese_chin
+High-purity target features: 1 | candidate non-target images: 3569
+  target 17 batch 0: collected 8/64
+  target 17 batch 1: collected 15/64
+  target 17 batch 2: collected 23/64
+  target 17 batch 3: collected 30/64
+  target 17 batch 4: collected 37/64
+  target 17 batch 5: collected 44/64
+  target 17 batch 6: collected 49/64
+  target 17 batch 7: collected 55/64
+  target 17 batch 8: collected 63/64
+  target 17 batch 9: collected 64/64
+
+========================================================================
+Target class 18: keeshond
+High-purity target features: 34 | candidate non-target images: 3570
+  target 18 batch 0: collected 8/64
+  target 18 batch 1: collected 13/64
+  target 18 batch 2: collected 21/64
+  target 18 batch 3: collected 29/64
+  target 18 batch 4: collected 37/64
+  target 18 batch 5: collected 43/64
+  target 18 batch 6: collected 50/64
+  target 18 batch 7: collected 57/64
+  target 18 batch 8: collected 64/64
+
+========================================================================
+Target class 19: leonberger
+High-purity target features: 13 | candidate non-target images: 3569
+  target 19 batch 0: collected 5/64
+  target 19 batch 1: collected 12/64
+  target 19 batch 2: collected 17/64
+  target 19 batch 3: collected 25/64
+  target 19 batch 4: collected 33/64
+  target 19 batch 5: collected 37/64
+  target 19 batch 6: collected 42/64
+  target 19 batch 7: collected 47/64
+  target 19 batch 8: collected 54/64
+  target 19 batch 9: collected 61/64
+  target 19 batch 10: collected 64/64
+
+========================================================================
+Target class 20: maine_coon
+High-purity target features: 1 | candidate non-target images: 3569
+  target 20 batch 0: collected 7/64
+  target 20 batch 1: collected 15/64
+  target 20 batch 2: collected 22/64
+  target 20 batch 3: collected 28/64
+  target 20 batch 4: collected 36/64
+  target 20 batch 5: collected 44/64
+  target 20 batch 6: collected 50/64
+  target 20 batch 7: collected 58/64
+  target 20 batch 8: collected 64/64
+
+========================================================================
+Target class 21: miniature_pinscher
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 22: newfoundland
+High-purity target features: 13 | candidate non-target images: 3569
+  target 22 batch 0: collected 7/64
+  target 22 batch 1: collected 15/64
+  target 22 batch 2: collected 20/64
+  target 22 batch 3: collected 27/64
+  target 22 batch 4: collected 34/64
+  target 22 batch 5: collected 40/64
+  target 22 batch 6: collected 46/64
+  target 22 batch 7: collected 54/64
+  target 22 batch 8: collected 62/64
+  target 22 batch 9: collected 64/64
+
+========================================================================
+Target class 23: persian
+High-purity target features: 11 | candidate non-target images: 3569
+  target 23 batch 0: collected 7/64
+  target 23 batch 1: collected 12/64
+  target 23 batch 2: collected 20/64
+  target 23 batch 3: collected 26/64
+  target 23 batch 4: collected 32/64
+  target 23 batch 5: collected 39/64
+  target 23 batch 6: collected 42/64
+  target 23 batch 7: collected 47/64
+  target 23 batch 8: collected 54/64
+  target 23 batch 9: collected 60/64
+  target 23 batch 10: collected 64/64
+
+========================================================================
+Target class 24: pomeranian
+High-purity target features: 3 | candidate non-target images: 3569
+  target 24 batch 0: collected 7/64
+  target 24 batch 1: collected 13/64
+  target 24 batch 2: collected 21/64
+  target 24 batch 3: collected 29/64
+  target 24 batch 4: collected 34/64
+  target 24 batch 5: collected 42/64
+  target 24 batch 6: collected 48/64
+  target 24 batch 7: collected 55/64
+  target 24 batch 8: collected 63/64
+  target 24 batch 9: collected 64/64
+
+========================================================================
+Target class 25: pug
+High-purity target features: 2 | candidate non-target images: 3569
+  target 25 batch 0: collected 8/64
+  target 25 batch 1: collected 16/64
+  target 25 batch 2: collected 21/64
+  target 25 batch 3: collected 27/64
+  target 25 batch 4: collected 32/64
+  target 25 batch 5: collected 39/64
+  target 25 batch 6: collected 47/64
+  target 25 batch 7: collected 54/64
+  target 25 batch 8: collected 61/64
+  target 25 batch 9: collected 64/64
+
+========================================================================
+Target class 26: ragdoll
+High-purity target features: 1 | candidate non-target images: 3569
+  target 26 batch 0: collected 6/64
+  target 26 batch 1: collected 12/64
+  target 26 batch 2: collected 18/64
+  target 26 batch 3: collected 26/64
+  target 26 batch 4: collected 34/64
+  target 26 batch 5: collected 42/64
+  target 26 batch 6: collected 49/64
+  target 26 batch 7: collected 56/64
+  target 26 batch 8: collected 63/64
+  target 26 batch 9: collected 64/64
+
+========================================================================
+Target class 27: russian_blue
+High-purity target features: 1 | candidate non-target images: 3569
+  target 27 batch 0: collected 8/64
+  target 27 batch 1: collected 15/64
+  target 27 batch 2: collected 22/64
+  target 27 batch 3: collected 29/64
+  target 27 batch 4: collected 37/64
+  target 27 batch 5: collected 44/64
+  target 27 batch 6: collected 50/64
+  target 27 batch 7: collected 56/64
+  target 27 batch 8: collected 63/64
+  target 27 batch 9: collected 64/64
+
+========================================================================
+Target class 28: saint_bernard
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 29: samoyed
+High-purity target features: 8 | candidate non-target images: 3569
+  target 29 batch 0: collected 7/64
+  target 29 batch 1: collected 15/64
+  target 29 batch 2: collected 23/64
+  target 29 batch 3: collected 29/64
+  target 29 batch 4: collected 37/64
+  target 29 batch 5: collected 43/64
+  target 29 batch 6: collected 51/64
+  target 29 batch 7: collected 59/64
+  target 29 batch 8: collected 64/64
+
+========================================================================
+Target class 30: scottish_terrier
+High-purity target features: 0 | candidate non-target images: 3570
+
+========================================================================
+Target class 31: shiba_inu
+High-purity target features: 4 | candidate non-target images: 3569
+  target 31 batch 0: collected 7/64
+  target 31 batch 1: collected 14/64
+  target 31 batch 2: collected 21/64
+  target 31 batch 3: collected 26/64
+  target 31 batch 4: collected 33/64
+  target 31 batch 5: collected 39/64
+  target 31 batch 6: collected 45/64
+  target 31 batch 7: collected 52/64
+  target 31 batch 8: collected 57/64
+  target 31 batch 9: collected 63/64
+  target 31 batch 10: collected 64/64
+
+========================================================================
+Target class 32: siamese
+High-purity target features: 0 | candidate non-target images: 3569
+
+========================================================================
+Target class 33: sphynx
+High-purity target features: 20 | candidate non-target images: 3569
+  target 33 batch 0: collected 8/64
+  target 33 batch 1: collected 13/64
+  target 33 batch 2: collected 20/64
+  target 33 batch 3: collected 28/64
+  target 33 batch 4: collected 36/64
+  target 33 batch 5: collected 41/64
+  target 33 batch 6: collected 47/64
+  target 33 batch 7: collected 55/64
+  target 33 batch 8: collected 62/64
+  target 33 batch 9: collected 64/64
+
+========================================================================
+Target class 34: staffordshire_bull_terrier
+High-purity target features: 1 | candidate non-target images: 3580
+  target 34 batch 0: collected 7/64
+  target 34 batch 1: collected 13/64
+  target 34 batch 2: collected 20/64
+  target 34 batch 3: collected 27/64
+  target 34 batch 4: collected 32/64
+  target 34 batch 5: collected 38/64
+  target 34 batch 6: collected 45/64
+  target 34 batch 7: collected 53/64
+  target 34 batch 8: collected 60/64
+  target 34 batch 9: collected 64/64
+
+========================================================================
+Target class 35: wheaten_terrier
+High-purity target features: 21 | candidate non-target images: 3569
+  target 35 batch 0: collected 7/64
+  target 35 batch 1: collected 11/64
+  target 35 batch 2: collected 19/64
+  target 35 batch 3: collected 26/64
+  target 35 batch 4: collected 33/64
+  target 35 batch 5: collected 40/64
+  target 35 batch 6: collected 47/64
+  target 35 batch 7: collected 55/64
+  target 35 batch 8: collected 61/64
+  target 35 batch 9: collected 64/64
+
+========================================================================
+Target class 36: yorkshire_terrier
+High-purity target features: 20 | candidate non-target images: 3569
+  target 36 batch 0: collected 6/64
+  target 36 batch 1: collected 13/64
+  target 36 batch 2: collected 21/64
+  target 36 batch 3: collected 29/64
+  target 36 batch 4: collected 37/64
+  target 36 batch 5: collected 44/64
+  target 36 batch 6: collected 52/64
+  target 36 batch 7: collected 59/64
+  target 36 batch 8: collected 64/64
+
+========================================================================
+ target_class          target_class_name  n_selected_features  n_source_images  mean_target_margin_difference  median_target_margin_difference  ci_95_low  ci_95_high  fraction_positive   wilcoxon_p  wilcoxon_fdr  targeted_flip_count  control_flip_count
+            0                 abyssinian                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            1           american_bulldog                    7               64                       0.856254                         0.858510   0.530466    1.185572           0.718750 8.537381e-06  1.205277e-05                    0                   0
+            2  american_pit_bull_terrier                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            3               basset_hound                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            4                     beagle                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            5                     bengal                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            6                     birman                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+            7                     bombay                    1               64                       0.472819                         0.596684   0.230696    0.707972           0.734375 2.289455e-04  2.497587e-04                    1                   0
+            8                      boxer                    2               64                       0.710766                         0.609089   0.601072    0.826725           0.937500 4.727396e-12  1.260639e-11                    0                   0
+            9          british_shorthair                    6               64                       1.568312                         1.519300   1.328417    1.808919           0.953125 3.104828e-12  9.314484e-12                    0                   0
+           10                  chihuahua                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           11               egyptian_mau                    1               64                       1.512293                         1.388650   1.266194    1.764816           0.937500 2.962478e-12  9.314484e-12                    1                   0
+           12     english_cocker_spaniel                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           13             english_setter                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           14         german_shorthaired                    2               64                       1.213615                         1.067761   1.044159    1.387865           0.984375 1.938008e-12  9.314484e-12                    0                   0
+           15             great_pyrenees                   16               64                       1.151381                         1.180454   0.954328    1.352800           0.953125 1.788360e-11  3.901877e-11                    0                   0
+           16                   havanese                    1               64                       0.785736                         0.845480   0.677486    0.898722           0.953125 2.341300e-12  9.314484e-12                    0                   0
+           17              japanese_chin                    1               64                       0.040849                        -0.032153  -0.088251    0.174778           0.468750 5.133372e-01  5.356562e-01                    0                   0
+           18                   keeshond                   34               64                       1.000708                         1.024378   0.571254    1.422179           0.687500 4.833225e-05  6.105126e-05                    0                   0
+           19                 leonberger                   13               64                       0.617173                         0.617800   0.343185    0.897494           0.687500 9.019594e-05  1.082351e-04                    0                   0
+           20                 maine_coon                    1               64                       0.240315                         0.237259   0.168642    0.315263           0.781250 2.833200e-07  4.533120e-07                    0                   0
+           21         miniature_pinscher                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           22               newfoundland                   13               64                       2.008464                         1.932107   1.683325    2.337296           0.906250 9.027659e-12  2.166638e-11                    0                   0
+           23                    persian                   11               64                       1.836338                         1.782660   1.549238    2.133462           0.984375 2.454341e-12  9.314484e-12                    0                   0
+           24                 pomeranian                    3               64                       1.641361                         1.561250   1.305954    1.979831           0.890625 2.103743e-10  4.207487e-10                    0                   0
+           25                        pug                    2               64                       0.834650                         0.789119   0.616977    1.056728           0.812500 6.312416e-09  1.165369e-08                    0                   0
+           26                    ragdoll                    1               64                       0.383055                         0.400334   0.273888    0.499359           0.781250 4.397620e-08  7.538777e-08                    0                   0
+           27               russian_blue                    1               64                       0.340525                         0.440830   0.182598    0.489469           0.687500 4.833225e-05  6.105126e-05                    0                   0
+           28              saint_bernard                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           29                    samoyed                    8               64                      -0.080164                         0.045856  -0.429109    0.272641           0.515625 6.233582e-01  6.233582e-01                    0                   0
+           30           scottish_terrier                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           31                  shiba_inu                    4               64                       0.398177                         0.355627   0.207951    0.592081           0.671875 1.967707e-04  2.248808e-04                    1                   0
+           32                    siamese                    0                0                            NaN                              NaN        NaN         NaN                NaN          NaN           NaN                    0                   0
+           33                     sphynx                   20               64                       1.638885                         1.521754   1.441847    1.841378           0.968750 2.031934e-12  9.314484e-12                    0                   0
+           34 staffordshire_bull_terrier                    1               64                       0.586350                         0.624948   0.390218    0.771314           0.796875 3.999774e-07  5.999661e-07                    0                   0
+           35            wheaten_terrier                   21               64                       1.997696                         2.062790   1.783288    2.213033           1.000000 1.762749e-12  9.314484e-12                    0                   0
+           36          yorkshire_terrier                   20               64                       2.979628                         2.776480   2.581082    3.394775           1.000000 1.762749e-12  9.314484e-12                    0                   0
+
+Saved run to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407
+Summary CSV: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/sufficiency/run_20260914_144407/sufficiency_statistical_summary.csv
+=== JOB_STATISTICS ===
+=== current date     : Mon Sep 14 02:46:17 PM CEST 2026
+= Job-ID             : 1812565 on tinygpu
+= Job-Name           : active_causal_sufficiency
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_causal_sufficiency_insertion.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:06:40
+= Total RAM usage    : 10.9 GiB of requested  GiB (%)   
+= Node list          : tg092
+= Subm/Elig/Start/End: 2026-09-14T14:39:12 / 2026-09-14T14:39:12 / 2026-09-14T14:39:37 / 2026-09-14T14:46:17
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 1122685, 75 %, 29 %, 16060 MiB, 387009 ms

@@ -1,0 +1,679 @@
+### Starting TaskPrologue of job 1802271 on tg094 at Fri Sep  4 10:25:02 AM CEST 2026
+Running on cores 64-95 with governor ondemand
+Fri Sep  4 10:25:02 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   49C    P0             83W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Automatically selected 34 target features
+Feature IDs: [1087, 7997, 11769, 12002, 13083, 16485, 19376, 19653, 22032, 28415, 29705, 30028, 37436, 38528, 41083, 42760, 44081, 49414, 50021, 53106, 56360, 56491, 56586, 59508, 59902, 60067, 62556, 62882, 63006, 67930, 72064, 76977, 77963, 80702]
+Device: cuda
+
+Loading feature statistics...
+Loading k-SAE...
+k-SAE k: 32
+k-SAE n_features: 81920
+
+Loading dataset...
+Target class: 18 keeshond
+Selected target-class images: 64
+First indices: [17, 55, 78, 109, 158, 169, 193, 272, 293, 311, 319, 428, 446, 497, 499, 545, 546, 626, 680, 731]
+
+Loading DiffC model...
+Loaded DiffC checkpoint epoch: 88
+Loaded DiffC checkpoint test accuracy: 0.8828018533660398
+Batch 0: target_ablate_counts=[4, 0, 2, 0, 2, 6, 4, 0], random_ablate_counts=[4, 0, 2, 0, 2, 6, 4, 0]
+Batch 1: target_ablate_counts=[4, 1, 5, 0, 5, 0, 0, 0], random_ablate_counts=[4, 1, 5, 0, 5, 0, 0, 0]
+Batch 2: target_ablate_counts=[1, 1, 1, 1, 1, 4, 0, 5], random_ablate_counts=[1, 1, 1, 1, 1, 4, 0, 5]
+Batch 3: target_ablate_counts=[0, 3, 0, 1, 0, 0, 0, 1], random_ablate_counts=[0, 3, 0, 1, 0, 0, 0, 1]
+Batch 4: target_ablate_counts=[0, 1, 0, 3, 0, 2, 1, 9], random_ablate_counts=[0, 1, 0, 3, 0, 2, 1, 9]
+Batch 5: target_ablate_counts=[4, 0, 0, 4, 0, 4, 0, 1], random_ablate_counts=[4, 0, 0, 4, 0, 4, 0, 1]
+Batch 6: target_ablate_counts=[0, 0, 4, 0, 0, 0, 0, 0], random_ablate_counts=[0, 0, 4, 0, 0, 0, 0, 0]
+Batch 7: target_ablate_counts=[0, 0, 3, 4, 0, 2, 1, 0], random_ablate_counts=[0, 0, 3, 4, 0, 2, 1, 0]
+
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "target_class": 18,
+        "num_classes": 37,
+        "split": "test",
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "prompt_type": "empty",
+        "pooling_strategy": "GAP",
+        "diffusion_step_type": "onestep",
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/image512/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_class19_upft1_ablation.json",
+        "min_purity": 0.8,
+        "min_valid": 10,
+        "max_ablate_per_image": 10,
+        "active_feature_ranking": "purity_actual_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42,
+        "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
+        "target_feature_ids": [
+            1087,
+            7997,
+            11769,
+            12002,
+            13083,
+            16485,
+            19376,
+            19653,
+            22032,
+            28415,
+            29705,
+            30028,
+            37436,
+            38528,
+            41083,
+            42760,
+            44081,
+            49414,
+            50021,
+            53106,
+            56360,
+            56491,
+            56586,
+            59508,
+            59902,
+            60067,
+            62556,
+            62882,
+            63006,
+            67930,
+            72064,
+            76977,
+            77963,
+            80702
+        ],
+        "target_class_name": "keeshond"
+    },
+    "metrics": {
+        "original": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.01827600074466318,
+            "true_class_confidence": 0.9832541793584824,
+            "target_class_confidence": 0.9832541793584824,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.953125,
+            "cross_entropy": 0.2223406475968659,
+            "true_class_confidence": 0.8774801641702652,
+            "target_class_confidence": 0.8774801641702652,
+            "total": 64
+        },
+        "active_targeted_ablation": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.02351707630441524,
+            "true_class_confidence": 0.9788215085864067,
+            "target_class_confidence": 0.9788215085864067,
+            "total": 64
+        },
+        "active_random_ablation": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.019002616449142806,
+            "true_class_confidence": 0.9826374500989914,
+            "target_class_confidence": 0.9826374500989914,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.10577401518821716,
+        "active_targeted_ablation": 0.004432670772075653,
+        "active_random_ablation": 0.0006167292594909668
+    },
+    "activation_summary": {
+        "total_images": 64,
+        "ksae_k": 32,
+        "total_active_features_seen": 2048,
+        "total_target_ablated": 95,
+        "total_random_ablated": 95,
+        "images_with_target_features": 33,
+        "fraction_images_with_target_features": 0.515625,
+        "avg_target_ablated_per_image": 1.484375,
+        "avg_random_ablated_per_image": 1.484375,
+        "random_control": "active non-target-class features matched without replacement on absolute activation magnitude"
+    },
+    "top_target_ablated_features": [
+        {
+            "feature_id": 12002,
+            "count": 14,
+            "activation_sum": 50.27423179149628,
+            "avg_activation_when_selected": 3.591016556535448,
+            "purity": 0.800000011920929,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.346848487854004,
+            "sparsity": 0.004347825888544321
+        },
+        {
+            "feature_id": 56491,
+            "count": 13,
+            "activation_sum": 53.080135345458984,
+            "avg_activation_when_selected": 4.083087334266076,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.967875003814697,
+            "sparsity": 0.005706521682441235
+        },
+        {
+            "feature_id": 80702,
+            "count": 9,
+            "activation_sum": 20.70883345603943,
+            "avg_activation_when_selected": 2.300981495115492,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.092719554901123,
+            "sparsity": 0.008423912338912487
+        },
+        {
+            "feature_id": 19376,
+            "count": 8,
+            "activation_sum": 30.273362278938293,
+            "avg_activation_when_selected": 3.7841702848672867,
+            "purity": 0.800000011920929,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.596290588378906,
+            "sparsity": 0.002989130327478051
+        },
+        {
+            "feature_id": 30028,
+            "count": 7,
+            "activation_sum": 22.01353108882904,
+            "avg_activation_when_selected": 3.144790155547006,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.505382061004639,
+            "sparsity": 0.0035326085053384304
+        },
+        {
+            "feature_id": 42760,
+            "count": 4,
+            "activation_sum": 12.33964228630066,
+            "avg_activation_when_selected": 3.084910571575165,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.446432590484619,
+            "sparsity": 0.0035326085053384304
+        },
+        {
+            "feature_id": 11769,
+            "count": 4,
+            "activation_sum": 12.157624125480652,
+            "avg_activation_when_selected": 3.039406031370163,
+            "purity": 0.800000011920929,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.551520824432373,
+            "sparsity": 0.004347825888544321
+        },
+        {
+            "feature_id": 62882,
+            "count": 4,
+            "activation_sum": 10.507986783981323,
+            "avg_activation_when_selected": 2.626996695995331,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.168902397155762,
+            "sparsity": 0.008152173832058907
+        },
+        {
+            "feature_id": 60067,
+            "count": 4,
+            "activation_sum": 10.36894428730011,
+            "avg_activation_when_selected": 2.5922360718250275,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.6935553550720215,
+            "sparsity": 0.0035326085053384304
+        },
+        {
+            "feature_id": 1087,
+            "count": 4,
+            "activation_sum": 9.287207007408142,
+            "avg_activation_when_selected": 2.3218017518520355,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.3685784339904785,
+            "sparsity": 0.007880434393882751
+        },
+        {
+            "feature_id": 44081,
+            "count": 3,
+            "activation_sum": 5.830855011940002,
+            "avg_activation_when_selected": 1.9436183373133342,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.8360490798950195,
+            "sparsity": 0.005163043271750212
+        },
+        {
+            "feature_id": 56360,
+            "count": 3,
+            "activation_sum": 4.812013506889343,
+            "avg_activation_when_selected": 1.6040045022964478,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.700210094451904,
+            "sparsity": 0.0032608695328235626
+        },
+        {
+            "feature_id": 59508,
+            "count": 2,
+            "activation_sum": 4.764846563339233,
+            "avg_activation_when_selected": 2.3824232816696167,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.104916572570801,
+            "sparsity": 0.007608695421367884
+        },
+        {
+            "feature_id": 16485,
+            "count": 2,
+            "activation_sum": 4.529971122741699,
+            "avg_activation_when_selected": 2.2649855613708496,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.044162273406982,
+            "sparsity": 0.007336955983191729
+        },
+        {
+            "feature_id": 29705,
+            "count": 2,
+            "activation_sum": 3.84318208694458,
+            "avg_activation_when_selected": 1.92159104347229,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 7.027651786804199,
+            "sparsity": 0.002989130327478051
+        },
+        {
+            "feature_id": 19653,
+            "count": 2,
+            "activation_sum": 3.8068997859954834,
+            "avg_activation_when_selected": 1.9034498929977417,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 6.693865776062012,
+            "sparsity": 0.002989130327478051
+        },
+        {
+            "feature_id": 49414,
+            "count": 1,
+            "activation_sum": 3.0898072719573975,
+            "avg_activation_when_selected": 3.0898072719573975,
+            "purity": 0.800000011920929,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.263748645782471,
+            "sparsity": 0.002989130327478051
+        },
+        {
+            "feature_id": 59902,
+            "count": 1,
+            "activation_sum": 2.5795111656188965,
+            "avg_activation_when_selected": 2.5795111656188965,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 6.008258819580078,
+            "sparsity": 0.0032608695328235626
+        },
+        {
+            "feature_id": 72064,
+            "count": 1,
+            "activation_sum": 2.400212526321411,
+            "avg_activation_when_selected": 2.400212526321411,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.267858505249023,
+            "sparsity": 0.004891304299235344
+        },
+        {
+            "feature_id": 77963,
+            "count": 1,
+            "activation_sum": 1.9649548530578613,
+            "avg_activation_when_selected": 1.9649548530578613,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 6.356029987335205,
+            "sparsity": 0.0035326085053384304
+        },
+        {
+            "feature_id": 38528,
+            "count": 1,
+            "activation_sum": 1.642339825630188,
+            "avg_activation_when_selected": 1.642339825630188,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.693446636199951,
+            "sparsity": 0.003804347710683942
+        },
+        {
+            "feature_id": 62556,
+            "count": 1,
+            "activation_sum": 1.5656641721725464,
+            "avg_activation_when_selected": 1.5656641721725464,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.295543670654297,
+            "sparsity": 0.004619564861059189
+        },
+        {
+            "feature_id": 67930,
+            "count": 1,
+            "activation_sum": 1.3380126953125,
+            "avg_activation_when_selected": 1.3380126953125,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.434935569763184,
+            "sparsity": 0.004619564861059189
+        },
+        {
+            "feature_id": 50021,
+            "count": 1,
+            "activation_sum": 1.306990385055542,
+            "avg_activation_when_selected": 1.306990385055542,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.341828346252441,
+            "sparsity": 0.004076086916029453
+        },
+        {
+            "feature_id": 76977,
+            "count": 1,
+            "activation_sum": 1.1724748611450195,
+            "avg_activation_when_selected": 1.1724748611450195,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.927373886108398,
+            "sparsity": 0.0035326085053384304
+        },
+        {
+            "feature_id": 28415,
+            "count": 1,
+            "activation_sum": 1.1156153678894043,
+            "avg_activation_when_selected": 1.1156153678894043,
+            "purity": 0.8999999761581421,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 5.49949312210083,
+            "sparsity": 0.005706521682441235
+        }
+    ],
+    "top_random_ablated_features": [
+        {
+            "feature_id": 44015,
+            "count": 7
+        },
+        {
+            "feature_id": 65800,
+            "count": 4
+        },
+        {
+            "feature_id": 10048,
+            "count": 4
+        },
+        {
+            "feature_id": 51899,
+            "count": 3
+        },
+        {
+            "feature_id": 2236,
+            "count": 2
+        },
+        {
+            "feature_id": 38775,
+            "count": 2
+        },
+        {
+            "feature_id": 57165,
+            "count": 2
+        },
+        {
+            "feature_id": 56828,
+            "count": 2
+        },
+        {
+            "feature_id": 8988,
+            "count": 2
+        },
+        {
+            "feature_id": 54751,
+            "count": 1
+        },
+        {
+            "feature_id": 35801,
+            "count": 1
+        },
+        {
+            "feature_id": 30744,
+            "count": 1
+        },
+        {
+            "feature_id": 19345,
+            "count": 1
+        },
+        {
+            "feature_id": 14103,
+            "count": 1
+        },
+        {
+            "feature_id": 4906,
+            "count": 1
+        },
+        {
+            "feature_id": 60460,
+            "count": 1
+        },
+        {
+            "feature_id": 63072,
+            "count": 1
+        },
+        {
+            "feature_id": 76115,
+            "count": 1
+        },
+        {
+            "feature_id": 79268,
+            "count": 1
+        },
+        {
+            "feature_id": 80879,
+            "count": 1
+        },
+        {
+            "feature_id": 40748,
+            "count": 1
+        },
+        {
+            "feature_id": 28823,
+            "count": 1
+        },
+        {
+            "feature_id": 70888,
+            "count": 1
+        },
+        {
+            "feature_id": 66375,
+            "count": 1
+        },
+        {
+            "feature_id": 14804,
+            "count": 1
+        },
+        {
+            "feature_id": 23109,
+            "count": 1
+        },
+        {
+            "feature_id": 28260,
+            "count": 1
+        },
+        {
+            "feature_id": 32948,
+            "count": 1
+        },
+        {
+            "feature_id": 79943,
+            "count": 1
+        },
+        {
+            "feature_id": 17828,
+            "count": 1
+        },
+        {
+            "feature_id": 35363,
+            "count": 1
+        },
+        {
+            "feature_id": 50553,
+            "count": 1
+        },
+        {
+            "feature_id": 38367,
+            "count": 1
+        },
+        {
+            "feature_id": 16463,
+            "count": 1
+        },
+        {
+            "feature_id": 26372,
+            "count": 1
+        },
+        {
+            "feature_id": 49448,
+            "count": 1
+        },
+        {
+            "feature_id": 39919,
+            "count": 1
+        },
+        {
+            "feature_id": 39289,
+            "count": 1
+        },
+        {
+            "feature_id": 55901,
+            "count": 1
+        },
+        {
+            "feature_id": 78382,
+            "count": 1
+        },
+        {
+            "feature_id": 71435,
+            "count": 1
+        },
+        {
+            "feature_id": 1468,
+            "count": 1
+        },
+        {
+            "feature_id": 49279,
+            "count": 1
+        },
+        {
+            "feature_id": 29358,
+            "count": 1
+        },
+        {
+            "feature_id": 57486,
+            "count": 1
+        },
+        {
+            "feature_id": 35644,
+            "count": 1
+        },
+        {
+            "feature_id": 35242,
+            "count": 1
+        },
+        {
+            "feature_id": 80954,
+            "count": 1
+        },
+        {
+            "feature_id": 664,
+            "count": 1
+        },
+        {
+            "feature_id": 52497,
+            "count": 1
+        }
+    ]
+}
+
+Saved results to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_class19_upft1_ablation.json
+=== JOB_STATISTICS ===
+=== current date     : Fri Sep  4 10:25:51 AM CEST 2026
+= Job-ID             : 1802271 on tinygpu
+= Job-Name           : active_causal
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_active_causal_ablation.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:50
+= Total RAM usage    : 10.2 GiB of requested  GiB (%)   
+= Node list          : tg094
+= Subm/Elig/Start/End: 2026-09-04T10:23:42 / 2026-09-04T10:23:42 / 2026-09-04T10:25:01 / 2026-09-04T10:25:51
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,249K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 26867, 11 %, 4 %, 17118 MiB, 32526 ms

@@ -1,0 +1,216 @@
+### Starting TaskPrologue of job 1801801 on tg094 at Thu Sep  3 01:52:18 PM CEST 2026
+Running on cores 64-95 with governor ondemand
+Thu Sep  3 13:52:18 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   33C    P0             54W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda
+
+Loading feature statistics...
+Loading k-SAE...
+k-SAE k: 32
+k-SAE n_features: 81920
+
+Loading dataset...
+Target class: 18 keeshond
+Selected target-class images: 64
+First indices: [17, 55, 78, 109, 158, 169, 193, 272, 293, 311, 319, 428, 446, 497, 499, 545, 546, 626, 680, 731]
+
+Loading DiffC model...
+Loaded DiffC checkpoint epoch: 88
+Loaded DiffC checkpoint test accuracy: 0.8828018533660398
+Batch 0: target_ablate_counts=[0, 0, 0, 0, 0, 0, 2, 0], random_ablate_counts=[0, 0, 0, 0, 0, 0, 2, 0]
+Batch 1: target_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0], random_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+Batch 2: target_ablate_counts=[0, 0, 0, 0, 1, 0, 0, 0], random_ablate_counts=[0, 0, 0, 0, 1, 0, 0, 0]
+Batch 3: target_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0], random_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+Batch 4: target_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 1], random_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 1]
+Batch 5: target_ablate_counts=[1, 0, 0, 0, 0, 0, 0, 0], random_ablate_counts=[1, 0, 0, 0, 0, 0, 0, 0]
+Batch 6: target_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0], random_ablate_counts=[0, 0, 0, 0, 0, 0, 0, 0]
+Batch 7: target_ablate_counts=[0, 0, 0, 0, 0, 0, 1, 0], random_ablate_counts=[0, 0, 0, 0, 0, 0, 1, 0]
+
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "target_class": 18,
+        "num_classes": 37,
+        "split": "test",
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "prompt_type": "empty",
+        "pooling_strategy": "GAP",
+        "diffusion_step_type": "onestep",
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/image512/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_class19_upft1_ablation.json",
+        "min_purity": 0.8,
+        "min_valid": 10,
+        "max_ablate_per_image": 3,
+        "active_feature_ranking": "purity_actual_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42,
+        "target_feature_ids": [
+            1087,
+            44081,
+            77963
+        ],
+        "target_class_name": "keeshond"
+    },
+    "metrics": {
+        "original": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.01751072893239325,
+            "true_class_confidence": 0.9837872534990311,
+            "target_class_confidence": 0.9837872534990311,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.953125,
+            "cross_entropy": 0.22583770821802318,
+            "true_class_confidence": 0.8768997937440872,
+            "target_class_confidence": 0.8768997937440872,
+            "total": 64
+        },
+        "active_targeted_ablation": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.01751216834236402,
+            "true_class_confidence": 0.9837858155369759,
+            "target_class_confidence": 0.9837858155369759,
+            "total": 64
+        },
+        "active_random_ablation": {
+            "accuracy": 1.0,
+            "cross_entropy": 0.017510414189018775,
+            "true_class_confidence": 0.9837875664234161,
+            "target_class_confidence": 0.9837875664234161,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.10688745975494385,
+        "active_targeted_ablation": 1.4379620552062988e-06,
+        "active_random_ablation": -3.129243850708008e-07
+    },
+    "activation_summary": {
+        "total_images": 64,
+        "ksae_k": 32,
+        "total_active_features_seen": 2048,
+        "total_target_ablated": 6,
+        "total_random_ablated": 6,
+        "images_with_target_features": 5,
+        "fraction_images_with_target_features": 0.078125,
+        "avg_target_ablated_per_image": 0.09375,
+        "avg_random_ablated_per_image": 0.09375,
+        "random_control": "active non-target-class features matched without replacement on absolute activation magnitude"
+    },
+    "top_target_ablated_features": [
+        {
+            "feature_id": 1087,
+            "count": 3,
+            "activation_sum": 8.302628517150879,
+            "avg_activation_when_selected": 2.767542839050293,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.3685784339904785,
+            "sparsity": 0.007880434393882751
+        },
+        {
+            "feature_id": 44081,
+            "count": 2,
+            "activation_sum": 3.322674870491028,
+            "avg_activation_when_selected": 1.661337435245514,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 4.8360490798950195,
+            "sparsity": 0.005163043271750212
+        },
+        {
+            "feature_id": 77963,
+            "count": 1,
+            "activation_sum": 1.9649548530578613,
+            "avg_activation_when_selected": 1.9649548530578613,
+            "purity": 1.0,
+            "majority_label": 18,
+            "valid_count": 10,
+            "mean_activation": 6.356029987335205,
+            "sparsity": 0.0035326085053384304
+        }
+    ],
+    "top_random_ablated_features": [
+        {
+            "feature_id": 80879,
+            "count": 1
+        },
+        {
+            "feature_id": 70888,
+            "count": 1
+        },
+        {
+            "feature_id": 51899,
+            "count": 1
+        },
+        {
+            "feature_id": 27234,
+            "count": 1
+        },
+        {
+            "feature_id": 40122,
+            "count": 1
+        },
+        {
+            "feature_id": 75710,
+            "count": 1
+        }
+    ]
+}
+
+Saved results to: /home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_class19_upft1_ablation.json
+=== JOB_STATISTICS ===
+=== current date     : Thu Sep  3 01:53:06 PM CEST 2026
+= Job-ID             : 1801801 on tinygpu
+= Job-Name           : active_causal
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_active_causal_ablation.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 01:00:00
+= Elapsed runtime    : 00:00:49
+= Total RAM usage    : 10.1 GiB of requested  GiB (%)   
+= Node list          : tg094
+= Subm/Elig/Start/End: 2026-09-03T13:49:29 / 2026-09-03T13:49:29 / 2026-09-03T13:52:17 / 2026-09-03T13:53:06
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.0G  1000.0G  1500.0G        N/A   1,249K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 1174121, 12 %, 4 %, 17118 MiB, 32760 ms

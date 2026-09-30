@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 1411,
+    "image_seed": 1453,
+    "true_label": 28,
+    "true_label_name": "saint_bernard",
+    "target_class": 15,
+    "target_class_name": "great_pyrenees",
+    "insertion_scale": 2.0,
+    "original_pred": 28,
+    "original_pred_name": "saint_bernard",
+    "target_neuron_ids": [
+      36186,
+      81177,
+      56474
+    ],
+    "control_neuron_ids": [
+      32492,
+      1087,
+      50021
+    ],
+    "removed_source_neuron_ids": [
+      39122,
+      3835,
+      279
+    ],
+    "target_inserted_values": [
+      12.511630058288574,
+      11.8798246383667,
+      11.769454002380371
+    ],
+    "control_inserted_values": [
+      12.683552742004395,
+      11.927556991577148,
+      11.953944206237793
+    ],
+    "removed_source_values": [
+      2.170645236968994,
+      2.233159303665161,
+      2.319291114807129
+    ],
+    "targeted_pred": 15,
+    "targeted_pred_name": "great_pyrenees",
+    "control_pred": 28,
+    "control_pred_name": "saint_bernard",
+    "original_target_margin": -3.3035945892333984,
+    "targeted_target_margin": 1.1093776226043701,
+    "control_target_margin": -2.4510111808776855,
+    "targeted_target_margin_increase": 4.4129722118377686,
+    "control_target_margin_increase": 0.8525834083557129,
+    "target_margin_increase_difference": 3.5603888034820557,
+    "original_target_logit": -2.101607322692871,
+    "targeted_target_logit": 2.029088258743286,
+    "control_target_logit": -1.9487351179122925,
+    "target_logit_increase_difference": 3.9778233766555786,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 28,
+  "source_label_name": "saint_bernard",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      36186,
+      81177,
+      56474
+    ],
+    "removed_source_neuron_ids": [
+      39122,
+      3835,
+      279
+    ],
+    "inserted_values": [
+      12.511630058288574,
+      11.8798246383667,
+      11.769454002380371
+    ],
+    "delta_l2": 23.13503074645996
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      32492,
+      1087,
+      50021
+    ],
+    "removed_source_neuron_ids": [
+      39122,
+      3835,
+      279
+    ],
+    "inserted_values": [
+      12.683552742004395,
+      11.927556991577148,
+      11.953944206237793
+    ],
+    "delta_l2": 23.049381256103516
+  },
+  "target_pixel_mae_vs_baseline": 5.7371024013264105e-05,
+  "target_pixel_mse_vs_baseline": 2.253826458797903e-08,
+  "control_pixel_mae_vs_baseline": 5.5718857765896246e-05,
+  "control_pixel_mse_vs_baseline": 2.16895532645367e-08
+}

@@ -1,0 +1,94 @@
+{
+  "classifier_case": {
+    "image_index": 2278,
+    "image_seed": 2320,
+    "true_label": 2,
+    "true_label_name": "american_pit_bull_terrier",
+    "target_class": 14,
+    "target_class_name": "german_shorthaired",
+    "insertion_scale": 2.0,
+    "original_pred": 2,
+    "original_pred_name": "american_pit_bull_terrier",
+    "target_neuron_ids": [
+      64835,
+      52792
+    ],
+    "control_neuron_ids": [
+      26264,
+      2236
+    ],
+    "removed_source_neuron_ids": [
+      54597,
+      80076
+    ],
+    "target_inserted_values": [
+      11.569255828857422,
+      8.28688907623291
+    ],
+    "control_inserted_values": [
+      11.604715347290039,
+      8.449164390563965
+    ],
+    "removed_source_values": [
+      1.1048645973205566,
+      1.1407192945480347
+    ],
+    "targeted_pred": 14,
+    "targeted_pred_name": "german_shorthaired",
+    "control_pred": 2,
+    "control_pred_name": "american_pit_bull_terrier",
+    "original_target_margin": -3.328198194503784,
+    "targeted_target_margin": 0.07720685005187988,
+    "control_target_margin": -3.0548593997955322,
+    "targeted_target_margin_increase": 3.405405044555664,
+    "control_target_margin_increase": 0.27333879470825195,
+    "target_margin_increase_difference": 3.132066249847412,
+    "original_target_logit": 0.7656475901603699,
+    "targeted_target_logit": 4.049084663391113,
+    "control_target_logit": 0.5986348986625671,
+    "target_logit_increase_difference": 3.450449764728546,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 2,
+  "source_label_name": "american_pit_bull_terrier",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      64835,
+      52792
+    ],
+    "removed_source_neuron_ids": [
+      54597,
+      80076
+    ],
+    "inserted_values": [
+      11.569255828857422,
+      8.28688907623291
+    ],
+    "delta_l2": 15.302669525146484
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      26264,
+      2236
+    ],
+    "removed_source_neuron_ids": [
+      54597,
+      80076
+    ],
+    "inserted_values": [
+      11.604715347290039,
+      8.449164390563965
+    ],
+    "delta_l2": 15.178589820861816
+  },
+  "target_pixel_mae_vs_baseline": 8.395159238716587e-05,
+  "target_pixel_mse_vs_baseline": 3.284344529674854e-08,
+  "control_pixel_mae_vs_baseline": 8.339745545526966e-05,
+  "control_pixel_mse_vs_baseline": 3.259522785015179e-08
+}

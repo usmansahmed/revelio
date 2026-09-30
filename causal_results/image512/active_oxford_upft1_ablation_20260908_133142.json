@@ -1,0 +1,312 @@
+{
+    "config": {
+        "work_dir": "/home/woody/rlvl/rlvl172v",
+        "sd_ksae_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE",
+        "diffc_dir": "/home/woody/rlvl/rlvl172v/revelio/diffc_image_classification",
+        "dataset_flag": "timm/oxford-iiit-pet",
+        "target_class": 15,
+        "num_classes": 37,
+        "split": "test",
+        "model_name": "runwayml/stable-diffusion-v1-5",
+        "diffusion_timestep": 25,
+        "diffusion_layer": "up_ft:1",
+        "input_channels": 1280,
+        "dropout_rate": 0.0,
+        "prompt_type": "empty",
+        "pooling_strategy": "GAP",
+        "diffusion_step_type": "onestep",
+        "feature_dir": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512",
+        "diffc_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/DiffC_outputs/image512/timm-oxford-iiit-pet/runwayml-stable-diffusion-v1-5/diffusion_step_25/layer_up_ft:1/prompt_empty/pool_GAP/dropout_0.0/best_classifier.pt",
+        "ksae_checkpoint_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/Checkpoints/image512/ihny7k5a/final_k_sparse_autoencoder_/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/oxfordpet/SDv1-5/timestep_25/up_blocks_1/image512_10_up_blocks_1_81920.pt",
+        "output_path": "/home/woody/rlvl/rlvl172v/revelio/causal_results/image512/active_oxford_upft1_ablation.json",
+        "min_purity": 0.8,
+        "min_valid": 10,
+        "max_ablate_per_image": 5,
+        "active_feature_ranking": "purity_actual_activation",
+        "max_images": 64,
+        "batch_size": 8,
+        "random_seed": 42,
+        "feature_summary_path": "/home/woody/rlvl/rlvl172v/revelio/SD-kSAE/features/oxfordpet/SDv1-5/step25_upft1/image512/feature_summary_top10.csv",
+        "target_feature_ids": [
+            3631,
+            5705,
+            6691,
+            10267,
+            21698,
+            31010,
+            32062,
+            36186,
+            39707,
+            43153,
+            56474,
+            57497,
+            58379,
+            64354,
+            67158,
+            81177
+        ],
+        "target_class_name": "great_pyrenees"
+    },
+    "metrics": {
+        "original": {
+            "accuracy": 0.984375,
+            "cross_entropy": 0.10911369969835505,
+            "true_class_confidence": 0.9534241482615471,
+            "target_class_confidence": 0.9534241482615471,
+            "total": 64
+        },
+        "sae_reconstruction": {
+            "accuracy": 0.953125,
+            "cross_entropy": 0.1626156544080004,
+            "true_class_confidence": 0.9315730780363083,
+            "target_class_confidence": 0.9315730780363083,
+            "total": 64
+        },
+        "active_targeted_ablation": {
+            "accuracy": 0.984375,
+            "cross_entropy": 0.10922209350974299,
+            "true_class_confidence": 0.9533180296421051,
+            "target_class_confidence": 0.9533180296421051,
+            "total": 64
+        },
+        "active_random_ablation": {
+            "accuracy": 0.984375,
+            "cross_entropy": 0.10906193559640087,
+            "true_class_confidence": 0.9534740969538689,
+            "target_class_confidence": 0.9534740969538689,
+            "total": 64
+        }
+    },
+    "confidence_drop_from_original": {
+        "sae_reconstruction": 0.0218510702252388,
+        "active_targeted_ablation": 0.00010611861944198608,
+        "active_random_ablation": -4.9948692321777344e-05
+    },
+    "activation_summary": {
+        "total_images": 64,
+        "ksae_k": 32,
+        "total_active_features_seen": 2048,
+        "total_target_ablated": 28,
+        "total_random_ablated": 28,
+        "images_with_target_features": 20,
+        "fraction_images_with_target_features": 0.3125,
+        "avg_target_ablated_per_image": 0.4375,
+        "avg_random_ablated_per_image": 0.4375,
+        "random_control": "active non-target-class features matched without replacement on absolute activation magnitude"
+    },
+    "top_target_ablated_features": [
+        {
+            "feature_id": 32062,
+            "count": 14,
+            "activation_sum": 30.958200454711914,
+            "avg_activation_when_selected": 2.2113000324794223,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 4.533022403717041,
+            "sparsity": 0.016847824677824974
+        },
+        {
+            "feature_id": 36186,
+            "count": 4,
+            "activation_sum": 9.597951292991638,
+            "avg_activation_when_selected": 2.3994878232479095,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 4.267705917358398,
+            "sparsity": 0.01711956411600113
+        },
+        {
+            "feature_id": 21698,
+            "count": 2,
+            "activation_sum": 3.4470272064208984,
+            "avg_activation_when_selected": 1.7235136032104492,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 4.153934478759766,
+            "sparsity": 0.007065217010676861
+        },
+        {
+            "feature_id": 67158,
+            "count": 2,
+            "activation_sum": 3.114552140235901,
+            "avg_activation_when_selected": 1.5572760701179504,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 3.835503578186035,
+            "sparsity": 0.008695651777088642
+        },
+        {
+            "feature_id": 5705,
+            "count": 2,
+            "activation_sum": 2.9574923515319824,
+            "avg_activation_when_selected": 1.4787461757659912,
+            "purity": 0.8999999761581421,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 5.144008636474609,
+            "sparsity": 0.003804347710683942
+        },
+        {
+            "feature_id": 64354,
+            "count": 1,
+            "activation_sum": 2.6023497581481934,
+            "avg_activation_when_selected": 2.6023497581481934,
+            "purity": 0.800000011920929,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 3.4144692420959473,
+            "sparsity": 0.005978260654956102
+        },
+        {
+            "feature_id": 6691,
+            "count": 1,
+            "activation_sum": 1.870754599571228,
+            "avg_activation_when_selected": 1.870754599571228,
+            "purity": 0.8999999761581421,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 5.529569149017334,
+            "sparsity": 0.004619564861059189
+        },
+        {
+            "feature_id": 81177,
+            "count": 1,
+            "activation_sum": 1.306047797203064,
+            "avg_activation_when_selected": 1.306047797203064,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 4.646207332611084,
+            "sparsity": 0.004891304299235344
+        },
+        {
+            "feature_id": 56474,
+            "count": 1,
+            "activation_sum": 1.2796473503112793,
+            "avg_activation_when_selected": 1.2796473503112793,
+            "purity": 1.0,
+            "majority_label": 15,
+            "valid_count": 10,
+            "mean_activation": 5.474154472351074,
+            "sparsity": 0.0054347822442650795
+        }
+    ],
+    "top_random_ablated_features": [
+        {
+            "feature_id": 49512,
+            "count": 1
+        },
+        {
+            "feature_id": 75171,
+            "count": 1
+        },
+        {
+            "feature_id": 34003,
+            "count": 1
+        },
+        {
+            "feature_id": 39455,
+            "count": 1
+        },
+        {
+            "feature_id": 70888,
+            "count": 1
+        },
+        {
+            "feature_id": 73561,
+            "count": 1
+        },
+        {
+            "feature_id": 51899,
+            "count": 1
+        },
+        {
+            "feature_id": 7332,
+            "count": 1
+        },
+        {
+            "feature_id": 642,
+            "count": 1
+        },
+        {
+            "feature_id": 30592,
+            "count": 1
+        },
+        {
+            "feature_id": 42631,
+            "count": 1
+        },
+        {
+            "feature_id": 30281,
+            "count": 1
+        },
+        {
+            "feature_id": 44921,
+            "count": 1
+        },
+        {
+            "feature_id": 39353,
+            "count": 1
+        },
+        {
+            "feature_id": 59380,
+            "count": 1
+        },
+        {
+            "feature_id": 55650,
+            "count": 1
+        },
+        {
+            "feature_id": 382,
+            "count": 1
+        },
+        {
+            "feature_id": 59778,
+            "count": 1
+        },
+        {
+            "feature_id": 19293,
+            "count": 1
+        },
+        {
+            "feature_id": 10805,
+            "count": 1
+        },
+        {
+            "feature_id": 71193,
+            "count": 1
+        },
+        {
+            "feature_id": 66318,
+            "count": 1
+        },
+        {
+            "feature_id": 68529,
+            "count": 1
+        },
+        {
+            "feature_id": 357,
+            "count": 1
+        },
+        {
+            "feature_id": 68331,
+            "count": 1
+        },
+        {
+            "feature_id": 32890,
+            "count": 1
+        },
+        {
+            "feature_id": 24926,
+            "count": 1
+        },
+        {
+            "feature_id": 38432,
+            "count": 1
+        }
+    ]
+}

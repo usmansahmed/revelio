@@ -1,0 +1,70 @@
+### Starting TaskPrologue of job 1813691 on tg091 at Tue Sep 15 01:14:40 PM CEST 2026
+Running on cores 64-95 with governor ondemand
+Tue Sep 15 13:14:40 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 610.57.04              KMD Version: 610.57.04     CUDA UMD Version: 13.3     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100-SXM4-40GB          On  |   00000000:81:00.0 Off |                    0 |
+| N/A   42C    P0             75W /  400W |       0MiB /  40960MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+Device: cuda | dtype: torch.float16
+Loading normal Stable Diffusion pipeline...
+Hook module: up_ft:1 | CrossAttnUpBlock2D
+Loading k-SAE and feature statistics...
+Target class 18: 34 qualifying features
+Eligible insertion-control pool: 190 features
+Loading dataset...
+Target: keeshond | Source: pug | images: [1713, 1697, 3368, 565, 2341]
+Target insertion vs baseline: MAE=0.00101648, MSE=0.00000296
+Control insertion vs baseline: MAE=0.00075844, MSE=0.00000157
+Finished index=1713 label=pug baseline_mse=0.005083
+Target insertion vs baseline: MAE=0.00045944, MSE=0.00000057
+Control insertion vs baseline: MAE=0.00041263, MSE=0.00000043
+Finished index=1697 label=pug baseline_mse=0.001244
+Target insertion vs baseline: MAE=0.00057018, MSE=0.00000097
+Control insertion vs baseline: MAE=0.00055000, MSE=0.00000090
+Finished index=3368 label=pug baseline_mse=0.001673
+Target insertion vs baseline: MAE=0.00081969, MSE=0.00000155
+Control insertion vs baseline: MAE=0.00073969, MSE=0.00000126
+Finished index=565 label=pug baseline_mse=0.006676
+Target insertion vs baseline: MAE=0.00042703, MSE=0.00000054
+Control insertion vs baseline: MAE=0.00038301, MSE=0.00000044
+Finished index=2341 label=pug baseline_mse=0.001162
+Saved: /home/woody/rlvl/rlvl172v/revelio/qualitative_interventions/keeshond_from_pug3/summary.json
+=== JOB_STATISTICS ===
+=== current date     : Tue Sep 15 01:15:24 PM CEST 2026
+= Job-ID             : 1813691 on tinygpu
+= Job-Name           : qualitative_sae_intervention
+= Job-Command        : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification/run_qualitative_sae_intervention.sh
+= Initial workdir    : /home/woody/rlvl/rlvl172v/revelio/diffc_image_classification
+= Queue/Partition    : a100
+= Slurm account      : rlvl with QOS=normal
+= Requested resources:  for 00:05:00
+= Elapsed runtime    : 00:00:44
+= Total RAM usage    : 7.8 GiB of requested  GiB (%)   
+= Node list          : tg091
+= Subm/Elig/Start/End: 2026-09-15T12:44:46 / 2026-09-15T12:44:46 / 2026-09-15T13:14:40 / 2026-09-15T13:15:24
+======================
+=== Quota infos ======
+    Path                 Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/woody           356.1G  1000.0G  1500.0G        N/A   1,250K   5,000K   7,500K        N/A    
+    /home/hpc              26.8G   104.9G   209.7G        N/A   3,222      500K   1,000K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA A100-SXM4-40GB, 00000000:81:00.0, 1697837, 8 %, 2 %, 4382 MiB, 29278 ms

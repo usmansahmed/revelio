@@ -1,0 +1,106 @@
+{
+  "classifier_case": {
+    "image_index": 165,
+    "image_seed": 207,
+    "true_label": 7,
+    "true_label_name": "bombay",
+    "target_class": 22,
+    "target_class_name": "newfoundland",
+    "insertion_scale": 2.0,
+    "original_pred": 7,
+    "original_pred_name": "bombay",
+    "target_neuron_ids": [
+      17353,
+      75237,
+      76520
+    ],
+    "control_neuron_ids": [
+      24655,
+      12628,
+      59902
+    ],
+    "removed_source_neuron_ids": [
+      61263,
+      69645,
+      17510
+    ],
+    "target_inserted_values": [
+      16.216344833374023,
+      14.444404602050781,
+      15.817178726196289
+    ],
+    "control_inserted_values": [
+      16.540790557861328,
+      14.421908378601074,
+      15.747325897216797
+    ],
+    "removed_source_values": [
+      0.5872531533241272,
+      0.5926333665847778,
+      0.6569067239761353
+    ],
+    "targeted_pred": 22,
+    "targeted_pred_name": "newfoundland",
+    "control_pred": 7,
+    "control_pred_name": "bombay",
+    "original_target_margin": -9.233242988586426,
+    "targeted_target_margin": 1.3881714344024658,
+    "control_target_margin": -8.82924747467041,
+    "targeted_target_margin_increase": 10.621414422988892,
+    "control_target_margin_increase": 0.4039955139160156,
+    "target_margin_increase_difference": 10.217418909072876,
+    "original_target_logit": -0.7774752378463745,
+    "targeted_target_logit": 4.948204517364502,
+    "control_target_logit": -1.9590119123458862,
+    "target_logit_increase_difference": 6.907216429710388,
+    "target_flip": true,
+    "control_flip": false,
+    "target_crossed_zero": true,
+    "control_crossed_zero": false,
+    "selection_priority": 0
+  },
+  "source_label": 7,
+  "source_label_name": "bombay",
+  "target_hook": {
+    "mode": "target",
+    "feature_ids": [
+      17353,
+      75237,
+      76520
+    ],
+    "removed_source_neuron_ids": [
+      61263,
+      69645,
+      17510
+    ],
+    "inserted_values": [
+      16.216344833374023,
+      14.444404602050781,
+      15.817178726196289
+    ],
+    "delta_l2": 29.048593521118164
+  },
+  "control_hook": {
+    "mode": "control",
+    "feature_ids": [
+      24655,
+      12628,
+      59902
+    ],
+    "removed_source_neuron_ids": [
+      61263,
+      69645,
+      17510
+    ],
+    "inserted_values": [
+      16.540790557861328,
+      14.421908378601074,
+      15.747325897216797
+    ],
+    "delta_l2": 27.123552322387695
+  },
+  "target_pixel_mae_vs_baseline": 5.462982880999334e-05,
+  "target_pixel_mse_vs_baseline": 1.6884087017388083e-08,
+  "control_pixel_mae_vs_baseline": 5.662224066327326e-05,
+  "control_pixel_mse_vs_baseline": 1.7780090288965766e-08
+}
